@@ -32,6 +32,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
+source "$HOME/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -69,7 +71,6 @@ add-zsh-hook -Uz precmd rehash_precmd
 source "$HOME/.config/zsh/exports.zsh"
 source "$HOME/.config/zsh/completion.zsh"
 source "$HOME/.config/zsh/scripts/pomodoro.zsh"
-source "$HOME/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
 
 # eval `ttysvr logo -i 300`
