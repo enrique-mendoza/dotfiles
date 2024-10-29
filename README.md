@@ -34,10 +34,6 @@
          </li>
       </ul>
    </li>
-  <!-- Credits -->
-   <li>
-      <a href="#credits">Credits</a>
-   </li>
   </ol>
 </details>
 
@@ -180,16 +176,5 @@ Due to my guide is based on the guide of others users I recommend watching the f
   ```powershell
   . $env:USERPROFILE\.config\powershell\user_profile.ps1
   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Credits
-
-- Takuya Matsuyama - [@craftzdog](https://github.com/craftzdog) - Freelancer
-- Jeff Delaney - [@fireship-io](https://github.com/fireship-io) - Creator of Fireship and Google developer
-- Antonio Sarosi - [@antoniosarosi](https://github.com/antoniosarosi) - Software Developer
-- Nick - [@theteachr](https://github.com/theteachr) - Teacher and Software Developer
-- Christian Chiarulli - [@ChristianChiarulli](https://github.com/ChristianChiarulli) - Fullstack Software Developer
-- Enrique Mendoza - [@enrique-mendoza](https://github.com/enrique-mendoza) - Entry-level Software Engineer
 
 <p align="right">(<a href="#top">back to top</a>)</p>
