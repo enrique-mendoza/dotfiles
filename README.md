@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Machfiles 🐶</h1>
+<h1 id="top" align="center">Dotfiles 🚀</h1>
 
 ![preview](./.screenshots/arch.png)
 
