@@ -20,7 +20,8 @@ source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 sketchybar --bar height=24        \
                  blur_radius=30   \
                  position=top     \
-                 sticky=off       \
+                 sticky=on        \
+                 shadow=on        \
                  padding_left=10  \
                  padding_right=10 \
                  color=$SEMITRANSPARENT
