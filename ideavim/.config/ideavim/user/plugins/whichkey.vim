@@ -108,7 +108,7 @@ let g:WhichKeyDesc_git_reset = "<leader>gz  Reset Changes"
 let g:WhichKeyDesc_run_options = "<leader>i  Intellij IDEA"
 
 let g:WhichKeyDesc_maven_download_all_sources = "<leader>iA  Maven Download All Sources"
-let g:WhichKeyDesc_maven_download_run_build = "<leader>iR  Maven Run Build"
+let g:WhichKeyDesc_maven_sync_incrementally = "<leader>iR  Maven Sync Incrementally"
 let g:WhichKeyDesc_activate_database_tool_window = "<leader>ib  Database Tool"
 let g:WhichKeyDesc_choose_run_configuration = "<leader>ic  Run Configuration"
 let g:WhichKeyDesc_activate_debug_tool_window = "<leader>id  Debug Tool"

@@ -129,7 +129,7 @@ nmap <leader>gz <Action>(Git.Reset)
 
 " IntelliJ IDEA ---------------------
 nmap <leader>iA <Action>(Maven.DownloadAllSources)
-nmap <leader>iR <Action>(Maven.RunBuild)
+nmap <leader>iR <Action>(Maven.SyncIncrementally)
 nmap <leader>ib <Action>(ActivateDatabaseToolWindow)
 nmap <Leader>ic <Action>(ChooseRunConfiguration)
 nmap <leader>id <Action>(ActivateDebugToolWindow)
