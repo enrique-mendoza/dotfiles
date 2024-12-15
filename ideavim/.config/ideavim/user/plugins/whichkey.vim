@@ -6,7 +6,7 @@
 "  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   
                                                               
 let g:WhichKey_CommandStyle = "none"
-let g:WhichKey_FontFamily = "JetBrainsMono NF"
+let g:WhichKey_FontFamily = "JetBrainsMono Nerd Font"
 let g:WhichKey_FontSize = 15
 let g:WhichKey_KeyStyle = "none"
 let g:WhichKey_ShowTypedSequence = "false"
