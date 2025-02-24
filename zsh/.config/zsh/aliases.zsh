@@ -38,6 +38,9 @@ alias mcu="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -10"
 # lazygit
 alias lg='lazygit'
 
+# lazydocker
+alias lzd='sudo lazydocker'
+
 # list packages
 alias pacpack="pacman -Qet | awk '{print $1}'"
 
