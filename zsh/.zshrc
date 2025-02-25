@@ -5,7 +5,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 export PATH="$HOME/.local/bin":$PATH
-export JAVA_HOME="/usr/lib/jvm/java-17-amazon-corretto"
+export JAVA_HOME="/usr/lib/jvm/java-21-amazon-corretto"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
