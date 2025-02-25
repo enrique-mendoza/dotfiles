@@ -21,31 +21,50 @@ gui:
   #     - '#f9e2af'
   # authorColors:
   #   '*': '#b4befe'
-  theme: # tokyonight storm
+  # theme: # tokyonight storm
+  #   activeBorderColor:
+  #     - "#ff9e64"
+  #     - "bold"
+  #   inactiveBorderColor:
+  #     - "#29a4bd"
+  #   searchingActiveBorderColor:
+  #     - "#ff9e64"
+  #     - "bold"
+  #   optionsTextColor:
+  #     - "#7aa2f7"
+  #   selectedLineBgColor:
+  #     - "#2e3c64"
+  #   cherryPickedCommitFgColor:
+  #     - "#7aa2f7"
+  #   cherryPickedCommitBgColor:
+  #     - "#bb9af7"
+  #   markedBaseCommitFgColor:
+  #     - "#7aa2f7"
+  #   markedBaseCommitBgColor:
+  #     - "#e0af68"
+  #   unstagedChangesColor:
+  #     - "#db4b4b"
+  #   defaultFgColor:
+  #     - "#c0caf5"
+  theme: # cyberdream
     activeBorderColor:
-      - "#ff9e64"
-      - "bold"
+        - "#5ef1ff"
     inactiveBorderColor:
-      - "#29a4bd"
+        - "#7b8496"
     searchingActiveBorderColor:
-      - "#ff9e64"
-      - "bold"
+        - "#ff5ef1"
     optionsTextColor:
-      - "#7aa2f7"
+        - "#3c4048"
     selectedLineBgColor:
-      - "#2e3c64"
-    cherryPickedCommitFgColor:
-      - "#7aa2f7"
+        - "#3c4048"
     cherryPickedCommitBgColor:
-      - "#bb9af7"
-    markedBaseCommitFgColor:
-      - "#7aa2f7"
-    markedBaseCommitBgColor:
-      - "#e0af68"
+        - "#3c4048"
+    cherryPickedCommitFgColor:
+        - "#ff5ea0"
     unstagedChangesColor:
-      - "#db4b4b"
+        - "#ffbd5e"
     defaultFgColor:
-      - "#c0caf5"
+        - "#ffffff"
   showFileTree: true # for rendering changes files in a tree format
   showListFooter: false # for seeing the '5 of 20' message in list panels
   showRandomTip: false
