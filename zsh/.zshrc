@@ -33,7 +33,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # source "$HOME/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
-source "$HOME/.config/zsh/themes/tokyonight_storm.sh"
+# source "$HOME/.config/zsh/themes/tokyonight_storm.sh"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/

@@ -58,7 +58,7 @@ alias br="pomodoro 'break'"
 # maven
 alias mvn8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn"
 alias mvn11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn"
-alias mvnds = "mvn dependency:sources dependency:resolve -Dclassifier=javadoc"
+alias mvnds="mvn dependency:sources dependency:resolve -Dclassifier=javadoc"
 
 # spring projects
 alias spring8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
