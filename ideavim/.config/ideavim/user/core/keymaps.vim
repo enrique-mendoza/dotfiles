@@ -171,6 +171,9 @@ nmap <leader>mp <Action>(GotoPreviousBookmark)
 nmap <leader>ms <Action>(ShowBookmarks)
 nmap <leader>mt <Action>(ToggleBookmark)
 
+" Flash ---------------------
+nmap <leader>s <Action>(flash.search)
+
 " UI ---------------------
 nmap <leader>uc <Action>(QuickChangeScheme)
 nmap <leader>us <Action>(ViewStatusBar)
