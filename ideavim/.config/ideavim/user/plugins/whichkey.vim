@@ -156,7 +156,7 @@ let g:WhichKeyDesc_show_bookmark = "<leader>ms  Show Bookmarks"
 let g:WhichKeyDesc_toggle_bookmark = "<leader>mt  Toggle Bookmark"
 
 " Flash ---------------------
-let g:WhichKeyDesc_flash = "<leader>s 󱕘 Flash""
+let g:WhichKeyDesc_flash = "<leader>s  Flash" 
 
 " UI ---------------------
 let g:WhichKeyDesc_ui_toggles = "<leader>u  UI"
