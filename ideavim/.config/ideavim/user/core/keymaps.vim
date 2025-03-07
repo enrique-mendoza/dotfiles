@@ -94,8 +94,9 @@ nmap <leader>du <Action>(StepOut)
 nmap <leader>fa <Action>(GotoAction)
 nmap <leader>fc <Action>(GotoClass)
 nmap <leader>fe <Action>(SearchEverywhere)
+nmap <leader>fE <Action>(GotoUrlAction)
 nmap <leader>ff <Action>(GotoFile)
-nmap <leader>fk <Action>(GotoUrlAction)
+nmap <leader>fk <Action>(flash.search)
 nmap <leader>fo <Action>(FindInPath)
 nmap <leader>fp <Action>(OpenFile)
 nmap <leader>fr <Action>(Switcher)
@@ -165,13 +166,10 @@ nmap <leader>lt <Action>(QuickImplementations)
 nmap <leader>lu <Action>(ShowUsages)
 
 " Bookmarks ---------------------
+nmap <leader>ml <Action>(ShowBookmarks)
 nmap <leader>mn <Action>(GotoNextBookmark)
 nmap <leader>mp <Action>(GotoPreviousBookmark)
-nmap <leader>ms <Action>(ShowBookmarks)
 nmap <leader>mt <Action>(ToggleBookmark)
-
-" Flash ---------------------
-nmap <leader>s <Action>(flash.search)
 
 " UI ---------------------
 nmap <leader>uc <Action>(QuickChangeScheme)

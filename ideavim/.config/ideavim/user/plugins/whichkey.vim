@@ -32,7 +32,7 @@ let g:WhichKeyDesc_split_vertically = "<leader>v  Split Vertically"
 let g:WhichKeyDesc_reload_idea_vim = "<leader>r  Reload IdeaVim"
 
 " Buffers ---------------------
-let g:WhichKeyDesc_buffers_editors = "<leader>b  Buffers & Tabs"
+let g:WhichKeyDesc_buffers_editors = "<leader>b  Buffers/Tabs"
 
 let g:WhichKeyDesc_close_all_editors = "<leader>bA  Close All Editors"
 let g:WhichKeyDesc_close_all_editors_but_active = "<leader>ba  Close Others Editors"
@@ -68,8 +68,9 @@ let g:WhichKeyDesc_search = "<leader>f  Find"
 let g:WhichKeyDesc_goto_action = "<leader>fa  Action"
 let g:WhichKeyDesc_goto_class = "<leader>fc  Class"
 let g:WhichKeyDesc_search_everywhere = "<leader>fe  Everywhere"
+let g:WhichKeyDesc_goto_endpoints = "<leader>fE  Endpoint"
 let g:WhichKeyDesc_goto_file = "<leader>ff  File"
-let g:WhichKeyDesc_goto_endpoints = "<leader>fk  Endpoint"
+let g:WhichKeyDesc_flash = "<leader>fk  Flash" 
 let g:WhichKeyDesc_find_in_path = "<leader>fo  In Path"
 let g:WhichKeyDesc_open_file = "<leader>fp  Project"
 let g:WhichKeyDesc_switcher = "<leader>fr  Recent File"
@@ -153,9 +154,6 @@ let g:WhichKeyDesc_goto_next_bookmark = "<leader>mn  Next Bookmark"
 let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mp  Previous Bookmark"
 let g:WhichKeyDesc_show_bookmark = "<leader>ms  Show Bookmarks"
 let g:WhichKeyDesc_toggle_bookmark = "<leader>mt  Toggle Bookmark"
-
-" Flash ---------------------
-let g:WhichKeyDesc_flash = "<leader>s  Flash" 
 
 " UI ---------------------
 let g:WhichKeyDesc_ui_toggles = "<leader>u  UI"
