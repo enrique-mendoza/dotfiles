@@ -26,6 +26,7 @@ let g:WhichKeyDesc_leader = "<leader> Leader"
 let mapleader=" "
 
 let g:WhichKeyDesc_comment_by_line_comment = "<leader>/  Comment Toggle"
+let g:WhichKeyDesc_no_hl_search = "<leader>c  Clear search" 
 let g:WhichKeyDesc_explorer = "<leader>e  Explorer"
 let g:WhichKeyDesc_split_horizontally = "<leader>h  Split Horizontally"
 let g:WhichKeyDesc_split_vertically = "<leader>v  Split Vertically"

@@ -74,6 +74,7 @@ nmap <A-l> <Action>(NextTab)
 nmap <leader>/ <Action>(CommentByLineComment)
 vmap <leader>/ <Action>(CommentByLineComment)
 nnoremap <leader>e :NERDTree<CR>
+nmap <Leader>c :nohlsearch<CR> 
 nmap <leader>h <Action>(SplitHorizontally)
 nmap <leader>v <Action>(SplitVertically)
 nmap <Leader>r <Action>(IdeaVim.ReloadVimRc.reload)
