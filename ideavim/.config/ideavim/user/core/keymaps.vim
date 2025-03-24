@@ -14,12 +14,28 @@ vnoremap <s-h> ^
 vnoremap <s-l> g_
 
 " Escape and Clear hlsearch
-nmap <esc> :nohlsearch<CR>
+" nmap <esc> :nohlsearch<CR>
 
 " Add Comment Below
 nmap gco o<c-o>gcc
 " Add Comment Above
 nmap gcO O<c-o>gcc
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap gw<C-n> <Plug>AllWholeOccurrences
+xmap gw<C-n> <Plug>AllWholeOccurrences
+nmap ga<C-n> <Plug>AllOccurrences
+xmap ga<C-n> <Plug>AllOccurrences
 
 " Go to Left Window
 nmap <C-h> <C-w>h
