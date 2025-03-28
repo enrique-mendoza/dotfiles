@@ -4,7 +4,7 @@
 ##
 ## Apply wallpaper on i3 startup
 
-WALLPAPER='/home/kike/.config/i3/themes/forest/wallpapers/13.jpg'
+WALLPAPER='/home/kike/.config/i3/themes/forest/wallpapers/12.png'
 
 ## For single monitor
 #hsetroot -root -cover "$WALLPAPER"
