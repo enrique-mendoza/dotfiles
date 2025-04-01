@@ -46,25 +46,50 @@ gui:
   #     - "#db4b4b"
   #   defaultFgColor:
   #     - "#c0caf5"
-  theme: # cyberdream
+  # theme: # cyberdream
+  #   activeBorderColor:
+  #       - "#5ef1ff"
+  #   inactiveBorderColor:
+  #       - "#7b8496"
+  #   searchingActiveBorderColor:
+  #       - "#ff5ef1"
+  #   optionsTextColor:
+  #       - "#3c4048"
+  #   selectedLineBgColor:
+  #       - "#3c4048"
+  #   cherryPickedCommitBgColor:
+  #       - "#3c4048"
+  #   cherryPickedCommitFgColor:
+  #       - "#ff5ea0"
+  #   unstagedChangesColor:
+  #       - "#ffbd5e"
+  #   defaultFgColor:
+  #       - "#ffffff"
+  theme:
     activeBorderColor:
-        - "#5ef1ff"
+        - "#50A4E9"
+        - "bold"
     inactiveBorderColor:
-        - "#7b8496"
+        - "#3A3E47"
     searchingActiveBorderColor:
-        - "#ff5ef1"
+        - "#50A4E9"
+        - "bold"
     optionsTextColor:
-        - "#3c4048"
+        - "#5EB7FF"
     selectedLineBgColor:
-        - "#3c4048"
-    cherryPickedCommitBgColor:
-        - "#3c4048"
+        - "#26343F"
     cherryPickedCommitFgColor:
-        - "#ff5ea0"
+        - "#1A1D23"
+    cherryPickedCommitBgColor:
+        - "#DD97F1"
+    markedBaseCommitFgColor:
+        - "#1A1D23"
+    markedBaseCommitBgColor:
+        - "#DFAB25"
     unstagedChangesColor:
-        - "#ffbd5e"
+        - "#FF838B"
     defaultFgColor:
-        - "#ffffff"
+        - "#ADB0BB"
   showFileTree: true # for rendering changes files in a tree format
   showListFooter: false # for seeing the '5 of 20' message in list panels
   showRandomTip: false
