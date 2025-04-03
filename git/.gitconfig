@@ -23,6 +23,8 @@
   pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
   st = status
   type = cat-file -t
+[branch]
+   sort = committerdate
 [color]
   branch = auto
   diff = auto
