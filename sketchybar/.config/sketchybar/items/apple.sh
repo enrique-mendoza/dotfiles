@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #### Apple Logo ####
 sketchybar -m                                                             \
            --add item apple.logo left                                     \

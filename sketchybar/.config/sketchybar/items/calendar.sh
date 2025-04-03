@@ -11,6 +11,9 @@ sketchybar --add   item          calendar.time right                   \
                                  background.color=$ACCENT_COLOR        \
                                  icon.color=$BAR_COLOR                 \
                                  label.color=$BAR_COLOR                \
+                                 label.padding_right=5                 \
+                                 padding_right=5                       \
+                                 padding_left=5                        \
                                  script="$PLUGIN_DIR/date.sh"          \
                                                                        \
            --add   bracket       calendar                              \
