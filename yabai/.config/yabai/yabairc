@@ -100,5 +100,5 @@ yabai -m rule --add app="IntelliJ IDEA" title="JetBrains Toolbox" manage=off mou
 yabai -m rule --add app="IntelliJ IDEA" title="Choose*.|Copy*.|.*Create*.|Delete*.|.*Decompiler*.|.*Evaluate*.|Generate*.|.*Git*.|New*.|Move*.|Preferences*.|Plugin*.|.*Source|.*Structure|.*Sharing|.*Run*.|Rename*.|.*Reload*.|Select*.|Settings*.|.*Templates*.|.*Toolbar*.|.*Update*.|.*Usages*.|.*Welcome*." manage=off
 
 # make yabai window manager aware of sketchybar
-yabai -m config external_bar all:32:0
-# yabai -m config external_bar all:10:5
+# yabai -m config external_bar all:32:0
+yabai -m config external_bar all:10:5
