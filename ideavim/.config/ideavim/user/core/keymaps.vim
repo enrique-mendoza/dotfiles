@@ -14,12 +14,28 @@ vnoremap <s-h> ^
 vnoremap <s-l> g_
 
 " Escape and Clear hlsearch
-nmap <esc> :nohlsearch<CR>
+" nmap <esc> :nohlsearch<CR>
 
 " Add Comment Below
 nmap gco o<c-o>gcc
 " Add Comment Above
 nmap gcO O<c-o>gcc
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap gw<C-n> <Plug>AllWholeOccurrences
+xmap gw<C-n> <Plug>AllWholeOccurrences
+nmap ga<C-n> <Plug>AllOccurrences
+xmap ga<C-n> <Plug>AllOccurrences
 
 " Go to Left Window
 nmap <C-h> <C-w>h
@@ -58,6 +74,7 @@ nmap <A-l> <Action>(NextTab)
 nmap <leader>/ <Action>(CommentByLineComment)
 vmap <leader>/ <Action>(CommentByLineComment)
 nnoremap <leader>e :NERDTree<CR>
+nmap <Leader>c :nohlsearch<CR> 
 nmap <leader>h <Action>(SplitHorizontally)
 nmap <leader>v <Action>(SplitVertically)
 nmap <Leader>r <Action>(IdeaVim.ReloadVimRc.reload)
@@ -93,14 +110,12 @@ nmap <leader>du <Action>(StepOut)
 " Find ---------------------
 nmap <leader>fa <Action>(GotoAction)
 nmap <leader>fc <Action>(GotoClass)
-nmap <leader>fd <Action>(GotoDeclaration)
 nmap <leader>fe <Action>(SearchEverywhere)
-nmap <leader>fF <Action>(Find)
+nmap <leader>fE <Action>(GotoUrlAction)
 nmap <leader>ff <Action>(GotoFile)
-nmap <leader>fi <Action>(GotoImplementation)
-nmap <leader>fk <Action>(GotoUrlAction)
-nmap <leader>fo <Action>(OpenFile)
-nmap <leader>fp <Action>(FindInPath)
+nmap <leader>fk <Action>(flash.search)
+nmap <leader>fo <Action>(FindInPath)
+nmap <leader>fp <Action>(OpenFile)
 nmap <leader>fr <Action>(Switcher)
 nmap <leader>fs <Action>(GotoSymbol)
 nmap <leader>ft <Action>(GotoTest)
@@ -155,10 +170,12 @@ nmap <leader>js <Action>(GenerateSetter)
 " LSP ---------------------
 nmap <leader>la <Action>(ShowIntentionActions)
 nmap <leader>ld <Action>(QuickTypeDefinition)
+nmap <leader>lD <Action>(GotoDeclaration)
 nmap <leader>le <Action>(ShowErrorDescription)
 nmap <leader>lf <Action>(ReformatCode)
 nmap <leader>lh <Action>(HighlightUsagesInFile)
-nmap <leader>li <Action>(ShowHoverInfo)
+nmap <leader>li <Action>(GotoImplementation)
+nmap <leader>lI <Action>(ShowHoverInfo)
 nmap <leader>lo <Action>(OptimizeImports)
 nmap <leader>lp <Action>(QuickPreview)
 nmap <leader>lr <Action>(RenameElement)
@@ -166,9 +183,9 @@ nmap <leader>lt <Action>(QuickImplementations)
 nmap <leader>lu <Action>(ShowUsages)
 
 " Bookmarks ---------------------
+nmap <leader>ml <Action>(ShowBookmarks)
 nmap <leader>mn <Action>(GotoNextBookmark)
 nmap <leader>mp <Action>(GotoPreviousBookmark)
-nmap <leader>ms <Action>(ShowBookmarks)
 nmap <leader>mt <Action>(ToggleBookmark)
 
 " UI ---------------------
