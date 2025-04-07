@@ -1,4 +1,5 @@
 gui:
+  border: rounded
   # theme: # catppuccin
   #   activeBorderColor:
   #     - '#89b4fa'
@@ -94,7 +95,7 @@ gui:
   showListFooter: false # for seeing the '5 of 20' message in list panels
   showRandomTip: false
   showBottomLine: false # for hiding the bottom information line (unless it has important information to tell you)
-  showCommandLog: false
+  showCommandLog: true
   showIcons: false # deprecated: use nerdFontsVersion instead
   nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
 os:
