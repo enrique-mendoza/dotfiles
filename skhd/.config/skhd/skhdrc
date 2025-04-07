@@ -15,7 +15,7 @@ alt - e : yabai -m window --toggle split
 alt - f : yabai -m window --toggle zoom-fullscreen
 alt - d : yabai -m window --toggle zoom-parent
 
-alt - x : yabai -m window --close
+alt - c : yabai -m window --close
 
 # -- Display Management --
 ctrl - h : yabai -m display --focus prev
@@ -27,7 +27,7 @@ alt - 2 : yabai -m window --display 2 && yabai -m display --focus 2
 
 # -- Space Management --
 alt - o : yabai -m space --create && yabai -m space --focus last
-alt - y : yabai -m space --destroy
+alt - x : yabai -m space --destroy
 
 # move window to space #
 alt + shift - 1 : yabai -m window --space 1;
