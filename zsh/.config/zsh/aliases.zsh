@@ -33,3 +33,6 @@ alias icat="kitty +kitten icat"
 
 # Lazygit
 alias lg="lazygit"
+
+# Lazydocker
+alias lzd="sudo lazydocker"
