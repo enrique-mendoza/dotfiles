@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 
 export PATH="$HOME/.local/bin":$PATH
 
