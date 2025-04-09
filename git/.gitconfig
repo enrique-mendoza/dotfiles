@@ -56,7 +56,8 @@
   default = simple
 [status]
   submoduleSummary = true
-[includeIf "gitdir:~/code/personal/"]
-  path = ~/.gitconfig-personal
+[user]
+  email = luis.e.1998@hotmail.com
+  name = Enrique Mendoza
 [includeIf "gitdir:~/code/work/"]
   path = ~/.gitconfig-work
