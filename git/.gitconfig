@@ -51,5 +51,7 @@
 [push]
   default = simple
 [user]
-  email = luis.mendoza@infotec.mx
+  email = luis.e.1998@hotmail.com
   name = Enrique Mendoza
+[includeIf "gitdir:~/code/work/"]
+  path = ~/.gitconfig-work
