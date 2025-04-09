@@ -56,6 +56,7 @@
   default = simple
 [status]
   submoduleSummary = true
-[user]
-  email = luis.mendoza@infotec.mx
-  name = Enrique Mendoza
+[includeIf "gitdir:~/code/personal/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/code/work/"]
+  path = ~/.gitconfig-work
