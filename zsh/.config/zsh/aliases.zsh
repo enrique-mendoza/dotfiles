@@ -56,10 +56,11 @@ alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
 
 # maven
-alias mvn8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn"
-alias mvn11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn"
+alias mvn-8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn"
+alias mvn-11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn"
 alias mvnds="mvn dependency:sources dependency:resolve -Dclassifier=javadoc"
 
 # spring projects
-alias spring8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
-alias spring11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
+alias spring-8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
+alias spring-11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
+alias spring-17="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
