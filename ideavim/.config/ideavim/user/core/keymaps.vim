@@ -189,7 +189,7 @@ nmap <leader>lt <Action>(QuickImplementations)
 nmap <leader>lu <Action>(ShowUsages)
 
 " Bookmarks ---------------------
-nmap <leader>ml <Action>(ShowBookmarks)
+nmap <leader>ml <Action>(Bookmarks)
 nmap <leader>mn <Action>(GotoNextBookmark)
 nmap <leader>mp <Action>(GotoPreviousBookmark)
 nmap <leader>mt <Action>(ToggleBookmark)
