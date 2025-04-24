@@ -73,6 +73,7 @@ source "$HOME/.config/zsh/exports.zsh"
 source "$HOME/.config/zsh/completion.zsh"
 source "$HOME/.config/zsh/scripts/pomodoro.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
+source "$HOME/.config/zsh/themes/astrodark.sh"
 
 # eval `ttysvr logo -i 300`
 neofetch
