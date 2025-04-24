@@ -1,96 +1,30 @@
 gui:
   border: rounded
-  # theme: # catppuccin
-  #   activeBorderColor:
-  #     - '#89b4fa'
-  #     - bold
-  #   inactiveBorderColor:
-  #     - '#a6adc8'
-  #   optionsTextColor:
-  #     - '#89b4fa'
-  #   selectedLineBgColor:
-  #     - '#313244'
-  #   cherryPickedCommitBgColor:
-  #     - '#45475a'
-  #   cherryPickedCommitFgColor:
-  #     - '#89b4fa'
-  #   unstagedChangesColor:
-  #     - '#f38ba8'
-  #   defaultFgColor:
-  #     - '#cdd6f4'
-  #   searchingActiveBorderColor:
-  #     - '#f9e2af'
-  # authorColors:
-  #   '*': '#b4befe'
-  # theme: # tokyonight storm
-  #   activeBorderColor:
-  #     - "#ff9e64"
-  #     - "bold"
-  #   inactiveBorderColor:
-  #     - "#29a4bd"
-  #   searchingActiveBorderColor:
-  #     - "#ff9e64"
-  #     - "bold"
-  #   optionsTextColor:
-  #     - "#7aa2f7"
-  #   selectedLineBgColor:
-  #     - "#2e3c64"
-  #   cherryPickedCommitFgColor:
-  #     - "#7aa2f7"
-  #   cherryPickedCommitBgColor:
-  #     - "#bb9af7"
-  #   markedBaseCommitFgColor:
-  #     - "#7aa2f7"
-  #   markedBaseCommitBgColor:
-  #     - "#e0af68"
-  #   unstagedChangesColor:
-  #     - "#db4b4b"
-  #   defaultFgColor:
-  #     - "#c0caf5"
-  # theme: # cyberdream
-  #   activeBorderColor:
-  #       - "#5ef1ff"
-  #   inactiveBorderColor:
-  #       - "#7b8496"
-  #   searchingActiveBorderColor:
-  #       - "#ff5ef1"
-  #   optionsTextColor:
-  #       - "#3c4048"
-  #   selectedLineBgColor:
-  #       - "#3c4048"
-  #   cherryPickedCommitBgColor:
-  #       - "#3c4048"
-  #   cherryPickedCommitFgColor:
-  #       - "#ff5ea0"
-  #   unstagedChangesColor:
-  #       - "#ffbd5e"
-  #   defaultFgColor:
-  #       - "#ffffff"
   theme:
     activeBorderColor:
-        - "#50A4E9"
-        - "bold"
+      - "#50A4E9"
+      - "bold"
     inactiveBorderColor:
-        - "#3A3E47"
+      - "#3A3E47"
     searchingActiveBorderColor:
-        - "#50A4E9"
-        - "bold"
+      - "#50A4E9"
+      - "bold"
     optionsTextColor:
-        - "#5EB7FF"
+      - "#5EB7FF"
     selectedLineBgColor:
-        - "#26343F"
+      - "#26343F"
     cherryPickedCommitFgColor:
-        - "#1A1D23"
+      - "#1A1D23"
     cherryPickedCommitBgColor:
-        - "#DD97F1"
+      - "#DD97F1"
     markedBaseCommitFgColor:
-        - "#1A1D23"
+      - "#1A1D23"
     markedBaseCommitBgColor:
-        - "#DFAB25"
+      - "#DFAB25"
     unstagedChangesColor:
-        - "#FF838B"
+      - "#FF838B"
     defaultFgColor:
-        - "#ADB0BB"
+      - "#ADB0BB"  
   showFileTree: true # for rendering changes files in a tree format
   showListFooter: false # for seeing the '5 of 20' message in list panels
   showRandomTip: false
