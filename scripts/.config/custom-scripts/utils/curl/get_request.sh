@@ -4,13 +4,18 @@
 
 URL=$1
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-LOG_DIR="$HOME/code/collections/logs"
-LOG_FILE="$LOG_DIR/get_request_log_$(date +"%Y%m%d").json"
 
 if [ -z "$URL" ]; then
   echo "Usage: $0 <URL_WITH_PARAMS>"
   exit 1
 fi
+
+# Extract domain from URL
+DOMAIN=$(echo "$URL" | awk -F[/:] '{print $4}')
+
+# Set log directory and file
+LOG_DIR="$HOME/code/collections/logs/$DOMAIN"
+LOG_FILE="$LOG_DIR/get_request_log_$(date +"%Y%m%d").json"
 
 # Ensure log directory exists
 mkdir -p "$LOG_DIR"

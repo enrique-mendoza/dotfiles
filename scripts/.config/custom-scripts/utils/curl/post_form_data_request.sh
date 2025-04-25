@@ -9,8 +9,6 @@ TEXT_FIELD=$4
 JSON_FILE=$5
 BEARER_TOKEN=$6
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-LOG_DIR="$HOME/code/collections/logs"
-LOG_FILE="$LOG_DIR/post_request_log_$(date +"%Y%m%d").json"
 
 if [[ -z "$URL" || -z "$FILE_FIELD" || -z "$FILE_PATH" || -z "$JSON_FILE" ]]; then
   echo "Usage: $0 <URL> <FILE_FIELD> <FILE_PATH> <TEXT_FIELD> <JSON_FILE> [BEARER_TOKEN]"
@@ -26,6 +24,13 @@ if [[ ! -f "$JSON_FILE" ]]; then
   echo "Error: JSON file '$JSON_FILE' does not exist."
   exit 1
 fi
+
+# Extract domain from URL
+DOMAIN=$(echo "$URL" | awk -F[/:] '{print $4}')
+
+# Set log directory and file
+LOG_DIR="$HOME/code/collections/logs/$DOMAIN"
+LOG_FILE="$LOG_DIR/post_request_log_$(date +"%Y%m%d").json"
 
 # Ensure log directory exists
 mkdir -p "$LOG_DIR"
