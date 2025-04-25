@@ -36,3 +36,9 @@ alias lg="lazygit"
 
 # Lazydocker
 alias lzd="sudo lazydocker"
+
+# curl
+alias getr="~/.config/custom-scripts/utils/curl/get_request.sh"
+alias postr="~/.config/custom-scripts/utils/curl/post_request.sh"
+alias postfr="~/.config/custom-scripts/utils/curl/post_form_data_request.sh"
+alias putr="~/.config/custom-scripts/utils/curl/put_request.sh"
