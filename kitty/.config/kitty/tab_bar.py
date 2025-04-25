@@ -24,7 +24,7 @@ RIGHT_MARGIN = 1
 REFRESH_TIME = 15
 
 icon_fg = as_rgb(color_as_int(Color(239,159,118))) # 120, 247, 111
-icon_bg = as_rgb(color_as_int(Color(41,44,60)))
+icon_bg = as_rgb(color_as_int(Color(48,52,70)))
 clock_color = as_rgb(0x7FBBB3)
 utc_color = as_rgb(color_as_int(Color(113, 115, 116)))
 
