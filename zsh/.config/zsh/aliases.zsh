@@ -66,10 +66,10 @@ alias spring-11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn clean ins
 alias spring-17="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
 
 # curl
-alias getr="~/.config/custom-scripts/utils/curl/get_request.sh"
-alias postr="~/.config/custom-scripts/utils/curl/post_request.sh"
-alias postfr="~/.config/custom-scripts/utils/curl/post_form_data_request.sh"
-alias putr="~/.config/custom-scripts/utils/curl/put_request.sh"
+alias cget="~/.config/custom-scripts/utils/curl/get_request.sh"
+alias cpost="~/.config/custom-scripts/utils/curl/post_request.sh"
+alias cpostf="~/.config/custom-scripts/utils/curl/post_form_data_request.sh"
+alias cput="~/.config/custom-scripts/utils/curl/put_request.sh"
 
 # jq
 alias jqfk="~/.config/custom-scripts/utils/jq/filter_by_key.sh"
