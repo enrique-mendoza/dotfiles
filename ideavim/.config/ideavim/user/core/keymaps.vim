@@ -13,6 +13,12 @@ nnoremap <s-l> g_
 vnoremap <s-h> ^
 vnoremap <s-l> g_
 
+" Duplicate line and comment the first line
+nmap ycc yygccp 
+
+" Search within visual selection - this is magic
+vmap / <esc>/\\%V
+
 " Escape and Clear hlsearch
 " nmap <esc> :nohlsearch<CR>
 
