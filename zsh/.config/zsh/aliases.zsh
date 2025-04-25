@@ -64,3 +64,9 @@ alias mvnds="mvn dependency:sources dependency:resolve -Dclassifier=javadoc"
 alias spring-8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
 alias spring-11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
 alias spring-17="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
+
+# curl
+alias getr="~/.config/custom-scripts/utils/curl/get_request.sh"
+alias postr="~/.config/custom-scripts/utils/curl/post_request.sh"
+alias postfr="~/.config/custom-scripts/utils/curl/post_form_data_request.sh"
+alias putr="~/.config/custom-scripts/utils/curl/put_request.sh"
