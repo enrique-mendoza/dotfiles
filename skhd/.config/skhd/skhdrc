@@ -18,8 +18,8 @@ alt - d : yabai -m window --toggle zoom-parent
 alt - c : yabai -m window --close
 
 # -- Display Management --
-cmd - h : yabai -m display --focus prev
-cmd - l : yabai -m display --focus next
+alt + ctrl - 0x2B : yabai -m display --focus prev 
+alt + ctrl - 0x2F : yabai -m display --focus next 
 
 # send window to monitor and follow focus
 alt - 1 : yabai -m window --display 1 && yabai -m display --focus 1
