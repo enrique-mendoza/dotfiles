@@ -83,3 +83,7 @@ shift + ctrl - r : yabai -m space --balance
 ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 ctrl + alt - q : yabai --stop-service
+
+# -- Apps --
+alt - return : osascript -e 'Open kitty' || open -na kitty
+alt + shift - w : open -n -a "Safari" 
