@@ -13,10 +13,31 @@ alias ll="eza -alF --icons --color=always --group-directories-first"
 alias la="eza -a --icons --color=always --group-directories-first"
 alias l="eza -F --icons --color=always --group-directories-first"
 alias l.="eza -a | grep -E '^\.'"
-alias tree="eza --icons --color=always --tree --level=2 --long"
+alias tree="eza --icons --color=always --tree --level=2 --longs
 
 # git
-alias g='git'
+alias g="git"
+alias ga="git add"
+alias gap="ga --patch"
+alias gb="git branch"
+alias gba="gb --all"
+alias gc="git commit"
+alias gca="gc --amend --no-edit"
+alias gce="gc --amend"
+alias gco="git checkout"
+alias gcl="git clone --recursive"
+alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+alias gds="gd --staged"
+alias gi="git init"
+alias gl="git log --graph --all --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(blue)  %D%n%s%n'"
+alias gm="git merge"
+alias gn="git checkout -b" # new branch
+alias gp="git push"
+alias gr="git reset"
+alias gs="git status --short"
+alias gu="git pull"
+
+gcm() { git commit --message "$*" }
 
 # colorize grep output (good for log files)
 alias egrep="egrep --color=auto"
@@ -31,10 +52,10 @@ alias free="free -m" # show sizes in MB
 alias mcu="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -10"
 
 # lazygit
-alias lg='lazygit'
+alias lg="lazygit"
 
 # lazydocker
-alias lzd='sudo lazydocker'
+alias lzd="sudo lazydocker"
 
 # list packages
 alias pacpack="pacman -Qet | awk '{print $1}'"
