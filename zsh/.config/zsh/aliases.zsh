@@ -37,7 +37,7 @@ alias gr="git reset"
 alias gs="git status --short"
 alias gu="git pull"
 
-gcm() { git commit --message "$*" }
+# gcm() { git commit --message "$*" }
 
 # colorize grep output (good for log files)
 alias egrep="egrep --color=auto"
