@@ -13,7 +13,7 @@ alias ll="eza -alF --icons --color=always --group-directories-first"
 alias la="eza -a --icons --color=always --group-directories-first"
 alias l="eza -F --icons --color=always --group-directories-first"
 alias l.="eza -a | grep -E '^\.'"
-alias tree="eza --icons --color=always --tree --level=2 --longs"
+alias tree="eza --icons --color=always --tree --level=2 --long"
 
 # git
 alias g="git"
