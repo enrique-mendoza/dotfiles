@@ -17,11 +17,6 @@ alias tree="eza --icons --color=always --tree --level=2 --long"
 
 # git
 alias g='git'
-alias gcl='git clone --depth 1'
-alias gi='git init'
-alias ga='git add'
-alias gc='git commit -m'
-alias gp='git push origin master'
 
 # colorize grep output (good for log files)
 alias egrep="egrep --color=auto"

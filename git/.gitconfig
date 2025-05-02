@@ -9,6 +9,8 @@
   bn = branch --no-merged
   ca = commit -a
   ci = commit
+  cl = clone --depth 1
+  cm = commit -m
   co = checkout
   d = diff
   df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
@@ -17,6 +19,7 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+  i = init
   llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
   open = "!hub browse"
   ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
