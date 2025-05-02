@@ -24,7 +24,7 @@
   st = status
   type = cat-file -t
 [branch]
-   sort = committerdate
+  sort = committerdate
 [color]
   branch = auto
   diff = auto
@@ -35,6 +35,8 @@
 [core]
   editor = nvim
   ignorecase = false
+[diff]
+  submodule = log
 [filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
@@ -50,6 +52,10 @@
   ff = true
 [push]
   default = simple
+[status]
+  submoduleSummary = true
+[url "git@github.com:"]
+    insteadOf = "gh:"
 [user]
   email = luis.e.1998@hotmail.com
   name = Enrique Mendoza
