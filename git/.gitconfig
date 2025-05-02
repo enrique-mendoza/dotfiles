@@ -56,6 +56,8 @@
   default = simple
 [status]
   submoduleSummary = true
+[url "git@github.com:"]
+    insteadOf = "gh:"
 [user]
   email = luis.e.1998@hotmail.com
   name = Enrique Mendoza
