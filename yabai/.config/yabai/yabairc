@@ -77,10 +77,6 @@ yabai -m rule --add app="Mattermost" space=^5
 yabai -m rule --add app="Telegram" space=^5
 yabai -m rule --add app="WhatsApp*." space=^5
 
-# space 6: extras
-yabai -m space 6 --layout stack
-yabai -m rule --add app="Discord" space=^6
-
 # things which create floating children
 yabai -m rule --add app="AlDente" manage=off
 yabai -m rule --add app="App Store" manage=off
