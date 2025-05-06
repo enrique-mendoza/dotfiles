@@ -6,7 +6,7 @@
 " ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   
 
 source ~/.config/ideavim/user/plugins/quickscope.vim
-source ~/.config/ideavim/user/plugins.vim
+source ~/.config/ideavim/user/launch.vim
 source ~/.config/ideavim/user/plugins/highlightedyank.vim
 source ~/.config/ideavim/user/plugins/sneak.vim
 source ~/.config/ideavim/user/plugins/whichkey.vim
