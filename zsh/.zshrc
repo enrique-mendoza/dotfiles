@@ -5,6 +5,7 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "zap-zsh/vim"
 
 # Sourcing of local files
 plug "$HOME/.config/zsh/aliases.zsh"
