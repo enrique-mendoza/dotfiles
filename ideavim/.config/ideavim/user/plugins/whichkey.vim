@@ -12,7 +12,7 @@ let g:WhichKey_KeyStyle = "none"
 let g:WhichKey_ShowTypedSequence = "false"
 let g:WhichKey_ShowVimActions = "true"
 let g:WhichKey_PrefixStyle = "none"
-let g:WhichKey_Divider = " "
+let g:WhichKey_Divider = " + " " 
 let g:WhichKey_DefaultDelay = 0
 
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
