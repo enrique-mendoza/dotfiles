@@ -86,6 +86,7 @@ yabai -m rule --add app="Tips" manage=off
 yabai -m rule --add app="Docker" manage=off
 yabai -m rule --add app="DBeaver" manage=off
 yabai -m rule --add app="Homerow" manage=off
+yabai -m rule --add app="Raycast" manage=off
 
 # dbeaver
 yabai -m rule --add app="DBeaver" title="Connect*.|Version*.|.*settings" manage=off
