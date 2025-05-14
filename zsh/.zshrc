@@ -76,4 +76,4 @@ source "$HOME/.config/zsh/aliases.zsh"
 source "$HOME/.config/zsh/themes/astrodark.sh"
 
 # eval `ttysvr logo -i 300`
-neofetch
+# neofetch
