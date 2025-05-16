@@ -151,10 +151,10 @@ let g:WhichKeyDesc_show_usages = "<leader>lu  Usage"
 " Bookmarks ---------------------
 let g:WhichKeyDesc_mark = "<leader>m  Bookmarks"
 
-let g:WhichKeyDesc_show_bookmark = "<leader>ml  Show Bookmarks"
 let g:WhichKeyDesc_goto_next_bookmark = "<leader>mn  Next Bookmark"
-let g:WhichKeyDesc_toggle_bookmark = "<leader>mt  Toggle Bookmark"
 let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mp  Previous Bookmark"
+let g:WhichKeyDesc_show_bookmark = "<leader>ms  Show Bookmarks"
+let g:WhichKeyDesc_toggle_bookmark = "<leader>mt  Toggle Bookmark"
 
 " UI ---------------------
 let g:WhichKeyDesc_ui_toggles = "<leader>u  UI"
