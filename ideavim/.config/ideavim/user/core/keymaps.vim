@@ -69,6 +69,9 @@ imap <A-k> <Esc><Action>(MoveLineUp)i
 nmap <A-h> <Action>(PreviousTab)
 nmap <A-l> <Action>(NextTab)
 
+nmap <C-/> <Action>(ActivateDebugToolWindow)
+" nmap <C-=> <Action>(ActivateRunToolWindow)
+
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
 "   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
@@ -86,9 +89,8 @@ nmap <leader>v <Action>(SplitVertically)
 nmap <Leader>r <Action>(IdeaVim.ReloadVimRc.reload)
 
 " Buffers ---------------------
-nmap <leader>bA <Action>(CloseAllEditors)
-nmap <leader>ba <Action>(CloseAllEditorsButActive)
-nmap <leader>bc <Action>(CloseEditor)
+nmap <leader>bD <Action>(CloseAllEditors)
+nmap <leader>bd <Action>(CloseEditor)
 nmap <leader>bh <Action>(MoveTabLeft)
 nmap <leader>bj <Action>(MoveTabDown)
 nmap <leader>bk <Action>(MoveTabUp)
@@ -101,6 +103,7 @@ nmap <leader>bu <action>(Unsplit)
 nmap <leader>by <Action>(ChangeSplitOrientation)
 
 " Debug ---------------------
+nmap <leader>dd <Action>(Stop)
 nmap <leader>dR <Action>(Debugger.RemoveAllBreakpoints)
 nmap <leader>de <Action>(EvaluateExpression)
 vmap <leader>de <Action>(EvaluateExpression)
@@ -120,7 +123,7 @@ nmap <leader>fe <Action>(SearchEverywhere)
 nmap <leader>fE <Action>(GotoUrlAction)
 nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fk <Action>(flash.search)
-nmap <leader>fo <Action>(FindInPath)
+nmap <leader>fP <Action>(FindInPath)
 nmap <leader>fp <Action>(OpenFile)
 nmap <leader>fr <Action>(Switcher)
 nmap <leader>fs <Action>(GotoSymbol)
@@ -150,28 +153,23 @@ nmap <leader>gy <Action>(VcsShowCurrentChangeMarker)
 nmap <leader>gz <Action>(Git.Reset)
 
 " IntelliJ IDEA ---------------------
-nmap <leader>iA <Action>(Maven.DownloadAllSources)
-nmap <leader>iR <Action>(Maven.SyncIncrementally)
-nmap <leader>ib <Action>(ActivateDatabaseToolWindow)
 nmap <Leader>ic <Action>(ChooseRunConfiguration)
-nmap <leader>id <Action>(ActivateDebugToolWindow)
 nmap <leader>ip <Action>(ShowProjectStructureSettings)
-nmap <leader>ir <Action>(Run)
 nmap <leader>is <Action>(ShowSettings)
-nmap <Leader>iu <Action>(ActivateUnitTestsToolWindow)
-nmap <leader>ix <Action>(Stop)
-nmap <Leader>iw <Action>(NavBarToolBar)
-nmap <leader>iz <Action>(ActivateRunToolWindow)
 
 " Java ---------------------
-nmap <leader>ja <Action>(Generate)
+nmap <leader>ja <Action>(GenerateGetterAndSetter)
 nmap <leader>jc <Action>(GenerateConstructor)
 nmap <leader>jd <Action>(QuickJavaDoc)
+nmap <leader>jG <Action>(Generate)
 nmap <leader>jg <Action>(GenerateGetter)
 nmap <leader>ji <Action>(ImplementMethods)
-nmap <leader>jm <Action>(GenerateGetterAndSetter)
 nmap <leader>jo <Action>(OverrideMethods)
 nmap <leader>js <Action>(GenerateSetter)
+
+" Maven ---------------------
+nmap <leader>jmd <Action>(Maven.DownloadAllSources)
+nmap <leader>jms <Action>(Maven.SyncIncrementally)
 
 " LSP ---------------------
 nmap <leader>la <Action>(ShowIntentionActions)

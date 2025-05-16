@@ -29,16 +29,15 @@ let mapleader=" "
 let g:WhichKeyDesc_comment_by_line_comment = "<leader>/  Comment Toggle"
 let g:WhichKeyDesc_no_hl_search = "<leader>c  Clear search" 
 let g:WhichKeyDesc_explorer = "<leader>e  Explorer"
-let g:WhichKeyDesc_split_horizontally = "<leader>h  Split Horizontally"
-let g:WhichKeyDesc_split_vertically = "<leader>v  Split Vertically"
+let g:WhichKeyDesc_split_horizontally = "<leader>h  Split Horizontally"
+let g:WhichKeyDesc_split_vertically = "<leader>v  Split Vertically"
 let g:WhichKeyDesc_reload_idea_vim = "<leader>r  Reload IdeaVim"
 
 " Buffers ---------------------
 let g:WhichKeyDesc_buffers_editors = "<leader>b  Buffers/Tabs"
 
-let g:WhichKeyDesc_close_all_editors = "<leader>bA  Close All Editors"
-let g:WhichKeyDesc_close_all_editors_but_active = "<leader>ba  Close Others Editors"
-let g:WhichKeyDesc_close_editor = "<leader>bc  Close Editor"
+let g:WhichKeyDesc_close_all_editors_but_active = "<leader>bD  Close Other Editors"
+let g:WhichKeyDesc_close_editor = "<leader>bd  Close Editor"
 let g:WhichKeyDesc_move_tab_left = "<leader>bh  Move Tab Into Left Group"
 let g:WhichKeyDesc_move_tab_down = "<leader>bj  Move Tab Into Below Group"
 let g:WhichKeyDesc_move_tab_up = "<leader>bk  Move Tab Into Above Group"
@@ -53,6 +52,7 @@ let g:WhichKeyDesc_unsplit = "<leader>bu  Unsplit"
 " Debug ---------------------
 let g:WhichKeyDesc_debug = "<leader>d  Debug"
 
+let g:WhichKeyDesc_stop = "<leader>dd   Disconnect"
 let g:WhichKeyDesc_remove_all_breakpoints = "<leader>dR  Remove All Breakpoints"
 let g:WhichKeyDesc_step_into = "<leader>di  Step Into"
 let g:WhichKeyDesc_evaluate_expression = "<leader>de  Evaluate Expression"
@@ -72,10 +72,10 @@ let g:WhichKeyDesc_goto_class = "<leader>fc  Class"
 let g:WhichKeyDesc_search_everywhere = "<leader>fe  Everywhere"
 let g:WhichKeyDesc_goto_endpoints = "<leader>fE  Endpoint"
 let g:WhichKeyDesc_goto_file = "<leader>ff  File"
-let g:WhichKeyDesc_flash = "<leader>fk  Flash" 
-let g:WhichKeyDesc_find_in_path = "<leader>fo  In Path"
+let g:WhichKeyDesc_flash = "<leader>fk  Flash" 
+let g:WhichKeyDesc_find_in_path = "<leader>fP  In Path"
 let g:WhichKeyDesc_open_file = "<leader>fp  Project"
-let g:WhichKeyDesc_switcher = "<leader>fr  Recent File"
+let g:WhichKeyDesc_switcher = "<leader>fr  Recent"
 let g:WhichKeyDesc_goto_symbol = "<leader>fs  Symbol"
 let g:WhichKeyDesc_goto_test = "<leader>ft  Test"
 let g:WhichKeyDesc_find_usages = "<leader>fu  Usages"
@@ -107,30 +107,27 @@ let g:WhichKeyDesc_git_reset = "<leader>gz  Reset Changes"
 " IntelliJ IDEA ---------------------
 let g:WhichKeyDesc_run_options = "<leader>i  Intellij IDEA"
 
-let g:WhichKeyDesc_maven_download_all_sources = "<leader>iA  Maven Download All Sources"
-let g:WhichKeyDesc_maven_sync_incrementally = "<leader>iR  Maven Sync Incrementally"
-let g:WhichKeyDesc_activate_database_tool_window = "<leader>ib  Database Tool"
 let g:WhichKeyDesc_choose_run_configuration = "<leader>ic  Run Configuration"
-let g:WhichKeyDesc_activate_debug_tool_window = "<leader>id  Debug Tool"
-let g:WhichKeyDesc_run = "<leader>ir  Run"
 let g:WhichKeyDesc_show_project_structure_settings = "<leader>ip  Project Structure Settings"
 let g:WhichKeyDesc_show_settings = "<leader>is  Settings"
-let g:WhichKeyDesc_activate_unit_tests_tool_window = "<leader>iu  Unit Tests Tool"
-let g:WhichKeyDesc_navbar_tool_bar = "<leader>iw  Run Widget"
-let g:WhichKeyDesc_stop = "<leader>ix  Stop"
-let g:WhichKeyDesc_activate_run_tool_window = "<leader>iz  Run Tool"
 
 " Java ---------------------
 let g:WhichKeyDesc_java = "<leader>j  Java"
 
-let g:WhichKeyDesc_generate = "<leader>ja  Generate"
+let g:WhichKeyDesc_generate_getter_and_setter = "<leader>ja  Generate Getters And Setters"
 let g:WhichKeyDesc_generate_constructor = "<leader>jc  Generate Constructor"
 let g:WhichKeyDesc_quick_javadoc = "<leader>jd  Quick Javadoc"
+let g:WhichKeyDesc_generate = "<leader>jG  Generate"
 let g:WhichKeyDesc_generate_getter = "<leader>jg  Generate Getters"
 let g:WhichKeyDesc_implement_methods = "<leader>ji  Implement Methods"
-let g:WhichKeyDesc_generate_getter_and_setter = "<leader>jm  Generate Getters And Setters"
 let g:WhichKeyDesc_override_methods = "<leader>jo  Override Methods"
 let g:WhichKeyDesc_generate_setter = "<leader>js  Generate Setters"
+
+" Maven ---------------------
+let g:WhichKeyDesc_maven = "<leader>jm  Maven"
+
+let g:WhichKeyDesc_maven_download_all_sources = "<leader>jmd  Maven Download All Sources"
+let g:WhichKeyDesc_maven_sync_incrementally = "<leader>jms  Maven Sync Incrementally"
 
 " LSP ---------------------
 let g:WhichKeyDesc_lsp = "<leader>l  LSP"
@@ -147,7 +144,7 @@ let g:WhichKeyDesc_optimize_imports = "<leader>lo  Optimize Imports"
 let g:WhichKeyDesc_quick_preview = "<leader>lp  Preview"
 let g:WhichKeyDesc_rename_element = "<leader>lr  Rename"
 let g:WhichKeyDesc_quick_type_definition = "<leader>lt  Type Definition"
-let g:WhichKeyDesc_show_usages = "<leader>lu  Usage"
+let g:WhichKeyDesc_show_usages = "<leader>lu  References"
 
 " Bookmarks ---------------------
 let g:WhichKeyDesc_mark = "<leader>m  Bookmarks"
@@ -161,10 +158,10 @@ let g:WhichKeyDesc_toggle_bookmark = "<leader>mt  Toggle Bookmark"
 let g:WhichKeyDesc_ui_toggles = "<leader>u  UI"
 
 let g:WhichKeyDesc_change_color_schema = "<leader>uc  Colorscheme"
-let g:WhichKeyDesc_distraction_free_mode = "<leader>uf  Distraction Free Mode"
-let g:WhichKeyDesc_zen_mode = "<leader>uz  Zen Mode"
-let g:WhichKeyDesc_view_status_bar = "<leader>us  Toggle Status Bar"
-let g:WhichKeyDesc_view_tool_buttons = "<leader>ut  Toggle Tool Buttons"
+let g:WhichKeyDesc_distraction_free_mode = "<leader>uf   Toggle Distraction Free Mode"
+let g:WhichKeyDesc_zen_mode = "<leader>uz   Toggle Zen Mode"
+let g:WhichKeyDesc_view_status_bar = "<leader>us   Toggle Status Bar"
+let g:WhichKeyDesc_view_tool_buttons = "<leader>ut   Toggle Tool Buttons"
 
 " Extract & Introduce: descriptions and maps ---------------------
 
