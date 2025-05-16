@@ -89,7 +89,7 @@ nmap <leader>v <Action>(SplitVertically)
 nmap <Leader>r <Action>(IdeaVim.ReloadVimRc.reload)
 
 " Buffers ---------------------
-nmap <leader>bD <Action>(CloseAllEditorsButActive)
+nmap <leader>bD <Action>(CloseAllEditors)
 nmap <leader>bd <Action>(CloseEditor)
 nmap <leader>bh <Action>(MoveTabLeft)
 nmap <leader>bj <Action>(MoveTabDown)
