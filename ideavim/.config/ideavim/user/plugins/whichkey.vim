@@ -71,7 +71,6 @@ let g:WhichKeyDesc_goto_class = "<leader>fc  Class"
 let g:WhichKeyDesc_search_everywhere = "<leader>fe  Everywhere"
 let g:WhichKeyDesc_goto_endpoints = "<leader>fE  Endpoint"
 let g:WhichKeyDesc_goto_file = "<leader>ff  File"
-let g:WhichKeyDesc_flash = "<leader>fk  Flash" 
 let g:WhichKeyDesc_find_in_path = "<leader>fP  In Path"
 let g:WhichKeyDesc_open_file = "<leader>fp  Project"
 let g:WhichKeyDesc_switcher = "<leader>fr  Recent"
@@ -152,6 +151,11 @@ let g:WhichKeyDesc_goto_next_bookmark = "<leader>mn  Next Bookmark"
 let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mp  Previous Bookmark"
 let g:WhichKeyDesc_show_bookmark = "<leader>ms  Show Bookmarks"
 let g:WhichKeyDesc_toggle_bookmark = "<leader>mt  Toggle Bookmark"
+
+" QOF ---------------------
+let g:WhichKeyDesc_search = "<leader>q  QOF"
+
+let g:WhichKeyDesc_flash = "<leader>qf  Flash" 
 
 " UI ---------------------
 let g:WhichKeyDesc_ui_toggles = "<leader>u  UI"

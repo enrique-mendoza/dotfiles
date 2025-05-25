@@ -122,7 +122,6 @@ nmap <leader>fc <Action>(GotoClass)
 nmap <leader>fe <Action>(SearchEverywhere)
 nmap <leader>fE <Action>(GotoUrlAction)
 nmap <leader>ff <Action>(GotoFile)
-nmap <leader>fk <Action>(flash.search)
 nmap <leader>fP <Action>(FindInPath)
 nmap <leader>fp <Action>(OpenFile)
 nmap <leader>fr <Action>(Switcher)
@@ -191,6 +190,9 @@ nmap <leader>mn <Action>(GotoNextBookmark)
 nmap <leader>mp <Action>(GotoPreviousBookmark)
 nmap <leader>ms <Action>(ShowBookmarks)
 nmap <leader>mt <Action>(ToggleBookmark)
+
+" QOF ---------------------
+nmap <leader>qf <Action>(flash.search)
 
 " UI ---------------------
 nmap <leader>uc <Action>(QuickChangeScheme)
