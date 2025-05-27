@@ -37,7 +37,11 @@ alias gr="git reset"
 alias gs="git status --short"
 alias gu="git pull"
 
-# gcm() { git commit --message "$*" }
+# gcm() { git commit --message "$*"; }
+
+# safety cmds
+alias cp='cp --interactive'
+alias mv='mv --interactive'
 
 # colorize grep output (good for log files)
 alias egrep="egrep --color=auto"
@@ -50,6 +54,11 @@ alias free="free -m" # show sizes in MB
 
 # most commands used
 alias mcu="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -10"
+
+# docker
+alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias dl='docker logs --tail=100'
+alias dc='docker compose'
 
 # lazygit
 alias lg="lazygit"
@@ -70,13 +79,3 @@ alias pms="pass show"
 # pomodoro
 alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
-
-# maven
-alias mvn-8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn"
-alias mvn-11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn"
-alias mvnds="mvn dependency:sources dependency:resolve -Dclassifier=javadoc"
-
-# spring projects
-alias spring-8="JAVA_HOME=/usr/lib/jvm/java-8-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
-alias spring-11="JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
-alias spring-17="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto && mvn clean install -DskipTests spring-boot:run"
