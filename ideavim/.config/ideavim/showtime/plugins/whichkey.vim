@@ -64,13 +64,13 @@ let g:WhichKeyDesc_toggle_line_breakpoint = "<leader>dt   Toggle Breakpoint"
 let g:WhichKeyDesc_step_out = "<leader>du  Step Out"
 
 " Find ---------------------
-let g:WhichKeyDesc_search = "<leader>f  Find"
+let g:WhichKeyDesc_find = "<leader>f  Find"
 
 let g:WhichKeyDesc_goto_action = "<leader>fa  Action"
 let g:WhichKeyDesc_goto_class = "<leader>fc  Class"
 let g:WhichKeyDesc_search_everywhere = "<leader>fe  Everywhere"
-let g:WhichKeyDesc_goto_endpoints = "<leader>fE  Endpoint"
 let g:WhichKeyDesc_goto_file = "<leader>ff  File"
+let g:WhichKeyDesc_goto_endpoints = "<leader>fh  Endpoint"
 let g:WhichKeyDesc_find_in_path = "<leader>fP  In Path"
 let g:WhichKeyDesc_open_file = "<leader>fp  Project"
 let g:WhichKeyDesc_switcher = "<leader>fr  Recent"
