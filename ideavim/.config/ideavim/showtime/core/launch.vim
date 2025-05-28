@@ -17,4 +17,4 @@ set surround " s action, such as cs"' (replace " with '), ds" (unquote)
 set which-key
 
 " similar to flash.nvim
-Plug 'justinmk/vim-sneak'
+" Plug 'justinmk/vim-sneak'
