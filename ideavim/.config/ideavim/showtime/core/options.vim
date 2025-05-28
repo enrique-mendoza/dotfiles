@@ -15,6 +15,8 @@ set ignorecase
 set incsearch
 set listchars=tab:>\ ,trail:-,nbsp:+
 set noerrorbells
+set nocursorline
+set nocursorcolumn
 set notimeout
 set nowrap
 set number
