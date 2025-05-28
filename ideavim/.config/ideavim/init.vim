@@ -5,11 +5,11 @@
 " ██║██║ ╚████║██║   ██║   
 " ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   
 
-source ~/.config/ideavim/user/plugins/quickscope.vim
-source ~/.config/ideavim/user/launch.vim
-source ~/.config/ideavim/user/plugins/highlightedyank.vim
-source ~/.config/ideavim/user/plugins/sneak.vim
-source ~/.config/ideavim/user/plugins/whichkey.vim
-source ~/.config/ideavim/user/core/options.vim
-source ~/.config/ideavim/user/core/keymaps.vim
-source ~/.config/ideavim/user/core/autocmds.vim
+source ~/.config/ideavim/showtime/plugins/quickscope.vim
+source ~/.config/ideavim/showtime/launch.vim
+source ~/.config/ideavim/showtime/plugins/highlightedyank.vim
+source ~/.config/ideavim/showtime/plugins/sneak.vim
+source ~/.config/ideavim/showtime/plugins/whichkey.vim
+source ~/.config/ideavim/showtime/core/options.vim
+source ~/.config/ideavim/showtime/core/keymaps.vim
+source ~/.config/ideavim/showtime/core/autocmds.vim
