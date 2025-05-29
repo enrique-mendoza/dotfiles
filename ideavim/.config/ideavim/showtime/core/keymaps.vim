@@ -13,6 +13,23 @@ nnoremap <s-l> g_
 vnoremap <s-h> ^
 vnoremap <s-l> g_
 
+" Make U opposite to u
+nnoremap U <C-r>
+
+" Keeping the cursor centered.
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv 
+nnoremap * *zzzv
+nnoremap # #zzzv
+nnoremap g* g*zzzv
+nnoremap g# g#zzzv
+
+" Move a chunk of text and it will automatically indent.
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " Duplicate line and comment the first line
 nmap ycc yygccp 
 
