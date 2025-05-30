@@ -153,10 +153,10 @@ let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mp  Previous Bookmark"
 let g:WhichKeyDesc_show_bookmark = "<leader>ms  Show Bookmarks"
 let g:WhichKeyDesc_toggle_bookmark = "<leader>mt  Toggle Bookmark"
 
-" QOF ---------------------
-let g:WhichKeyDesc_search = "<leader>q  QOF"
+" Search ---------------------
+let g:WhichKeyDesc_search = "<leader>s  Search"
 
-let g:WhichKeyDesc_flash = "<leader>qf  Flash" 
+let g:WhichKeyDesc_flash = "<leader>sf  Flash" 
 
 " UI ---------------------
 let g:WhichKeyDesc_ui_toggles = "<leader>u  UI"
