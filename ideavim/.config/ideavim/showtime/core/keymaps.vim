@@ -19,12 +19,13 @@ nnoremap U <C-r>
 " Keeping the cursor centered.
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
-nnoremap n nzzz
-nnoremap N Nzzz 
-nnoremap * *zzz
-nnoremap # #zzz
-nnoremap g* g*zzz
-nnoremap g# g#zzz
+" This works weird
+" nnoremap n nzzz
+" nnoremap N Nzzz 
+" nnoremap * *zzz
+" nnoremap # #zzz
+" nnoremap g* g*zzz
+" nnoremap g# g#zzz
 
 " Move a chunk of text and it will automatically indent.
 vnoremap J :m '>+1<CR>gv=gv
