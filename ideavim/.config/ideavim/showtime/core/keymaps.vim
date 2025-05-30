@@ -208,8 +208,8 @@ nmap <leader>mp <Action>(GotoPreviousBookmark)
 nmap <leader>ms <Action>(ShowBookmarks)
 nmap <leader>mt <Action>(ToggleBookmark)
 
-" QOF ---------------------
-nmap <leader>qf <Action>(flash.search)
+" Search ---------------------
+nmap <leader>sf <Action>(flash.search)
 
 " UI ---------------------
 nmap <leader>uc <Action>(QuickChangeScheme)
