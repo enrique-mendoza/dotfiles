@@ -17,5 +17,5 @@ elif [ "$1" == "-F" ]; then
 		  --override 'font_size=14' \
 		  --override 'background_opacity=0.95'
 else
-	kitty --config "$CONFIG" ${@}
+	kitty --config "$CONFIG" ${@} -e tmux
 fi

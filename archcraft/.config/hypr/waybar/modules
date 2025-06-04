@@ -240,11 +240,11 @@
 		"interval": 5,
         //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
         "format-wifi": "{essid}",
-        "format-ethernet": " {bandwidthUpBits} |  {bandwidthDownBits}",
+        "format-ethernet": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected",
         "format-disabled": "Disabled",
-        "format-alt": "{ipaddr}/{cidr}",
+        "format-alt": " {bandwidthUpBits} |  {bandwidthDownBits}",
         "tooltip-format": " {ifname} via {gwaddr}",
     },
 
@@ -299,35 +299,29 @@
 	// waybar-wlr-workspaces
     "hyprland/workspaces": {
          "format": "{icon}",
-         //"sort-by-number": true,
+         "sort-by-number": true,
          "active-only": false,
-         //"format-icons": {
-         //    "1": "",
-         //    "2": "",
-         //    "3": "",
-         //    "4": "",
-         //    "5": "",
-         //    "6": "漣",
-         //    "7": "",
-         //    "8": "",
-         //    "9": "",
-         //    "10": "ﳴ",
-         //    "urgent": "",
-         //    "focused": "",
-         //    "default": ""
-         //},
+         // "format-icons": {
+         //     "1": "",
+         //     "2": "",
+         //     "3": "",
+         //     "4": "",
+         //     "5": "",
+         //     "6": "漣",
+         //     "7": "",
+         //     "8": "",
+         //     "9": "",
+         //     "10": "ﳴ",
+         //     "urgent": "",
+         //     "focused": "",
+         //     "default": ""
+         // },
          "format-icons": {
           "urgent": "",
             "active": "",
             "default": ""
           },
          "on-click": "activate",
-    },
-
-	// waybar-tray
-    "tray": {
-        "icon-size": 16,
-        "spacing": 10
     },
 
   // language
@@ -338,39 +332,11 @@
         "format": "{}",
         "format-en": "us",
         "format-es": "latam"
-    },           	
+    },      
 
-  // keyboard state
-    "keyboard-state": {
-        "capslock": true,
-        "format": { 
-            "capslock": "{icon}"                                                                                                                                                       
-        },
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-
-  // pacman updates
-    "custom/pacman-updates": {
-      "format": "",
-    },
-    "custom/pacman-updates#2": {
-      "format": "{}",
-      "interval": 3600, // every hour
-      "exec": "checkupdates | wc -l", // # of updates
-      "exec-if": "exit 0", // always run; consider advanced run conditions
-      "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
-      "signal": 8
-    },
-
-  // pomodoro: https://github.com/Andeskjerf/waybar-module-pomodoro 
-    "custom/pomodoro": {
-      "format": "{} {icon}", // 
-      "return-type": "json",
-      "exec": "waybar-module-pomodoro -w 50 -s 10 -l 20 --no-icons",
-      "on-click": "waybar-module-pomodoro toggle",
-      "on-click-right": "waybar-module-pomodoro reset"
+	// waybar-tray
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
     }
 }

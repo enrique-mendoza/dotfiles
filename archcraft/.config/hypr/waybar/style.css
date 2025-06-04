@@ -28,7 +28,7 @@ window#waybar.hidden {
 
 #custom-menu {
 	background-color: @background-alt1;
-	color: @blue;
+	color: @magenta;
 	font-size: 18px;
 	border-radius: 0px 14px 0px 0px;
 	margin: 0px 0px 0px 0px;
@@ -51,10 +51,6 @@ window#waybar.hidden {
 	padding: 2px 8px 2px 8px;
 }
 
-#custom-pacman-updates {
-	color: @blue;
-}
-
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
 	background-color: @green;
@@ -68,10 +64,10 @@ window#waybar.hidden {
 }
 
 /** ********** Tray ********** **/
-#tray, #keyboard-state {
+#tray {
 	background-color: @background-alt1;
 	border-radius: 10px;
-	margin: 6px 0px 6px 6px ;
+	margin: 6px 6px 6px 6px ;
 	padding: 4px 6px;
 }
 #tray > .passive {
@@ -267,20 +263,6 @@ window#waybar.hidden {
   color: @magenta;
 }
 
-/** ********** Keyboard State ********** **/
-#keyboard-state {
-	margin: 6px 6px 6px 0px ;
-	padding: 6px 7px;
-}
-
-#keyboard-state label {
-	color: @green;
-}
-
-#keyboard-state label.locked {
-	color: @red;
-}
-
 /** ********** WLR Desktop ********** **/
 #workspaces {
 	background-color: @background;
@@ -312,8 +294,7 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #bluetooth,
-#language,
-#custom-pacman-updates {
+#language {
 	background-color: @background-alt2;
 	border-radius: 10px 0px 0px 10px;
 	margin: 6px 0px 6px 0px ;
@@ -329,8 +310,7 @@ window#waybar.hidden {
 #pulseaudio.2,
 #network.2,
 #bluetooth.2,
-#language.2,
-#custom-pacman-updates.2 {
+#language.2 {
 	background-color: @background-alt1;
 	color: @foreground;
 	font-size: 12px;

@@ -5,13 +5,13 @@
 
 ## GENERAL --------------------------------------------------------
 
+[general]
 ## Import additional configuration files.
-import = ["~/.config/i3/alacritty/colors.toml", "~/.config/i3/alacritty/fonts.toml"]
+import = ["~/.config/hypr/alacritty/colors.toml", "~/.config/hypr/alacritty/fonts.toml"]
 
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.
 #shell = { program = "/bin/zsh", args = ["--login"] }
-shell = { program = "tmux" }
 
 ## Directory the shell is started in. When this is unset, or "None",
 ## the working directory of the parent process will be used.
@@ -28,7 +28,7 @@ ipc_socket = true
 ## All key-value pairs in the [env] section will be added as environment variables for any process spawned
 ## by Alacritty, including its shell. Some entries may override variables set by alacritty itself.
 [env]
-TERM = "xterm-256color"
+TERM = "alacritty"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 ## WINDOW ---------------------------------------------------------
@@ -45,7 +45,7 @@ decorations_theme_variant = "None"
 
 ## Number of lines/columns (not pixels) in the terminal.
 [window.dimensions]
-columns = 82
+columns = 95
 lines = 24
 
 ## Blank space added around the window in pixels.
@@ -78,7 +78,7 @@ thickness = 0.15
 
 [cursor.style]
 shape = "Block"
-blinking = "Off"
+blinking = "On"
 
 ## MOUSE ----------------------------------------------------------
 [mouse]
@@ -103,13 +103,3 @@ renderer = "None"
 print_events = false
 highlight_damage = false
 prefer_egl = false
-
-## KEYBOARD ----------------------------------------------------------
-[keyboard]
-bindings = [
-  { key = "V", mods = "Control|Shift", action = "Paste" },
-  { key = "C", mods = "Control|Shift", action = "Copy" },
-  { key = "Key0", mods = "Control", action = "ResetFontSize" },
-  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
-  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
-]
