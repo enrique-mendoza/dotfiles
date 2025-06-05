@@ -23,6 +23,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/menu", "hyprland/workspaces"],
     //"modules-left": ["custom/menu", "hyprland/workspaces", "idle_inhibitor", "tray", "custom/spotify" ],
-    "modules-center": ["cpu", "cpu#2", "memory", "memory#2", "disk", "disk#2"],
-    "modules-right": ["tray", "hyprland/language", "hyprland/language#2", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "bluetooth", "bluetooth#2", "clock", "clock#2", "custom/power"],
+    // "modules-center": ["cpu", "cpu#2", "memory", "memory#2", "disk", "disk#2"],
+    "modules-center": ["clock", "clock#2"],
+    "modules-right": ["tray", "hyprland/language", "hyprland/language#2", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "bluetooth", "bluetooth#2", "custom/power"],
 }
