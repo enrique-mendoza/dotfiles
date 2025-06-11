@@ -7,6 +7,28 @@ alias ohmyzsh="thunar ~/.oh-my-zsh"
 # battery status
 # alias cbst="upower -i $(upower -e | grep BAT)"
 
+# fzf
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fe() {
+  IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR} "${files[@]}"
+}
+
+# fd - cd to selected directory including hidden directories.
+fd() {
+  local dir
+  dir=$(find ${1:-.} -type d 2> /dev/null | fzf --multi) && cd "$dir"
+}
+
+# using ripgrep combined with preview
+# find-in-file - usage: fif <searchTerm>
+fif() {
+  if [ ! "$#" -gt 0 ]; then echo "Need a string to search for\!"; return 1; fi
+  rg --files-with-matches --no-messages "$1" | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
+}
+
 # l (exa is unmaintained, use eza instead)
 alias ls="eza --icons --color=always --group-directories-first"
 alias ll="eza -alF --icons --color=always --group-directories-first"
