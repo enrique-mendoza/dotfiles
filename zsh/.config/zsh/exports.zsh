@@ -3,6 +3,9 @@
 export EDITOR="nvim"
 export TERMINAL="kitty"
 
+# FZF
+export FZF_CTRL_R_OPTS="--style minimal --color 16 --info inline --no-sort --no-preview" # separate opts for history widget
+
 PATH="/home/kike/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/kike/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/kike/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
