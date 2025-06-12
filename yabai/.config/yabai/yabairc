@@ -65,11 +65,16 @@ yabai -m rule --add app="OneNote" space=^2
 # space 3: development
 yabai -m rule --add app="IntelliJ IDEA" space=^3
 
-# space 4: communication
+# space 4: db and testing
 yabai -m space 4 --layout stack
-yabai -m rule --add app="Mattermost" space=^4
-yabai -m rule --add app="Telegram" space=^4
-yabai -m rule --add app="WhatsApp*." space=^4
+yabai -m rule --add app="DBeaver" space=^4
+yabai -m rule --add app="Bruno" space=^4
+
+# space 5: communication
+yabai -m space 5 --layout stack
+yabai -m rule --add app="Mattermost" space=^5
+yabai -m rule --add app="Telegram" space=^5
+yabai -m rule --add app="WhatsApp*." space=^5
 
 # things which create floating children
 yabai -m rule --add app="AlDente" manage=off
