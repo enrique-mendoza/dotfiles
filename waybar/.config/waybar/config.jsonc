@@ -1,0 +1,30 @@
+[
+  {
+    "include": [
+      "~/.config/waybar/modules/default-modules.json"
+    ],
+    "position": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "output": ["eDP-1"],
+    "modules-left": ["clock", "cpu", "memory", "disk"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["custom/updates", "sway/language", "keyboard-state", "battery", "backlight", "pulseaudio", "tray"]
+  },
+  {
+    "include": [
+      "~/.config/waybar/modules/default-modules.json"
+    ],
+    "position": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "output": ["DP-1"],
+    "modules-left": ["clock", "cpu", "memory", "disk"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["sway/language", "keyboard-state", "battery", "backlight", "pulseaudio"]
+  }
+]

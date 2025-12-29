@@ -4,7 +4,7 @@
 " ██╔═██╗ ██╔══╝    ╚██╔╝  ██║╚██╔╝██║██╔══██║██╔═══╝ ╚════██║
 " ██║  ██╗███████╗   ██║   ██║ ╚═╝ ██║██║  ██║██║     ███████║
 " ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
-                                                            
+
 " Better navigation
 vnoremap < <gv
 vnoremap > >gv
@@ -21,7 +21,7 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 " This works weird
 " nnoremap n nzzz
-" nnoremap N Nzzz 
+" nnoremap N Nzzz
 " nnoremap * *zzz
 " nnoremap # #zzz
 " nnoremap g* g*zzz
@@ -32,7 +32,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Duplicate line and comment the first line
-nmap ycc yygccp 
+nmap ycc yygccp
 
 " Search within visual selection - this is magic
 vmap / <esc>/\\%V
@@ -87,8 +87,43 @@ imap <A-k> <Esc><Action>(MoveLineUp)i
 nmap <A-h> <Action>(PreviousTab)
 nmap <A-l> <Action>(NextTab)
 
+nmap <C-=> <Action>(HideActiveWindow)
 nmap <C-/> <Action>(ActivateDebugToolWindow)
-" nmap <C-=> <Action>(ActivateRunToolWindow)
+
+" Search for string in visible area and jump
+nmap zk <Action>(flash.search)
+xmap zk <Action>(flash.search)
+omap zk <Action>(flash.search)
+" enhance vim f (find for char in characters to the right of the current cursor)
+nmap f <Action>(flash.find)
+xmap f <Action>(flash.find)
+" enhance vim F (find for char in characters to the left of the current cursor)
+nmap F <Action>(flash.find_backward)
+xmap F <Action>(flash.find_backward)
+" enhance vim t (till for char in characters to the right of the current cursor)
+nmap t <Action>(flash.till)
+xmap t <Action>(flash.till)
+" enhance vim T (till for char in characters to the left of the current cursor)
+nmap T <Action>(flash.till_backward)
+xmap T <Action>(flash.till_backward)
+" enhance vim ; (Repeat the last f/F/t/T search)
+nmap ; <Action>(flash.repeat)
+xmap ; <Action>(flash.repeat)
+" enhance vim , (Repeat the last f/F/t/T search backward)
+nmap , <Action>(flash.repeat_backward)
+xmap , <Action>(flash.repeat_backward)
+" syntax node expansion (flash.nvim treesitter equivalent)
+nmap Zk <Action>(flash.treesitter)
+xmap Zk <Action>(flash.treesitter)
+omap Zk <Action>(flash.treesitter)
+" remote operator (after pressing an operator like d, use r to pick target line remotely)
+omap r <Action>(flash.remote)
+
+" map Ctrl+A to increment
+nnoremap <C-a> :DialIncrement<cr>
+
+" map Ctrl+X to decrement
+nnoremap <C-x> :DialDecrement<cr>
 
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
@@ -101,7 +136,7 @@ nmap <C-/> <Action>(ActivateDebugToolWindow)
 nmap <leader>/ <Action>(CommentByLineComment)
 vmap <leader>/ <Action>(CommentByLineComment)
 nnoremap <leader>e :NERDTree<CR>
-nmap <Leader>c :nohlsearch<CR> 
+nmap <Leader>c :nohlsearch<CR>
 nmap <leader>h <Action>(SplitHorizontally)
 nmap <leader>v <Action>(SplitVertically)
 nmap <Leader>r <Action>(IdeaVim.ReloadVimRc.reload)
@@ -121,14 +156,18 @@ nmap <leader>bu <action>(Unsplit)
 nmap <leader>by <Action>(ChangeSplitOrientation)
 
 " Debug ---------------------
-nmap <leader>dd <Action>(Stop)
-nmap <leader>dR <Action>(Debugger.RemoveAllBreakpoints)
+nmap <leader>db <Action>(Debugger.PopFrame)
+nmap <leader>dC <Action>(XDebugger.RunToCursorInlayExtraActions)
+nmap <leader>dc <Action>(Resume)
+nmap <leader>dd <Action>(Debugger.InterruptThread)
 nmap <leader>de <Action>(EvaluateExpression)
 vmap <leader>de <Action>(EvaluateExpression)
 nmap <leader>di <Action>(StepInto)
 nmap <leader>dm <Action>(XDebugger.MuteBreakpoints)
 nmap <leader>do <Action>(StepOver)
 nmap <leader>dp <Action>(Pause)
+nmap <leader>dq <Action>(Stop)
+nmap <leader>dR <Action>(Debugger.RemoveAllBreakpoints)
 nmap <leader>dr <Action>(Debugger.RemoveAllBreakpointsInFile)
 nmap <leader>ds <Action>(Debug)
 nmap <leader>dt <Action>(ToggleLineBreakpoint)
@@ -149,25 +188,19 @@ nmap <leader>fu <Action>(FindUsages)
 
 " Git ---------------------
 nmap <leader>gB <Action>(EditorGutterVcsPopupMenu)
-nmap <leader>gC <Action>(Git.CompareWithBranch)
-nmap <leader>gH <Action>(Vcs.ShowTabbedFileHistory)
-nmap <leader>gP <Action>(Vcs.PushUpToCommit)
-nmap <leader>gR <Action>(Git.ResolveConflicts)
-nmap <leader>gU <Action>(Vcs.RollbackChangedLines)
-nmap <leader>ga <Action>(Git.Add)
 nmap <leader>gb <Action>(Git.Branches)
-nmap <leader>gc <Action>(ActivateCommitToolWindow)
-nmap <leader>gd <Action>(GitDeleteBranchAction)
-nmap <leader>gf <Action>(Git.Fetch)
-nmap <leader>gh <Action>(ActivateVersionControlToolWindow)
-nmap <leader>gi <Action>(Git.Init)
-nmap <leader>gm <Action>(Git.Merge)
-nmap <leader>gn <Action>(Git.CreateNewBranch)
-nmap <leader>gp <Action>(Git.Pull)
+nmap <leader>gD <Action>(Vcs.ShowDiffChangedLines)
+nmap <leader>gd <Action>(Compare.SameVersion)
+nmap <leader>gf <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>gj <Action>(VcsShowNextChangeMarker)
+nmap <leader>gk <Action>(VcsShowPrevChangeMarker)
+nmap <leader>gL <Action>(Vcs.ShowHistoryForBlock)
+vmap <leader>gL <Action>(Vcs.ShowHistoryForBlock)
+nmap <leader>gl <Action>(Vcs.Show.Log)
+nmap <leader>gp <Action>(VcsShowCurrentChangeMarker)
+nmap <leader>gr <Action>(Vcs.RollbackChangedLines)
 nmap <leader>gs <Action>(Git.Stash)
 nmap <leader>gu <Action>(Git.Unstash)
-nmap <leader>gy <Action>(VcsShowCurrentChangeMarker)
-nmap <leader>gz <Action>(Git.Reset)
 
 " IntelliJ IDEA ---------------------
 nmap <Leader>ic <Action>(ChooseRunConfiguration)
@@ -210,7 +243,13 @@ nmap <leader>ms <Action>(ShowBookmarks)
 nmap <leader>mt <Action>(ToggleBookmark)
 
 " Search ---------------------
-nmap <leader>sf <Action>(flash.search)
+" nmap <leader>sF <Action>(flash.treesitter)
+" xmap <leader>sF <Action>(flash.treesitter)
+" omap <leader>sF <Action>(flash.treesitter)
+" nmap <leader>sf <Action>(flash.search)
+" xmap <leader>sf <Action>(flash.search)
+" omap <leader>sf <Action>(flash.search)
+" omap <leader>sr <Action>(flash.remote)
 
 " UI ---------------------
 nmap <leader>uc <Action>(QuickChangeScheme)

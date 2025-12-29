@@ -1,5 +1,4 @@
 #!/bin/sh
-# Source: https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/updates-pacman
 
 if ! updates=$(checkupdates 2> /dev/null | wc -l ); then
     updates=0

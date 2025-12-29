@@ -1,11 +1,9 @@
 {
-  // LEFT MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Clock
-  "clock": {
-    "format": "{: %R   %d/%m}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  "custom/launcher": {
+    "format": "󰈸",
+    "on-click": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi",
+    "on-click-right": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi"
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Custom
   "custom/weather": {
     "tooltip": true,
     "format": "{}",
@@ -13,136 +11,118 @@
     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
     "return-type": "json"
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
-  "wlr/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "all-outputs": false,
-    "on-click": "activate",
-    "format": "{icon}",
+  "clock": {
+    "format": "󰥔 {:%H:%M}",
+    "tooltip": "true",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": " {:%d/%m}"
+  },
+  "cpu": {
+    "format": " {icon0}{icon1}{icon2}{icon3}{icon4} {usage}%",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "format-alt": "󰻠 {avg_frequency} GHz",
+    "interval": 5
+  },
+  "memory": {
+    "format": " {}%",
+    "format-alt": " {used:0.1f}G/{total:0.1f}G",
+    "interval": 5
+  },
+  "disk": {
+    "format": " {used}",
+    "format-alt": " {used}/{total}",
+    "interval": 5,
+    "path": "/home"
+  },
+  "sway/workspaces": {
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "disable-scroll": false,
+    "current-only": false,
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
       "urgent": "",
-      "active": "",
-      "default": ""
+      "focused": "",
+      "default": "",
+      "sort-by-number": true
     }
   },
-  // CENTER MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
-  "hyprland/window": {
-    "format": "{}"
+  "custom/updates": {
+    "format": "󰮯 {}",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
+    "signal": 8
   },
-  // RIGHT MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Tray
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  Muted",
+    "format-icons": {
+      "default": ["", "", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+  "sway/language": {
+    "format": "󰌌 {}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+  },
+  "keyboard-state": {
+    "numlock": false,
+    "capslock": true,
+    "format": {
+	"numlock": "{icon}",
+	"capslock": "{icon}"                                                                                                                                                       
+    },
+    "format-icons": {
+	"locked": "",
+	"unlocked": ""
+    }
+  },
+  "battery": {
+    "design-capacity": false,
+    "states": {
+      "good": 80,
+      "warning": 20,
+      "critical": 10
+    },
+    "full-at": 80,
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {time}",
+    "format-plugged": "",
+    "format-alt": "{icon} {power}W",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "tooltip-format": "{health}% of health with {cycles} cycles" 
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"]
+  },
+  "network": {
+    "format-wifi": "󰤨 ",
+    "format-ethernet": "󰈀 {essid}: Aesthetic",
+    "format-linked": "  {ifname} (No IP)",
+    "format-disconnected": "󰤭",
+    "format-alt": "󰛳  {ifname}: {ipaddr}/{cidr}",
+    "tooltip-format": "{essid}"
+  },
   "tray": {
     "icon-size": 13,
     "tooltip": false,
     "spacing": 10
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Custom#pacman
-  "custom/updates": {
-    "format": " {}",
-    "interval": 3600, // every hour
-    "exec": "checkupdates | wc -l", // # of updates
-    "exec-if": "exit 0", // always run; consider advanced run conditions
-    "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
-    "signal": 8
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
-  "hyprland/language": {
-    "format": " {}",
-    "format-en": "US",
-    "format-es": "LATAM"
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-CPU
-  "cpu": {
-    "interval": 10,
-    "format": " {}%",
-    "max-length": 10,
-    "on-click": ""
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Disk
-  "disk": {
-    "interval": 30,
-    "format": " {free}",
-    "path": "/home"
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Memory
-  "memory": {
-    "interval": 30,
-    "format": " {}%",
-    "format-alt": " {used:0.1f}G",
-    "max-length": 10
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Network
-  "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "直 {signalStrength}%",
-    "format-ethernet": "",
-    "format-disconnected": "睊",
-    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    "format-alt": "直 {essid}"
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Battery
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    // "format": "{icon} {capacity}%",
-    // "format-charging": " {capacity}%",
-    // "format-plugged": " {capacity}%",
-    "format": "{icon} {capacity}%",
-    "format-charging": "",
-    "format-plugged": "",
-    "format-alt": "{icon} {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    // "format-icons": ["", "", "", "", ""]
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
+  "custom/power": {
     "tooltip": false,
-    "format-muted": " Muted",
-    "on-click": "pamixer -t",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
-    "scroll-step": 5,
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
-  },
-  "pulseaudio#microphone": {
-    "format": "{format_source}",
-    "tooltip": false,
-    "format-source": " {volume}%",
-    "format-source-muted": " Muted",
-    "on-click": "pamixer --default-source -t",
-    "on-scroll-up": "pamixer --default-source -i 5",
-    "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 5
+    "on-click": "wlogout &",
+    "format": "⏻"
   }
 }
