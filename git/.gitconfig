@@ -1,0 +1,70 @@
+[alias]
+  # note: you'll need hub and peco for some alias
+  a = "!git status --short | peco | awk '{print $2}' | xargs git add"
+  # add conflicted file on merge
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  br = branch
+  ba = branch -a
+  bm = branch --merged
+  bn = branch --no-merged
+  ca = commit -a
+  ci = commit
+  co = checkout
+  d = diff
+  df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
+  dump = cat-file -p
+  # edit conflicted file on merge
+  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+  find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
+  hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+  llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  open = "!hub browse"
+  ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+  pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+  st = status
+  type = cat-file -t
+[branch]
+  sort = committerdate
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
+  ui = auto
+# [commit]
+#   gpgsign = true
+[core]
+  editor = nvim
+  ignorecase = false
+[credential]
+  helper = store
+[diff]
+  submodule = log
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  process = git-lfs filter-process
+  required = true
+  smudge = git-lfs smudge -- %f
+[ghq]
+  root = ~/.ghq
+[gpg]
+  format = ssh
+[github]
+  user = enrique-mendoza
+[merge]
+  ff = false
+[pull]
+  ff = true
+[push]
+  default = simple
+[status]
+  submoduleSummary = true
+[url "git@github.com:"]
+    insteadOf = "gh:"
+[user]
+  email = luis.e.1998@hotmail.com
+  name = Enrique Mendoza
+  signingkey = /home/kike/.ssh/id_ed25519.pub
+[includeIf "gitdir:~/code/work/"]
+  path = ~/.gitconfig-work

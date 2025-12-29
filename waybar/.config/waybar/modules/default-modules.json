@@ -1,0 +1,148 @@
+{
+  // LEFT MODULES
+  // https://github.com/Alexays/Waybar/wiki/Module:-Clock
+  "clock": {
+    "format": "{: %R   %d/%m}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Custom
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "restart-interval": 300,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
+  "wlr/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": false,
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+  // CENTER MODULES
+  // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
+  "hyprland/window": {
+    "format": "{}"
+  },
+  // RIGHT MODULES
+  // https://github.com/Alexays/Waybar/wiki/Module:-Tray
+  "tray": {
+    "icon-size": 13,
+    "tooltip": false,
+    "spacing": 10
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Custom#pacman
+  "custom/updates": {
+    "format": " {}",
+    "interval": 3600, // every hour
+    "exec": "checkupdates | wc -l", // # of updates
+    "exec-if": "exit 0", // always run; consider advanced run conditions
+    "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+    "signal": 8
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "US",
+    "format-es": "LATAM"
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-CPU
+  "cpu": {
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10,
+    "on-click": ""
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Disk
+  "disk": {
+    "interval": 30,
+    "format": " {free}",
+    "path": "/home"
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Memory
+  "memory": {
+    "interval": 30,
+    "format": " {}%",
+    "format-alt": " {used:0.1f}G",
+    "max-length": 10
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Network
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "直 {signalStrength}%",
+    "format-ethernet": "",
+    "format-disconnected": "睊",
+    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "直 {essid}"
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-Battery
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    // "format": "{icon} {capacity}%",
+    // "format-charging": " {capacity}%",
+    // "format-plugged": " {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-alt": "{icon} {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    // "format-icons": ["", "", "", "", ""]
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+  },
+  // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "tooltip": false,
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  }
+}

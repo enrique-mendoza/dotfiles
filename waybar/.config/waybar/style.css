@@ -1,0 +1,155 @@
+/* General */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "JetBrainsMono NF", "FontAwesome";
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 0;
+}
+
+/* Waybar Window */
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: #cdd6f4;
+}
+
+/* Tooltip */
+tooltip {
+  background: #1e1e2e;
+  border-color: #11111b;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* Modules: General */
+#battery,
+#clock,
+#custom-updates,
+#custom-weather,
+#language,
+#network,
+#pulseaudio,
+#tray,
+#window,
+#workspaces {
+  background: #1e1e2e;
+  border: 1px solid #181825;
+  margin: 3px 0px;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+/* If Clock is the leftmost module, add left margin */
+.modules-left > widget:first-child > #clock {
+  margin-left: 20px; /* Alt: 5px */
+}
+
+/* If Microphone is the rightmost module, add right margin */
+.modules-right > widget:last-child > #pulseaudio.microphone {
+  margin-right: 20px; /* Alt: 5px */
+}
+
+/* Module: Clock */
+#clock {
+  border-radius: 10px 0px 0px 10px;
+  border-right: 0px;
+  color: #fab387;
+}
+
+/* Module: Custom Weather */
+#custom-weather {
+  border-radius: 0px 10px 10px 0px;
+  border-right: 0px;
+  margin-left: 0px;
+}
+
+/* Module: Workspaces */
+#workspaces {
+    background: #1e1e2e;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#workspaces button {
+  color: #313244;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+#workspaces button.active {
+  color: #a6adc8;
+}
+
+#workspaces button.focused {
+  background: #eba0ac;
+  border-radius: 10px;
+  color: #a6adc8;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  border-radius: 10px;
+  color: #cdd6f4;
+}
+
+#workspaces button.urgent {
+  background: #a6e3a1;
+  border-radius: 10px;
+  color: #11111b;
+}
+
+/* Module: Window */
+#window {
+  border-radius: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/* Modules: Custom Updates & Tray */
+#custom-updates, #tray {
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+/* Module: Custom Updates */
+#custom-updates {
+  color: #f5c2e7;
+}
+
+/* Module: Language */
+#language {
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 10px 0px 0px 10px;
+  color: #f38ba8;
+}
+
+/* Module: Battery */
+#battery {
+  border-left: 0px;
+  border-right: 0px;
+  color: #a6e3a1;
+}
+
+/* Module: Network */
+#network {
+  border-left: 0px;
+  border-right: 0px;
+  color: #f9e2af;
+}
+
+/* Module: Pulseaudio */
+#pulseaudio {
+  border-left: 0px;
+  border-right: 0px;
+  color: #89b4fa;
+}
+
+#pulseaudio.microphone {
+  border-radius: 0 10px 10px 0;
+  color: #cba6f7;
+}

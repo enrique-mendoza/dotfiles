@@ -1,0 +1,10 @@
+{
+  "bar": "decorated",
+  "colorscheme": "catppuccin",
+  "browser": "brave",
+  "terminal": {
+    "main": "kitty",
+    "floating": "kitty"
+  },
+  "wallpaper": "~/Pictures/wallpapers/23.png"
+}
