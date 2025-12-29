@@ -1,6 +1,6 @@
-<h1 id="top" align="center">Dotfiles 🚀</h1>
+<h1 id="top" align="center"> MacOS Dotfiles </h1>
 
-![preview](./.screenshots/arch.png)
+![preview](./.screenshots/macos.png)
 
 ## Installation
 
@@ -9,7 +9,7 @@
 2. Clone into your `$HOME` directory or `~`.
 
    ```bash
-   git clone git@github.com:enrique-mendoza/dotfiles.git ~/dotfiles
+   git clone -b macos git@github.com:enrique-mendoza/dotfiles.git ~/dotfiles
    ```
 
 3. Run `stow` to symlink everything or just select what you want:

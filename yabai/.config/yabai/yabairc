@@ -1,0 +1,104 @@
+#!/usr/bin/env sh
+
+#   ██╗   ██╗ █████╗ ██████╗  █████╗ ██╗
+#   ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██║
+#    ╚████╔╝ ███████║██████╔╝███████║██║
+#     ╚██╔╝  ██╔══██║██╔══██╗██╔══██║██║
+#      ██║   ██║  ██║██████╔╝██║  ██║██║
+#      ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝
+#
+
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# debugger
+# run to solve "a password is required" problem:
+# echo "$(whoami) ALL=(ALL) NOPASSWD: $(which yabai)" | sudo tee /etc/sudoers.d/yabai
+yabai -m config debug_output on
+
+# global settings
+yabai -m config active_window_opacity 1.0
+
+yabai -m config auto_balance on
+
+yabai -m config normal_window_opacity 0.94
+
+yabai -m config menubar_opacity 1.0
+
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config mouse_follows_focus on
+
+yabai -m config split_ratio 0.50
+
+yabai -m config window_animation_duration 0.0
+yabai -m config window_opacity on
+yabai -m config window_placement second_child
+yabai -m config window_shadow on
+
+# general space settings
+yabai -m config layout bsp
+
+# can use Übersicht to create custom status bars
+# yabai -m config external_bar main:0:0
+yabai -m config external_bar all:10:5
+
+yabai -m config top_padding 0
+yabai -m config right_padding 8
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+
+yabai -m config window_gap 8
+
+# space 1: browser & communications
+yabai -m space 1 --layout stack
+yabai -m rule --add app="Safari" space=^1
+yabai -m rule --add app="Google Chrome" space=^1
+yabai -m rule --add app="Mattermost" space=^1
+
+# space 2: terminals
+yabai -m rule --add app="iTerm2" space=^2
+yabai -m rule --add app="kitty" space=^2
+
+# space 3: development
+yabai -m rule --add app="IntelliJ IDEA" space=^3
+
+# space 4: db and testing
+yabai -m space 4 --layout stack
+yabai -m rule --add app="DBeaver" space=^4
+yabai -m rule --add app="Bruno" space=^4
+yabai -m rule --add app="Docker Desktop" space=^4
+yabai -m rule --add app="Postgres" space=^4
+
+# space 5: others
+yabai -m space 5 --layout stack
+yabai -m rule --add app="Telegram" space=^5
+yabai -m rule --add app="WhatsApp*." space=^5
+
+# things which create floating children
+yabai -m rule --add app="AlDente" manage=off
+yabai -m rule --add app="App Store" manage=off
+yabai -m rule --add app="Cursor Pro" manage=off
+yabai -m rule --add app="Discord" manage=off
+yabai -m rule --add app="Finder" manage=off
+yabai -m rule --add app="iStat Menus" manage=off mouse_follows_focus=off
+yabai -m rule --add app="JetBrains Toolbox" manage=off mouse_follows_focus=off
+yabai -m rule --add app="Logi Options" manage=off mouse_follows_focus=off
+yabai -m rule --add app="Notes" manage=off
+yabai -m rule --add app="System Settings" manage=off
+yabai -m rule --add app="Tips" manage=off
+yabai -m rule --add app="Docker" manage=off
+yabai -m rule --add app="DBeaver" manage=off
+yabai -m rule --add app="Homerow" manage=off
+yabai -m rule --add app="Raycast" manage=off
+
+# dbeaver
+yabai -m rule --add app="DBeaver" title="Connect*.|Version*.|.*settings" manage=off
+
+# make JetBrains products popup windows float
+yabai -m rule --add app="IntelliJ IDEA" title="JetBrains Toolbox" manage=off mouse_follows_focus=off
+yabai -m rule --add app="IntelliJ IDEA" title="Choose*.|Copy*.|.*Create*.|Delete*.|.*Decompiler*.|.*Evaluate*.|Generate*.|.*Git*.|New*.|Move*.|Preferences*.|Plugin*.|.*Source|.*Structure|.*Sharing|.*Run*.|Rename*.|.*Reload*.|Select*.|Settings*.|.*Templates*.|.*Toolbar*.|.*Update*.|.*Usages*.|.*Welcome*." manage=off

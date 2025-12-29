@@ -47,3 +47,4 @@ btop.log
 java-debug/
 vscode-java-test/
 lazygit/.config/lazygit/state.yml
+tmux/.config/tmux/plugins/

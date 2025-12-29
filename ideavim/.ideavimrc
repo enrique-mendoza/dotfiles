@@ -1,4 +1,3 @@
 " Examples: https://jb.gg/share-ideavimrc
 " NOTE. ASCII Banner Font: ANSI Shadow
-
 source ~/.config/ideavim/init.vim
