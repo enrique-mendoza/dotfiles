@@ -61,9 +61,10 @@ window {
   margin: 0px;
   padding: 10px;
   border: 0.16em solid @lavender;
-  border-radius: 0.1em;
+  /* border-radius: 0.1em; */
+  border-radius: 0.625em;
   background-color: @base;
-  animation: slideIn 0.5s ease-in-out both;
+  animation: slideIn 0.2s ease-in-out both;
 }
 
 /* Slide In */
@@ -118,7 +119,8 @@ window {
   margin: 5px 20px;
   padding: 10px;
   border: none;
-  border-radius: 0.1em;
+  /* border-radius: 0.1em; */
+  border-radius: 0.625em;
   color: @text;
   background-color: @base;
   animation: fadeIn 0.5s ease-in-out both;
@@ -153,6 +155,7 @@ window {
 /* Selected Entry */
 #entry:selected {
   border: 0.11em solid @lavender;
+  border-radius: 0.625em;
 }
 
 #entry:selected #text {
