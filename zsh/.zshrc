@@ -326,6 +326,9 @@ alias eatcpu="ps auxf | sort -nr -k 3 | head -5" # Get top process eating cpu
 alias pmc="pass show -c"
 alias pms="pass show"
 
+# Fastfetch
+alias ff="fastfetch"
+
 # Yazi Shell Wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -336,13 +339,19 @@ function y() {
 }
 
 # fnm
-FNM_PATH="/home/kike/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
+# FNM_PATH="/home/kike/.local/share/fnm"
+# if [ -d "$FNM_PATH" ]; then
+#   export PATH="$FNM_PATH:$PATH"
+#   eval "`fnm env`"
+# fi
 
-eval "$(fnm env --use-on-cd --shell zsh)"
+# eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Mise
+eval "$(mise activate zsh --shims)"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
 
 # Autocompletions
 # Load and initialise completion system
@@ -352,10 +361,5 @@ compinit
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
-
-fastfetch
