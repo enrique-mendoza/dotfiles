@@ -18,6 +18,7 @@ button {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
+  font-family: "CaskaydiaMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
 }
 
 button:focus, button:active, button:hover {
