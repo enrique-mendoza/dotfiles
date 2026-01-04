@@ -4,9 +4,9 @@
 /* Note: alt border style: border-radius: 10px */
 * {
   border: none;
-  border-radius: 0px;
+  border-radius: 5px;
   font-family: "JetBrainsMono Nerd Font Propo", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   min-height: 0;
 }
@@ -44,7 +44,7 @@ tooltip {
 #window,
 #workspaces {
   background: @base;
-  border: 1px solid @sky;
+  border: 2px solid @sky;
   margin: 3px 0px;
   margin-top: 10px;
   padding: 0px 10px;
@@ -56,19 +56,23 @@ tooltip {
   border-right: 0px;
 }
 
-#disk,
-#network {
+#disk {
   border-left: 0px;
 }
 
 /* If Clock is the leftmost module, add left margin */
 .modules-left > widget:first-child > #clock {
-  margin-left: 10px; /* Alt: 5px */
+  margin-left: 12px; /* Alt: 5px */
 }
 
 /* If Pulseaudio is the rightmost module, add right margin */
 .modules-right > widget:last-child > #pulseaudio {
-  margin-right: 10px; /* Alt: 5px */
+  margin-right: 12px; /* Alt: 5px */
+}
+
+/* If Network is the rightmost module, add right margin */
+.modules-right > widget:last-child > #network {
+  margin-right: 12px; /* Alt: 5px */
 }
 
 /* If Tray is the rightmost module, add right margin */
@@ -79,13 +83,17 @@ tooltip {
 
 /* Module: Backlight */
 #backlight {
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
   color: @sapphire;
 }
 
 /* Module: Battery */
 #battery {
-  border-left: 0px;
-  border-right: 0px;
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
   color: @green;
 }
 
@@ -104,9 +112,11 @@ tooltip {
 
 /* Module: Cpu */
 #cpu {
-  border-right: 0px;
-  margin-left: 7px;
   color: @yellow;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right-style: none;
+  margin-left: 7px;
 }
 
 /* Modules: Custom Updates */
@@ -133,41 +143,50 @@ tooltip {
 
 /* Module: Disk */
 #disk {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   color: @teal;
 }
 
 /* Module: Keyboard-state */
 #keyboard-state {
-  border-left: 0px;
-  border-right: 0px;
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
   color: @pink;
 }
 
 /* Module: Language */
 #language {
-  border-right: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right-style: none;
   color: @pink;
 }
 
 /* Module: Memory */
 #memory {
+  border-radius: 0px;
   color: @blue;
 }
 
 /* Module: Network */
 #network {
+  margin-left: 10px;
   color: @flamingo;
 }
 
 /* Module: Pulseaudio */
 #pulseaudio {
-  border-left: 0px;
-  color: #89b4fa;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left-style: none;
+  color: @blue;
 }
 
 #pulseaudio.microphone {
   border-radius: 0 10px 10px 0;
-  color: #cba6f7;
+  color: @pink;
 }
 
 /* Module: Window */

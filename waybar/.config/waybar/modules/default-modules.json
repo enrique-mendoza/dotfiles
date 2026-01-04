@@ -4,13 +4,6 @@
     "on-click": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi",
     "on-click-right": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi"
   },
-  "custom/weather": {
-    "tooltip": true,
-    "format": "{}",
-    "restart-interval": 300,
-    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-    "return-type": "json"
-  },
   "clock": {
     "format": "󰥔 {:%H:%M}",
     "tooltip": "true",
@@ -19,7 +12,16 @@
   },
   "cpu": {
     "format": " {icon0}{icon1}{icon2}{icon3}{icon4} {usage}%",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
     "format-alt": "󰻠 {avg_frequency} GHz",
     "interval": 5
   },
@@ -46,8 +48,20 @@
       "sort-by-number": true
     }
   },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "disable-scroll": false,
+    "current-only": false,
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
+      "sort-by-number": true
+    }
+  },
   "custom/updates": {
-    "format": "󰮯 {}",
+    "format": " {}",
     "interval": 3600,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
@@ -58,7 +72,11 @@
     "format": "{icon} {volume}%",
     "format-muted": "  Muted",
     "format-icons": {
-      "default": ["", "", " "]
+      "default": [
+        "",
+        "",
+        " "
+      ]
     },
     "on-click": "pavucontrol"
   },
@@ -66,54 +84,94 @@
     "format": "󰌌 {}",
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
   },
+  "hyprland/language": {
+    "format": "󰌌 {}",
+    "format-en": "us",
+    "format-es": "latam"
+  },
   "keyboard-state": {
     "numlock": false,
     "capslock": true,
     "format": {
-	"numlock": "{icon}",
-	"capslock": "{icon}"                                                                                                                                                       
+      "numlock": "{icon}",
+      "capslock": "{icon}"
     },
     "format-icons": {
-	"locked": "",
-	"unlocked": ""
+      "locked": "",
+      "unlocked": ""
     }
   },
   "battery": {
-    "design-capacity": false,
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{icon}",
+    "format-charging": "{icon}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format": "{health}% of health with {cycles} cycles",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
     "states": {
-      "good": 80,
       "warning": 20,
       "critical": 10
-    },
-    "full-at": 80,
-    "format": "{icon} {capacity}%",
-    "format-charging": "󰂄 {time}",
-    "format-plugged": "",
-    "format-alt": "{icon} {power}W",
-    "format-icons": [
-      "󰁻",
-      "󰁼",
-      "󰁽",
-      "󰁾",
-      "󰁿",
-      "󰂀",
-      "󰂁",
-      "󰂂",
-      "󰁹"
-    ],
-    "tooltip-format": "{health}% of health with {cycles} cycles" 
+    }
   },
   "backlight": {
     "format": "{icon} {percent}%",
-    "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"]
+    "format-icons": [
+      "󰃚",
+      "󰃛",
+      "󰃜",
+      "󰃝",
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
   },
   "network": {
-    "format-wifi": "󰤨 ",
-    "format-ethernet": "󰈀 {essid}: Aesthetic",
-    "format-linked": "  {ifname} (No IP)",
-    "format-disconnected": "󰤭",
-    "format-alt": "󰛳  {ifname}: {ipaddr}/{cidr}",
-    "tooltip-format": "{essid}"
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "kitty --class nmwui nmtui"
   },
   "tray": {
     "icon-size": 13,
