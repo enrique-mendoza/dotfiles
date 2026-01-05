@@ -264,11 +264,14 @@ nmap <leader>fF <Action>(GotoFile)
 let g:WhichKeyDesc_find_git_files = "<leader>fg Find Files (git-files)"
 nmap <leader>fg <Action>(GotoFile)
 
-let g:WhichKeyDesc_find_endpoints = "<leader>fh  Http Endpoint"
+let g:WhichKeyDesc_find_endpoints = "<leader>fh  Find Endpoints"
 nmap <leader>fh <Action>(GotoUrlAction)
 
 let g:WhichKeyDesc_file_new = "<leader>fn New File"
 nmap <leader>fn <Action>(NewElementSamePlace)
+
+let g:WhichKeyDesc_find_projects = "<leader>fp Projects"
+nmap <leader>fp <Action>(OpenFile)
 
 let g:WhichKeyDesc_find_recent = "<leader>fr Recent"
 nmap <leader>fr <Action>(RecentFiles)
