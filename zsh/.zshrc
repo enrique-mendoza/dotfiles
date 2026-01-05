@@ -290,6 +290,9 @@ alias eatcpu="ps auxf | sort -nr -k 3 | head -5" # Get top process eating cpu
 alias pmc="pass show -c"
 alias pms="pass show"
 
+# Fasfetch
+alias ff="fasfetch"
+
 # Yazi Shell Wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -329,8 +332,6 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-
-fastfetch
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
