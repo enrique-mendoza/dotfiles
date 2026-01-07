@@ -302,14 +302,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# fnm
-FNM_PATH="/home/kike/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
-
-eval "$(fnm env --use-on-cd --shell zsh)"
+# Mise
+eval "$(mise activate zsh --shims)"
 
 # Autocompletions
 # Load and initialise completion system
@@ -328,11 +322,3 @@ eval "$(zoxide init --cmd cd zsh)"
 if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
   tmux attach || exec tmux new-session && exit;
 fi
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
