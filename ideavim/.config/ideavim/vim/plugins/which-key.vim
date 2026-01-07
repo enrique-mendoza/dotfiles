@@ -124,13 +124,13 @@ nmap <leader><bar> <c-w>v
 let g:WhichKeyDesc_find_files = "<leader><space> Find Files (Root Dir)"
 nmap <leader><space> <Action>(GotoFile)
 
-let g:WhichKeyDesc_harpoon_quick_menu = "<leader>H Harpoon Quick Menu"
-nmap <leader>H <Action>(ShowBookmarks)
-" nmap <leader>H <Action>(ShowHarpoon)
-
-let g:WhichKeyDesc_harpoon_file = "<leader>h Harpoon File"
-nmap <leader>h <Action>(ToggleBookmark)
+let g:WhichKeyDesc_harpoon_file = "<leader>H Harpoon File"
+nmap <leader>H <Action>(ToggleBookmark)
 " nmap <leader>h <Action>(AddToHarpoon)
+"
+let g:WhichKeyDesc_harpoon_quick_menu = "<leader>h Harpoon Quick Menu"
+nmap <leader>h <Action>(ShowBookmarks)
+" nmap <leader>H <Action>(ShowHarpoon)
 
 let g:WhichKeyDesc_plugins = "<leader>p Plugins"
 nmap <leader>p <Action>(WelcomeScreen.Plugins)
