@@ -208,3 +208,7 @@ tooltip {
 #workspaces button.urgent {
   color: @red;
 }
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
