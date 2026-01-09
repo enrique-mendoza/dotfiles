@@ -264,7 +264,7 @@ nmap <leader>fF <Action>(GotoFile)
 let g:WhichKeyDesc_find_git_files = "<leader>fg Find Files (git-files)"
 nmap <leader>fg <Action>(GotoFile)
 
-let g:WhichKeyDesc_find_endpoints = "<leader>fh  Find Endpoints"
+let g:WhichKeyDesc_find_endpoints = "<leader>fh Find Endpoints"
 nmap <leader>fh <Action>(GotoUrlAction)
 
 let g:WhichKeyDesc_file_new = "<leader>fn New File"
@@ -294,17 +294,11 @@ nmap <leader>gb <Action>(Annotate)
 let g:WhichKeyDesc_git_browse = "<leader>gB Git Browse (open)"
 nmap <leader>gB <Action>(Vcs.Show.Log)
 
-let g:WhichKeyDesc_git_commits = "<leader>gc Git Log"
-nmap <leader>gc <Action>(Vcs.Show.Log)
-
 let g:WhichKeyDesc_git_show_diff = "<leader>gd Git Diff"
 nmap <leader>gd <Action>(Compare.SameVersion)
 
 let g:WhichKeyDesc_git_show_diff_changed_lines = "<leader>gD Git Diff (Hunks)"
 nmap <leader>gD <Action>(Vcs.ShowDiffChangedLines)
-
-let g:WhichKeyDesc_git_explorer = "<leader>ge Git Explorer"
-nmap <leader>ge <Action>(ActivateVersionControlToolWindow)
 
 let g:WhichKeyDesc_git_file_history = "<leader>gf Git File History"
 nmap <leader>gf <Action>(Vcs.ShowTabbedFileHistory)
@@ -315,30 +309,36 @@ nmap <leader>gg <Action>(ActivateCommitToolWindow)
 let g:WhichKeyDesc_git_ui_cwd = "<leader>gG GitUi (cwd)"
 nmap <leader>gG <Action>(ActivateCommitToolWindow)
 
-let g:WhichKeyDesc_git_next_change = "<leader>gj Next Hunk"
-nmap <leader>gj <Action>(VcsShowNextChangeMarker)
-
-let g:WhichKeyDesc_git_prev_change = "<leader>gk Previous Hunk"
-nmap <leader>gk <Action>(VcsShowPrevChangeMarker)
-
 let g:WhichKeyDesc_git_log = "<leader>gl Git Log"
 nmap <leader>gl <Action>(Vcs.Show.Log)
 
 let g:WhichKeyDesc_git_log_cwd = "<leader>gL Git Log (cwd)"
 nmap <leader>gL <Action>(Vcs.Show.Log)
 
-let g:WhichKeyDesc_git_vcs_show_current_change_marker = "<leader>gp Preview Hunk"
-nmap <leader>gp <Action>(VcsShowCurrentChangeMarker)
-
-let g:WhichKeyDesc_git_vcs_rollback_changed_lines = "<leader>gr Reset Hunk"
-nmap <leader>gr <Action>(Vcs.RollbackChangedLines)
-
 let g:WhichKeyDesc_git_status = "<leader>gs Git Status"
 nmap <leader>gs <Action>(Vcs.Show.Log)
 
+let g:WhichKeyDesc_git_stash = "<leader>gS Git Stash"
+nmap <leader>gs <Action>(Git.Stash)
+
+" Git Hunks ---------------------
+let g:WhichKeyDesc_leader_g_h = "<leader>gh hunks"
+
+let g:WhichKeyDesc_git_hunks_prev_hunk = "<leader>ghj Previous Hunk"
+nmap <leader>ghj <Action>(VcsShowNextChangeMarker)
+
+let g:WhichKeyDesc_git_hunks_next_hunk = "<leader>ghk Next Hunk"
+nmap <leader>ghk <Action>(VcsShowPrevChangeMarker)
+
+let g:WhichKeyDesc_git_hunks_preview_hunk_inline = "<leader>ghp Preview Hunk Inline"
+nmap <leader>ghp <Action>(VcsShowCurrentChangeMarker)
+
+let g:WhichKeyDesc_git_hunks_reset_hunk = "<leader>ghr Reset Hunk"
+nmap <leader>ghr <Action>(Vcs.RollbackChangedLines)
+
 " Java ---------------------
 if is_ide_intellij_idea |
-  let g:WhichKeyDesc_leader_j = "<leader>j Java"
+  let g:WhichKeyDesc_leader_j = "<leader>j java"
 
   let g:WhichKeyDesc_java_generate_getter_and_setter = "<leader>ja Generate Getters And Setters"
   nmap <leader>ja <Action>(GenerateGetterAndSetter)
@@ -365,7 +365,7 @@ if is_ide_intellij_idea |
   nmap <leader>js <Action>(GenerateSetter)
 
   " Maven ---------------------
-  let g:WhichKeyDesc_leader_j_m = "<leader>jm Maven"
+  let g:WhichKeyDesc_leader_j_m = "<leader>jm maven"
 
   let g:WhichKeyDesc_maven_download_all_sources = "<leader>jmd Maven Download All Sources"
   nmap <leader>jmd <Action>(Maven.DownloadAllSources)
