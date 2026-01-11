@@ -1,52 +1,121 @@
+@import url("/home/kike/.config/waybar/themes/mocha.css");
+
 * {
 	background-image: none;
 	box-shadow: none;
 }
 
 window {
-	background-color: rgba(30, 30, 46, 0.90);
+	/* background-color: rgba(30, 30, 46, 0.90); */
+	background-color: transparent;
 }
 
 button {
-	border-radius: 0;
-	border-color: #89dceb;
-	text-decoration-color: #cdd6f4;
-	color: #cdd6f4;
-	background-color: #181825;
-	border-style: solid;
-	border-width: 1px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 25%;
+  background-color: @base;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24%;
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: none;
+  border: 1px solid @sky;
+  color: @text;
   font-family: "GeistMono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
+  outline-style: none;
+  text-shadow: none;
 }
 
-button:focus, button:active, button:hover {
-	/* 20% Overlay 2, 80% mantle */
-	background-color: rgb(48, 50, 66);
-	outline-style: none;
+button:focus {
+  background-color: @mantle;
+  background-size: 34%;
+}
+
+button:hover {
+  animation: gradient_f 20s ease-in infinite;
+  background-color: @crust;
+  background-size: 34%;
+  border-radius: 15px;
+  transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682);
+}
+
+button:hover#lock {
+  border: 1px solid @sky;
+  border-radius: 15px;
+  margin: 270px 0px 270px 300px;
+}
+
+button:hover#hibernate {
+  border: 1px solid @sky;
+  border-radius: 15px;
+  margin: 270px 0px 270px 0px;
+}
+
+button:hover#logout {
+  border: 1px solid @sky;
+  border-radius: 15px;
+  margin: 270px 0px 270px 0px;
+}
+
+button:hover#shutdown {
+  border: 1px solid @sky;
+  border-radius: 15px;
+  margin: 270px 0px 270px 0px;
+}
+
+button:hover#suspend {
+  border: 1px solid @sky;
+  border-radius: 15px;
+  margin: 270px 0px 270px 0px;
+}
+
+button:hover#reboot {
+  border: 1px solid @sky;
+  border-radius: 15px;
+  margin: 270px 300px 270px 0px;
 }
 
 #lock {
-    background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/lock.svg");
-}
-
-#logout {
-    background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/logout.svg");
-}
-
-#suspend {
-    background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/suspend.svg");
+  background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/lock.svg");
+  border-radius: 15px 0 0 15px;
+  border-right: none;
+  margin: 300px 0px 300px 300px;
 }
 
 #hibernate {
-    background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/hibernate.svg");
+  background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/hibernate.svg");
+  border-left: none;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+  margin: 300px 0px 300px 0px;
+}
+
+#logout {
+  background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/logout.svg");
+  border-left: none;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+  margin: 300px 0px 300px 0px;
 }
 
 #shutdown {
-    background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/shutdown.svg");
+  background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/shutdown.svg");
+  border-left: none;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+  margin: 300px 0px 300px 0px;
+}
+
+#suspend {
+  background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/suspend.svg");
+  border-left: none;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+  margin: 300px 0px 300px 0px;
 }
 
 #reboot {
-    background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/reboot.svg");
+  background-image: url("/home/kike/.config/wlogout/icons/catppuccin/mocha/sky/reboot.svg");
+  border-left: none;
+  border-radius: 0px 15px 15px 0px;
+  margin: 300px 300px 300px 0px;
 }

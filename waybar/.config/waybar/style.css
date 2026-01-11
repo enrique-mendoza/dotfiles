@@ -4,8 +4,8 @@
 /* Note: alt border style: border-radius: 10px */
 * {
   border: none;
-  border-radius: 5px;
-  font-family: "GeistMono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
+  border-radius: 13.5px;
+  font-family: "GeistMono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
   font-size: 12px;
   font-weight: bold;
   min-height: 0;
@@ -20,10 +20,8 @@ window#waybar {
 /* Tooltip */
 tooltip {
   background: @base;
-  border-color: @sky;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 2px;
+  border-radius: 13.5px;
+  border: 1px solid @sky;
   color: @text;
 }
 
@@ -53,8 +51,9 @@ tooltip {
 #window,
 #workspaces {
   background: @base;
-  /* border: 2px solid @sky; */
-  margin: 7.5px 0 3px 0;
+  border: 0.1px solid @sky;
+  /* margin: 7.5px 0 3px 0; */
+  margin: 4px 0 4px 0;
   padding: 0px 10px;
 }
 
@@ -106,11 +105,6 @@ tooltip {
   margin-left: 7px;
 }
 
-/* Modules: Custom Updates */
-#custom-updates {
-  margin-right: 10px;
-}
-
 /* Module: Custom Power */
 #custom-power {
   color: @red;
@@ -119,6 +113,7 @@ tooltip {
 /* Module: Custom Updates */
 #custom-updates {
   color: @blue;
+  margin-right: 7px;
 }
 
 /* Module: Custom Weather */
@@ -140,7 +135,7 @@ tooltip {
   border-radius: 0px;
   border-left-style: none;
   border-right-style: none;
-  color: @pink;
+  color: @rosewater;
 }
 
 /* Module: Language */
@@ -148,7 +143,9 @@ tooltip {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-right-style: none;
-  color: @pink;
+  padding-right: 7px;
+  padding-right: 0px;
+  color: @rosewater;
 }
 
 /* Module: Memory */
@@ -159,8 +156,16 @@ tooltip {
 
 /* Module: Network */
 #network {
-  margin-left: 10px;
-  color: @flamingo;
+  margin-left: 7px;
+  color: @green;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.disabled {
+  color: @text;
 }
 
 /* Module: Pulseaudio */
@@ -177,6 +182,11 @@ tooltip {
 }
 
 /* Module: Window */
+#tray {
+  margin-right: 7px;
+}
+
+/* Module: Window */
 #window {
   border-radius: 10px;
   margin-left: 60px;
@@ -185,7 +195,7 @@ tooltip {
 
 /* Module: Workspaces */
 #workspaces {
-  margin-left: 10px;
+  margin-left: 0;
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -211,4 +221,9 @@ tooltip {
 
 #workspaces button.empty {
   opacity: 0.5;
+}
+
+/* If Microphone is the rightmost module, add right margin */
+.modules-right > widget:last-child > #tray {
+  margin-left: 7px;
 }
