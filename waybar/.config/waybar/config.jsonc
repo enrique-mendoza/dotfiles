@@ -18,7 +18,7 @@
       "disk"
     ],
     "modules-center": [
-      "hyprland/workspaces"
+      "hyprland/workspaces#square"
     ],
     "modules-right": [
       "tray",
@@ -51,7 +51,7 @@
       "disk"
     ],
     "modules-center": [
-      "hyprland/workspaces"
+      "hyprland/workspaces#square"
     ],
     "modules-right": [
       "hyprland/language",

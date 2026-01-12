@@ -50,14 +50,63 @@
   },
   "hyprland/workspaces": {
     "all-outputs": true,
-    "format": "{name}: {icon}",
-    "disable-scroll": false,
     "current-only": false,
+    "disable-scroll": true,
+    "format": "{name}: {icon}",
+    "on-click": "activate",
     "format-icons": {
       "urgent": "",
       "active": "",
       "default": "",
       "sort-by-number": true
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "hyprland/workspaces#pacman": {
+    "all-outputs": true,
+    "current-only": false,
+    "disable-scroll": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "<span font='12'>󰮯</span>",
+      "empty": "<span font='8'></span>",
+      "default": "󰊠",
+      "sort-by-number": true
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "hyprland/workspaces#square": {
+    "all-outputs": true,
+    "current-only": false,
+    "disable-scroll": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "active": "󱓻"
     },
     "persistent-workspaces": {
       "1": [],
