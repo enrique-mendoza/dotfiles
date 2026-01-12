@@ -58,58 +58,45 @@
 
 /* Window */
 window {
+  background-color: @base;
+  border: 0.1em solid @sky;
+  border-radius: 0.625em;
   margin: 0px;
   padding: 10px;
-  border: 0.16em solid @sky;
-  /* border-radius: 0.1em; */
-  border-radius: 0.625em;
-  background-color: @base;
-}
-
-/* Slide In */
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 /* Inner Box */
 #inner-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
   background-color: @base;
+  border: none;
+  margin: 5px;
+  padding: 5px;
 }
 
 /* Outer Box */
 #outer-box {
-  margin: 5px;
-  padding: 10px;
   border: none;
   background-color: @base;
+  margin: 5px;
+  padding: 5px;
 }
 
 /* Scroll */
 #scroll {
-  margin: 0px;
-  padding: 10px;
   border: none;
   background-color: @base;
+  margin: 0px;
+  padding: 5px;
 }
 
 /* Input */
 #input {
-  margin: 5px 20px;
-  padding: 10px;
-  border: 0.11em solid @sky;
-  /* border-radius: 0.1em; */
-  border-radius: 0.625em;
-  color: @text;
   background-color: @base;
+  border-color: @base;
+  box-shadow: none;
+  color: @text;
+  margin: 5px;
+  outline: none;
 }
 
 #input image {
@@ -117,19 +104,16 @@ window {
   color: @red;
 }
 
-#input * {
-  outline: 4px solid @red!important;
-}
-
 /* Text */
 #text {
-  margin: 5px;
   border: none;
   color: @text;
+  margin: 5px;
 }
 
 #entry {
   background-color: @base;
+  padding: 10px;
 }
 
 #entry arrow {
@@ -139,12 +123,14 @@ window {
 
 /* Selected Entry */
 #entry:selected {
-  border: 0.11em solid @sky;
-  border-radius: 0.625em;
+  background-color: @mantle;
+  border-bottom: 0.1px solid @sky;
+  border-radius: 5px;
+  outline: none;
 }
 
 #entry:selected #text {
-  color: @mauve;
+  color: @text;
 }
 
 #entry:drop(active) {
