@@ -329,6 +329,9 @@ alias pms="pass show"
 # Fastfetch
 alias ff="fastfetch"
 
+# tty-clock
+alias tclock="tty-clock"
+
 # Yazi Shell Wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
