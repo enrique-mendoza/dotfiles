@@ -51,7 +51,7 @@
   "hyprland/workspaces": {
     "all-outputs": true,
     "current-only": false,
-    "disable-scroll": true,
+    "disable-scroll": false,
     "format": "{name}: {icon}",
     "on-click": "activate",
     "format-icons": {
@@ -71,7 +71,7 @@
   "hyprland/workspaces#pacman": {
     "all-outputs": true,
     "current-only": false,
-    "disable-scroll": true,
+    "disable-scroll": false,
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {
@@ -91,7 +91,7 @@
   "hyprland/workspaces#square": {
     "all-outputs": true,
     "current-only": false,
-    "disable-scroll": true,
+    "disable-scroll": false,
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {
@@ -125,16 +125,20 @@
     "signal": 8
   },
   "pulseaudio": {
-    "format": "{icon}{volume}%",
-    "format-muted": "  Muted",
+    "format": "{icon} {volume}%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
     "format-icons": {
+      "headphone": "",
       "default": [
         "",
         "",
-        " "
+        ""
       ]
-    },
-    "on-click": "pavucontrol"
+    }
   },
   "sway/language": {
     "format": "󰌌 {}",

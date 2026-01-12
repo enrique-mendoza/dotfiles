@@ -6,7 +6,7 @@ outer-margin=20
 padding=10,15
 border-size=2
 max-icon-size=32
-font=GeistMono Nerd Font 14px
+font=GeistMono Nerd Font 12px
 border-radius=5
 
 background-color=#1e1e2e
