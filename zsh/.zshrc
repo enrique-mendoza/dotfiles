@@ -165,6 +165,7 @@ ZSH_HIGHLIGHT_STYLES[cursor]='fg=#cdd6f4'
 plugins=(
   git
   fzf-tab
+  mise
   vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -341,22 +342,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# fnm
-# FNM_PATH="/home/kike/.local/share/fnm"
-# if [ -d "$FNM_PATH" ]; then
-#   export PATH="$FNM_PATH:$PATH"
-#   eval "`fnm env`"
-# fi
-
-# eval "$(fnm env --use-on-cd --shell zsh)"
-
-# Mise
-eval "$(mise activate zsh --shims)"
-
+# Autocompletions
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
-# Autocompletions
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
