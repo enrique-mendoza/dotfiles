@@ -154,6 +154,9 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
     alt-f = 'fullscreen'
 
+    # See: https://nikitabobko.github.io/AeroSpace/commands#macos-native-fullscreen
+    alt-shift-f = 'macos-native-fullscreen'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#reload-config
     alt-shift-r = 'reload-config'
 
