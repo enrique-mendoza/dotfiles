@@ -24,7 +24,6 @@
       "tray",
       "custom/updates",
       "hyprland/language",
-      "keyboard-state",
       "battery",
       "backlight",
       "pulseaudio",
@@ -55,7 +54,6 @@
     ],
     "modules-right": [
       "hyprland/language",
-      "keyboard-state",
       "battery",
       "backlight",
       "pulseaudio",

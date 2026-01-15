@@ -143,8 +143,8 @@ tooltip {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-right-style: none;
-  padding-right: 7px;
-  padding-right: 0px;
+  /* padding-right: 7px; */
+  /* padding-right: 0px; */
   color: @rosewater;
 }
 

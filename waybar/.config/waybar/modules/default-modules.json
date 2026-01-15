@@ -145,9 +145,10 @@
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
   },
   "hyprland/language": {
-    "format": "{}",
+    "format": " {}",
     "format-en": "us",
-    "format-es": "latam"
+    "format-es": "latam",
+    "on-click": "hyprctl switchxkblayout current next"
   },
   "keyboard-state": {
     "numlock": false,
