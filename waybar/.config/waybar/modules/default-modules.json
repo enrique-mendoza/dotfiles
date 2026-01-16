@@ -126,7 +126,7 @@
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "on-click": "pavucontrol",
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
@@ -232,7 +232,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "kitty --class nmwui nmtui"
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh gazelle"
   },
   "tray": {
     "icon-size": 13,
