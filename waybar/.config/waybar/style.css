@@ -4,7 +4,7 @@
 /* Note: alt border style: border-radius: 10px */
 * {
   border: none;
-  border-radius: 13.5px;
+  border-radius: 8px;
   font-family: "GeistMono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
   font-size: 12px;
   font-weight: bold;
@@ -20,8 +20,8 @@ window#waybar {
 /* Tooltip */
 tooltip {
   background: @base;
-  border-radius: 13.5px;
-  border: 1px solid @sky;
+  border-radius: 8px;
+  border: 0.5px solid @sky;
   color: @text;
 }
 
