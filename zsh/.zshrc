@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="typewritten"
 
-TYPEWRITTEN_PROMPT_LAYOUT="singleline"
+TYPEWRITTEN_PROMPT_LAYOUT="pure"
 TYPEWRITTEN_RELATIVE_PATH="adaptive"
 TYPEWRITTEN_CURSOR="terminal"
 
@@ -335,7 +335,7 @@ alias pms="pass show"
 alias ff="fastfetch"
 
 # tty-clock
-alias tclock="tty-clock"
+alias tclock="tty-clock -c -b -s"
 
 # Yazi Shell Wrapper
 function y() {

@@ -20,7 +20,7 @@ button {
   box-shadow: none;
   border: 1px solid @sky;
   color: @text;
-  font-family: "GeistMono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
+  font-family: "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
   outline-style: none;
   text-shadow: none;
 }
