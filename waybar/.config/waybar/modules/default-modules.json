@@ -1,14 +1,14 @@
 {
   "custom/launcher": {
-    "format": "󰈸",
+    "format": "",
     "on-click": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi",
     "on-click-right": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi"
   },
   "clock": {
-    "format": "󰥔 {:%H:%M}",
+    "format": "{:L%A %H:%M}",
+    "format-alt": "{:L%B %d, %Y}",
     "tooltip": "true",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": " {:%m/%d/%y}"
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "cpu": {
     "format": " {icon0}{icon1}{icon2}{icon3}{icon4} {usage}%",
@@ -23,7 +23,8 @@
       "█"
     ],
     "format-alt": "󰻠 {avg_frequency} GHz",
-    "interval": 5
+    "interval": 5,
+    "on-click-right": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh btop"
   },
   "memory": {
     "format": " {}%",
