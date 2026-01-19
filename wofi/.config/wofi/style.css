@@ -58,7 +58,7 @@
 
 /* Window */
 window {
-  background-color: @base;
+  background-color: alpha(@base, 0.95);
   border: 0.1em solid @sky;
   border-radius: 0.625em;
   margin: 0px;
@@ -67,16 +67,16 @@ window {
 
 /* Inner Box */
 #inner-box {
-  background-color: @base;
+  background-color: alpha(@base, 0.95);
   border: none;
-  margin: 5px;
-  padding: 5px;
+  /* margin: 5px; */
+  /* padding: 5px; */
 }
 
 /* Outer Box */
 #outer-box {
   border: none;
-  background-color: @base;
+  background-color: alpha(@base, 0.95);
   margin: 5px;
   padding: 5px;
 }
@@ -84,14 +84,14 @@ window {
 /* Scroll */
 #scroll {
   border: none;
-  background-color: @base;
+  background-color: alpha(@base, 0.95);
   margin: 0px;
   padding: 5px;
 }
 
 /* Input */
 #input {
-  background-color: @base;
+  background-color: alpha(@mantle, 0.95);
   border-color: @base;
   box-shadow: none;
   color: @text;
@@ -112,7 +112,7 @@ window {
 }
 
 #entry {
-  background-color: @base;
+  background-color: alpha(@base, 0.95);
   padding: 10px;
 }
 
@@ -123,16 +123,16 @@ window {
 
 /* Selected Entry */
 #entry:selected {
-  background-color: @mantle;
-  border-bottom: 0.1px solid @sky;
-  border-radius: 5px;
+  /* background-color: @mantle; */
+  /* border-bottom: 0.1px solid @sky; */
+  /* border-radius: 5px; */
   outline: none;
 }
 
 #entry:selected #text {
-  color: @text;
+  color: @blue;
 }
 
 #entry:drop(active) {
-  background-color: @sky!important;
+  background-color: alpha(@sky, 0.95)!important;
 }

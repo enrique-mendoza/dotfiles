@@ -1,6 +1,6 @@
 show=drun
-width=450
-height=500
+width=350
+height=600
 always_parse_args=true
 show_all=false
 term=kitty
@@ -10,4 +10,4 @@ insensitive=true
 prompt=Search...
 columns=1
 allow_images=true
-image_size=15
+image_size=14
