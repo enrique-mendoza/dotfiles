@@ -230,7 +230,6 @@ if is_ide_intellij_idea |
 
 " Search ---------------------
 nmap <leader>s" :registers<cr>
-nmap <leader>sb <Action>(Switcher)
 nmap <leader>sC <Action>(GotoAction)
 nmap <leader>sc :history<cr>
 nmap <leader>sd <Action>(ActivateProblemsViewToolWindow)
