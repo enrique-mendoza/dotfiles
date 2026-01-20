@@ -8,8 +8,7 @@
 set autoindent
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
-" set formatoptions=jcroqlnt
-set formatoptions=tcqj
+set formatoptions=jcroqlnt
 set hlsearch
 set ignorecase
 set incsearch

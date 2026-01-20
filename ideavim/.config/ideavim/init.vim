@@ -5,7 +5,7 @@
 " ██║██║ ╚████║██║   ██║
 " ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝
 
-source ~/.config/ideavim/vim/autoload/launch.vim
+source ~/.config/ideavim/vim/config/launch.vim
 source ~/.config/ideavim/vim/plugins/argtextobj.vim
 source ~/.config/ideavim/vim/plugins/highlightedyank.vim
 source ~/.config/ideavim/vim/plugins/dial.vim
