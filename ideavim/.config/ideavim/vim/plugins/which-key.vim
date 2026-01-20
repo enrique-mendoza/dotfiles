@@ -65,7 +65,7 @@ let g:WhichKeyDesc_split_vertically = "<leader>-  Split Horizontally"
 let g:WhichKeyDesc_plugins = "<leader>p  Plugins"
 let g:WhichKeyDesc_reload_idea_vim = "<leader>r  Reload IdeaVim"
 let g:WhichKeyDesc_bookmarks_show_list = "<leader>h  Harpoon Quick Menu"
-let g:WhichKeyDesc_bookmarks_toggle = "<leader>H  Harpoon File"
+let g:WhichKeyDesc_bookmarks_toggle = "<leader>H  Harpoon File"
 
 " Tab ------------------------
 let g:WhichKeyDesc_tab = "<leader><tab>  Tabs"
