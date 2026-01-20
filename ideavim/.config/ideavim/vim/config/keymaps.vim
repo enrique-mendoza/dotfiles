@@ -202,8 +202,8 @@ nmap <leader>gs <Action>(Git.Stash)
 nmap <leader>gu <Action>(Git.Unstash)
 
 " Git Hunks ---------------------
-nmap <leader>ghp <Action>(VcsShowPrevChangeMarker)
-nmap <leader>ghn <Action>(VcsShowNextChangeMarker)
+nmap <leader>gh[ <Action>(VcsShowPrevChangeMarker)
+nmap <leader>gh] <Action>(VcsShowNextChangeMarker)
 nmap <leader>ghp <Action>(VcsShowCurrentChangeMarker)
 nmap <leader>ghr <Action>(Vcs.RollbackChangedLines)
 

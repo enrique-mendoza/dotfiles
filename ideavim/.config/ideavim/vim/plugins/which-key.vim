@@ -142,8 +142,8 @@ let g:WhichKeyDesc_git_unstash = "<leader>gu  Git Unstash"
 " Git Hunks ---------------------
 let g:WhichKeyDesc_git_hunks = "<leader>gh  Hunks"
 
-let g:WhichKeyDesc_git_hunks_previous = "<leader>ghp  Previous Hunk"
-let g:WhichKeyDesc_git_hunks_next = "<leader>ghn  Next Hunk"
+let g:WhichKeyDesc_git_hunks_previous = "<leader>gh[  Previous Hunk"
+let g:WhichKeyDesc_git_hunks_next = "<leader>gh]  Next Hunk"
 let g:WhichKeyDesc_git_hunks_preview_inline = "<leader>ghp  Preview Hunk Inline"
 let g:WhichKeyDesc_git_hunks_reset = "<leader>ghr  Reset Hunk"
 
