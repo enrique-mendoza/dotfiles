@@ -178,7 +178,6 @@ if is_ide_intellij_idea |
 let g:WhichKeyDesc_search = "<leader>s search"
 
 let g:WhichKeyDesc_search_registers = "<leader>s\"  Registers"
-let g:WhichKeyDesc_search_buffer_lines = "<leader>sb  Buffer Lines"
 let g:WhichKeyDesc_search_action = "<leader>sC  Commands"
 let g:WhichKeyDesc_search_history = "<leader>sc  Command History"
 let g:WhichKeyDesc_search_diagnostics = "<leader>sd  Diagnostics"
