@@ -166,9 +166,9 @@ nmap <leader>by <Action>(ChangeSplitOrientation)
 
 " Debug ---------------------
 nmap <leader>db <Action>(Debugger.PopFrame)
-nmap <leader>dC <Action>(XDebugger.RunToCursorInlayExtraActions)
+nmap <leader>dC <Action>(ForceRunToCursor)
 nmap <leader>dc <Action>(Resume)
-nmap <leader>dd <Action>(Debugger.InterruptThread)
+nmap <leader>dd <Action>(Stop)
 nmap <leader>de <Action>(EvaluateExpression)
 vmap <leader>de <Action>(EvaluateExpression)
 nmap <leader>di <Action>(StepInto)
