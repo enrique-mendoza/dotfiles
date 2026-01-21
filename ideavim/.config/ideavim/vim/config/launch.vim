@@ -13,7 +13,7 @@ set functiontextobj
 set matchit
 set NERDTree
 set highlightedyank
-set ideainput
+set ideaput
 set ideajoin " press J (shift+j) on a line or a selected block of text to join the lines together
 set ideamarks
 set multiple-cursors
