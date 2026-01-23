@@ -1,0 +1,97 @@
+[
+  {
+    "include": [
+      "~/.config/waybar/modules/default-modules.json"
+    ],
+    "position": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "output": [
+      "eDP-1"
+    ],
+    "modules-left": [
+      "clock",
+      "cpu",
+      "memory",
+      "disk"
+    ],
+    "modules-center": [
+      "hyprland/workspaces#square"
+    ],
+    "modules-right": [
+      "tray",
+      "custom/updates",
+      "hyprland/language",
+      "battery",
+      "backlight",
+      "pulseaudio",
+      "bluetooth",
+      "network"
+    ],
+    "reload_style_on_change": true
+  },
+  {
+    "include": [
+      "~/.config/waybar/modules/default-modules.json"
+    ],
+    "position": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "output": [
+      "DP-1"
+    ],
+    "modules-left": [
+      "clock",
+      "cpu",
+      "memory",
+      "disk"
+    ],
+    "modules-center": [
+      "hyprland/workspaces#square"
+    ],
+    "modules-right": [
+      "hyprland/language",
+      "battery",
+      "backlight",
+      "pulseaudio",
+      "bluetooth",
+      "network"
+    ],
+    "reload_style_on_change": true
+  },
+  {
+    "include": [
+      "~/.config/waybar/modules/default-modules.json"
+    ],
+    "position": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "output": [
+      "DP-3"
+    ],
+    "modules-left": [
+      "clock",
+      "cpu",
+      "memory",
+      "disk"
+    ],
+    "modules-center": [
+      "hyprland/workspaces#square"
+    ],
+    "modules-right": [
+      "hyprland/language",
+      "battery",
+      "backlight",
+      "pulseaudio",
+      "bluetooth",
+      "network"
+    ],
+    "reload_style_on_change": true
+  }
+]

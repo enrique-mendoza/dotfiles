@@ -1,32 +1,27 @@
 gui:
+  authorColors:
+    '*': '#b4befe'
   border: rounded
   theme:
-    241:
-      - "#c678dd"
     activeBorderColor:
-      - "#98c379"
-      - "bold"
+      - '#89dceb'
+      - bold
     inactiveBorderColor:
-      - "#5c6370"
-    searchingActiveBorderColor:
-      - "#98c379"
-      - "bold"
+      - '#a6adc8'
     optionsTextColor:
-      - "#61afef"
+      - '#89b4fa'
     selectedLineBgColor:
-      - "#414858"
-    cherryPickedCommitFgColor:
-      - "#61afef"
+      - '#313244'
     cherryPickedCommitBgColor:
-      - "#c678dd"
-    markedBaseCommitFgColor:
-      - "#61afef"
-    markedBaseCommitBgColor:
-      - "#e5c07b"
+      - '#45475a'
+    cherryPickedCommitFgColor:
+      - '#89dceb'
     unstagedChangesColor:
-      - "#e06c75"
+      - '#f38ba8'
     defaultFgColor:
-      - "#abb2bf"
+      - '#cdd6f4'
+    searchingActiveBorderColor:
+      - '#f9e2af'
   showFileTree: true # for rendering changes files in a tree format
   showListFooter: false # for seeing the '5 of 20' message in list panels
   showRandomTip: false
@@ -35,7 +30,7 @@ gui:
   showIcons: false # deprecated: use nerdFontsVersion instead
   nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
 os:
-  editPresent: 'nvim'
+  editCommand: 'nvim'
 confirmOnQuit: false
 disableStartupPopups: true
 notARepository: 'skip' # one of: 'prompt' | 'create' | 'skip'

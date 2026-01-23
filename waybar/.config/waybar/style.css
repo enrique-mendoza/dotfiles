@@ -1,9 +1,12 @@
+@import url("/home/kike/.config/waybar/themes/mocha.css");
+
 /* General */
+/* Note: alt border style: border-radius: 10px */
 * {
   border: none;
-  border-radius: 0;
-  font-family: "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "JetBrainsMono NF", "FontAwesome";
-  font-size: 14px;
+  border-radius: 8px;
+  font-family: "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
+  font-size: 12px;
   font-weight: bold;
   min-height: 0;
 }
@@ -11,51 +14,117 @@
 /* Waybar Window */
 window#waybar {
   background: rgba(21, 18, 27, 0);
-  color: #cdd6f4;
+  color: @text;
 }
 
 /* Tooltip */
 tooltip {
-  background: #1e1e2e;
-  border-color: #11111b;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 2px;
+  background: @base;
+  border-radius: 8px;
+  border: 0.5px solid @sky;
+  color: @text;
+}
+
+.modules-left {
+  margin-left: 10px;
+}
+
+.modules-right {
+  margin-right: 10px;
 }
 
 /* Modules: General */
+#backlight,
 #battery,
+#bluetooth,
 #clock,
+#cpu,
+#custom-power,
 #custom-updates,
 #custom-weather,
+#disk,
+#keyboard-state,
 #language,
+#memory,
 #network,
 #pulseaudio,
 #tray,
 #window,
 #workspaces {
-  background: #1e1e2e;
-  border: 1px solid #181825;
-  margin: 3px 0px;
-  margin-top: 10px;
+  background: @base;
+  border: 0.1px solid @sky;
+  /* margin: 7.5px 0 3px 0; */
+  margin: 4px 0 4px 0;
   padding: 0px 10px;
 }
 
-/* If Clock is the leftmost module, add left margin */
-.modules-left > widget:first-child > #clock {
-  margin-left: 20px; /* Alt: 5px */
+#backlight,
+#memory {
+  border-left: 0px;
+  border-right: 0px;
 }
 
-/* If Microphone is the rightmost module, add right margin */
-.modules-right > widget:last-child > #pulseaudio.microphone {
-  margin-right: 20px; /* Alt: 5px */
+#disk {
+  border-left: 0px;
+}
+
+/* Module: Backlight */
+#backlight {
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
+  color: @sapphire;
+}
+
+/* Module: Battery */
+#battery {
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
+  color: @green;
+}
+
+#battery.warning {
+  color: @peach;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+/* Module: Bluetooth */
+#bluetooth {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right-style: none;
+  color: @blue;
+  margin-left: 7px;
+  padding-right: 5px;
 }
 
 /* Module: Clock */
 #clock {
-  border-radius: 10px 0px 0px 10px;
-  border-right: 0px;
-  color: #fab387;
+  color: @peach;
+}
+
+/* Module: Cpu */
+#cpu {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right-style: none;
+  color: @yellow;
+  margin-left: 7px;
+}
+
+/* Module: Custom Power */
+#custom-power {
+  color: @red;
+}
+
+/* Module: Custom Updates */
+#custom-updates {
+  color: @blue;
+  margin-right: 7px;
 }
 
 /* Module: Custom Weather */
@@ -65,41 +134,70 @@ tooltip {
   margin-left: 0px;
 }
 
-/* Module: Workspaces */
-#workspaces {
-    background: #1e1e2e;
-    border-radius: 10px;
-    margin-left: 10px;
-    padding-right: 0px;
-    padding-left: 5px;
+/* Module: Disk */
+#disk {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  color: @teal;
 }
 
-#workspaces button {
-  color: #313244;
-  margin-right: 5px;
-  padding: 5px;
+/* Module: Keyboard-state */
+#keyboard-state {
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
+  color: @rosewater;
 }
 
-#workspaces button.active {
-  color: #a6adc8;
+/* Module: Language */
+#language {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right-style: none;
+  /* padding-right: 7px; */
+  /* padding-right: 0px; */
+  color: @rosewater;
 }
 
-#workspaces button.focused {
-  background: #eba0ac;
-  border-radius: 10px;
-  color: #a6adc8;
+/* Module: Memory */
+#memory {
+  border-radius: 0px;
+  color: @blue;
 }
 
-#workspaces button:hover {
-  background: #11111b;
-  border-radius: 10px;
-  color: #cdd6f4;
+/* Module: Network */
+#network {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left-style: none;
+  margin-left: 0px;
+  color: @green;
 }
 
-#workspaces button.urgent {
-  background: #a6e3a1;
-  border-radius: 10px;
-  color: #11111b;
+#network.disconnected {
+  color: @red;
+}
+
+#network.disabled {
+  color: @text;
+}
+
+/* Module: Pulseaudio */
+#pulseaudio {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left-style: none;
+  color: @blue;
+}
+
+#pulseaudio.microphone {
+  border-radius: 0 10px 10px 0;
+  color: @pink;
+}
+
+/* Module: Window */
+#tray {
+  margin-right: 7px;
 }
 
 /* Module: Window */
@@ -109,47 +207,42 @@ tooltip {
   margin-right: 60px;
 }
 
-/* Modules: Custom Updates & Tray */
-#custom-updates, #tray {
-  border-radius: 10px;
-  margin-right: 10px;
+/* Module: Workspaces */
+#workspaces {
+  animation: gradient_f 20s ease-in infinite;
+  margin-left: 0;
+  padding-right: 5px;
+  padding-left: 5px;
+  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
-/* Module: Custom Updates */
-#custom-updates {
-  color: #f5c2e7;
+#workspaces button {
+  animation: gradient_f 20s ease-in infinite;
+  color: @sky;
+  margin: 0 2.5px;
+  padding: 5px;
+  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
-/* Module: Language */
-#language {
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 10px 0px 0px 10px;
-  color: #f38ba8;
+#workspaces button.empty {
+  opacity: 0.5;
 }
 
-/* Module: Battery */
-#battery {
-  border-left: 0px;
-  border-right: 0px;
-  color: #a6e3a1;
+#workspaces button.visible {
+  color: @sky;
 }
 
-/* Module: Network */
-#network {
-  border-left: 0px;
-  border-right: 0px;
-  color: #f9e2af;
+#workspaces button.active {
+  animation: gradient_f 20s ease-in infinite;
+  color: @sky;
+  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
-/* Module: Pulseaudio */
-#pulseaudio {
-  border-left: 0px;
-  border-right: 0px;
-  color: #89b4fa;
+#workspaces button.urgent {
+  color: @red;
 }
 
-#pulseaudio.microphone {
-  border-radius: 0 10px 10px 0;
-  color: #cba6f7;
+/* If Microphone is the rightmost module, add right margin */
+.modules-right > widget:last-child > #tray {
+  margin-left: 7px;
 }

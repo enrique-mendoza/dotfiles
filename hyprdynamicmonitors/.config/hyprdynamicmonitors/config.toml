@@ -1,0 +1,39 @@
+[general]
+destination = "$HOME/.config/hypr/monitors.conf"
+debounce_time_ms = 1500
+pre_apply_exec = "notify-send '󰍹  Switching profile...'"
+
+[power_events]
+
+[power_events.dbus_query_object]
+path = "/org/freedesktop/UPower/devices/line_power_AC"
+
+[[power_events.dbus_signal_match_rules]]
+object_path = "/org/freedesktop/UPower/devices/line_power_AC"
+
+[profiles.laptop]
+config_file = "/home/kike/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
+config_file_type = "template"
+post_apply_exec = "notify-send '  Laptop profile applied'"
+[profiles.laptop.conditions]
+
+[[profiles.laptop.conditions.required_monitors]]
+description = "Lenovo Group Limited 0x8AB1"
+monitor_tag = "monitor0"
+
+[profiles.workstation]
+config_file = "/home/kike/.config/hyprdynamicmonitors/hyprconfigs/workstation.go.tmpl"
+config_file_type = "template"
+post_apply_exec = "notify-send '󰍺  Workstation profile applied'"
+[profiles.workstation.conditions]
+
+[profiles.workstation.static_template_values]
+mode = "standard"
+
+[[profiles.workstation.conditions.required_monitors]]
+description = "Lenovo Group Limited 0x8AB1"
+monitor_tag = "monitor0"
+
+[[profiles.workstation.conditions.required_monitors]]
+description = "ASUSTek COMPUTER INC ROG XG27AQM N7LMQS148804"
+monitor_tag = "monitor1"

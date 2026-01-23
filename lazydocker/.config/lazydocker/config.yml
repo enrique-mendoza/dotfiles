@@ -2,11 +2,11 @@ gui:
   border: rounded
   theme:
     activeBorderColor:
-      - "#50A4E9"
-      - "bold"
+      - '#89dceb'
+      - bold
     inactiveBorderColor:
-      - "#3A3E47"
+      - '#a6adc8'
     selectedLineBgColor:
-      - "#5EB7FF"
+      - '#313244'
     optionsTextColor:
-      - "#5EB7FF"
+      - '#89b4fa'

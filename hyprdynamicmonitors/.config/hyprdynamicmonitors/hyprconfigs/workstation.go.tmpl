@@ -1,0 +1,11 @@
+{{ if eq .mode "standard" }}
+monitor=desc:Lenovo Group Limited 0x8AB1,3072x1920@120.00000,118x-170,2.00000000,transform,0,vrr,0
+monitor=desc:ASUSTek COMPUTER INC ROG XG27AQM N7LMQS148804,2560x1440@120.00000,-2442x-700,1.00000000,transform,0,vrr,0
+{{ end }}
+
+{{ if eq .mode "external" }}
+# <<<<< TUI AUTO START
+monitor=desc:Lenovo Group Limited 0x8AB1,3072x1920@120.00200,-1930x890,2.00000000,transform,0,vrr,0
+monitor=desc:ASUSTek COMPUTER INC ROG XG27AQM N7LMQS148804,2560x1440@119.99800,-2442x-700,1.00000000,transform,0,vrr,0
+# <<<<< TUI AUTO END
+{{ end }}

@@ -41,6 +41,8 @@
   helper = store
 [diff]
   submodule = log
+[fetch]
+  prune = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
@@ -50,6 +52,8 @@
   root = ~/.ghq
 [gpg]
   format = ssh
+[init]
+  defaultBranch = main
 [github]
   user = enrique-mendoza
 [merge]

@@ -1,8 +1,0 @@
-[Unit]
-Description=Hints daemon
-[Service]
-Type=simple
-ExecStart=/home/kike/.local/bin/hintsd
-Restart=always
-[Install]
-WantedBy=default.target

@@ -1,133 +1,139 @@
 {
-  // LEFT MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Clock
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi",
+    "on-click-right": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi"
+  },
   "clock": {
-    "format": "{: %R   %d/%m}",
+    "format": "{:L%A %H:%M}",
+    "format-alt": "{:L%B %d, %Y}",
+    "tooltip": "true",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Custom
-  "custom/weather": {
-    "tooltip": true,
-    "format": "{}",
-    "restart-interval": 300,
-    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-    "return-type": "json"
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
-  "wlr/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "all-outputs": false,
-    "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "urgent": "",
-      "active": "",
-      "default": ""
-    }
-  },
-  // CENTER MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
-  "hyprland/window": {
-    "format": "{}"
-  },
-  // RIGHT MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Tray
-  "tray": {
-    "icon-size": 13,
-    "tooltip": false,
-    "spacing": 10
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Custom#pacman
-  "custom/updates": {
-    "format": " {}",
-    "interval": 3600, // every hour
-    "exec": "checkupdates | wc -l", // # of updates
-    "exec-if": "exit 0", // always run; consider advanced run conditions
-    "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
-    "signal": 8
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
-  "hyprland/language": {
-    "format": " {}",
-    "format-en": "US",
-    "format-es": "LATAM"
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-CPU
   "cpu": {
-    "interval": 10,
-    "format": " {}%",
-    "max-length": 10,
-    "on-click": ""
+    "format": " {icon0}{icon1}{icon2}{icon3}{icon4} {usage}%",
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+    "format-alt": "󰻠 {avg_frequency} GHz",
+    "interval": 5,
+    "on-click-right": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh btop"
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Disk
+  "memory": {
+    "format": " {}%",
+    "format-alt": " {used:0.1f}G/{total:0.1f}G",
+    "interval": 5
+  },
   "disk": {
-    "interval": 30,
-    "format": " {free}",
+    "format": " {used}",
+    "format-alt": " {used}/{total}",
+    "interval": 5,
     "path": "/home"
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Memory
-  "memory": {
-    "interval": 30,
-    "format": " {}%",
-    "format-alt": " {used:0.1f}G",
-    "max-length": 10
+  "sway/workspaces": {
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "disable-scroll": false,
+    "current-only": false,
+    "format-icons": {
+      "urgent": "",
+      "focused": "",
+      "default": "",
+      "sort-by-number": true
+    }
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Network
-  "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "直 {signalStrength}%",
-    "format-ethernet": "",
-    "format-disconnected": "睊",
-    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    "format-alt": "直 {essid}"
-  },
-  // https://github.com/Alexays/Waybar/wiki/Module:-Battery
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "current-only": false,
+    "disable-scroll": false,
+    "format": "{name}: {icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
+      "sort-by-number": true
     },
-    // "format": "{icon} {capacity}%",
-    // "format-charging": " {capacity}%",
-    // "format-plugged": " {capacity}%",
-    "format": "{icon} {capacity}%",
-    "format-charging": "",
-    "format-plugged": "",
-    "format-alt": "{icon} {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    // "format-icons": ["", "", "", "", ""]
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
   },
-  // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
+  "hyprland/workspaces#pacman": {
+    "all-outputs": true,
+    "current-only": false,
+    "disable-scroll": false,
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "<span font='12'>󰮯</span>",
+      "empty": "<span font='8'></span>",
+      "default": "󰊠",
+      "sort-by-number": true
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "hyprland/workspaces#square": {
+    "all-outputs": true,
+    "current-only": false,
+    "disable-scroll": false,
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "active": "󱓻"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "custom/updates": {
+    "format": " {}",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
+    "signal": 8
+  },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "tooltip": false,
-    "format-muted": " Muted",
-    "on-click": "pamixer -t",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
+    "format-muted": "",
     "format-icons": {
       "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
       "default": [
         "",
         "",
@@ -135,14 +141,117 @@
       ]
     }
   },
-  "pulseaudio#microphone": {
-    "format": "{format_source}",
+  "sway/language": {
+    "format": "󰌌 {}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+  },
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "us",
+    "format-es": "latam",
+    "on-click": "hyprctl switchxkblayout current next"
+  },
+  "keyboard-state": {
+    "numlock": false,
+    "capslock": true,
+    "format": {
+      "numlock": "{icon}",
+      "capslock": "{icon}"
+    },
+    "format-icons": {
+      "locked": "locked",
+      "unlocked": "unlocked"
+    }
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-discharging": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format": "{health}% of health with {cycles} cycles",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃚",
+      "󰃛",
+      "󰃜",
+      "󰃝",
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+  },
+  "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh gazelle"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh bluetui"
+  },
+  "tray": {
+    "icon-size": 13,
     "tooltip": false,
-    "format-source": " {volume}%",
-    "format-source-muted": " Muted",
-    "on-click": "pamixer --default-source -t",
-    "on-scroll-up": "pamixer --default-source -i 5",
-    "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 5
+    "spacing": 10
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout &",
+    "format": "⏻"
   }
 }
