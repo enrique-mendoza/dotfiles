@@ -21,8 +21,7 @@
       "hyprland/workspaces#square"
     ],
     "modules-right": [
-      "tray",
-      "custom/updates",
+      "group/tray-expander",
       "hyprland/language",
       "battery",
       "backlight",
@@ -54,6 +53,7 @@
       "hyprland/workspaces#square"
     ],
     "modules-right": [
+      "group/tray-expander",
       "hyprland/language",
       "battery",
       "backlight",
@@ -85,6 +85,7 @@
       "hyprland/workspaces#square"
     ],
     "modules-right": [
+      "group/tray-expander",
       "hyprland/language",
       "battery",
       "backlight",
