@@ -8,7 +8,7 @@
 # ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝    ╚═╝
 # See https://github.com/basecamp/omarchy/blob/master/bin/omarchy-cmd-screenshot
 
-OUTPUT_DIR="$HOME/Pictures/Screenshots/"
+OUTPUT_DIR="$HOME/Pictures/Screenshots"
 
 if [[ ! -d "$OUTPUT_DIR" ]]; then
   notify-send "Screenshot directory does not exist: $OUTPUT_DIR" -u critical -t 3000
