@@ -60,7 +60,8 @@ tooltip {
 /* Islands: Left */
 #bluetooth,
 #cpu,
-#custom-expand-icon {
+#custom-expand-icon,
+#language {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-right-style: none;
@@ -70,9 +71,7 @@ tooltip {
 /* Islands: center */
 #backlight,
 #battery,
-#language,
-#memory,
-#tray {
+#memory {
   border-radius: 0px;
   border-left-style: none;
   border-right-style: none;
