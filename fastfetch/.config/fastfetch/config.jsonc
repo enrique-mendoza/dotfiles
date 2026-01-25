@@ -46,9 +46,9 @@
       "keyColor": "blue",
     },
     {
-      "type": "uptime",
-      "format": "{?days}{days}d {?}{hours}h {minutes}m",
-      "key": "uptime",
+      "type": "disk",
+      "format": "{create-time:10} ({days} days)",
+      "key": "age   ",
       "keyColor": "magenta",
     },
     "break",
