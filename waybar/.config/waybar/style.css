@@ -39,6 +39,7 @@ tooltip {
 #clock,
 #cpu,
 #custom-expand-icon,
+#custom-launcher,
 #custom-power,
 #custom-updates,
 #custom-weather,
@@ -59,19 +60,17 @@ tooltip {
 }
 
 /* Islands: Left */
-#bluetooth,
+#clock,
 #cpu,
-#custom-expand-icon,
-#language {
+#pulseaudio {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-right-style: none;
-  margin-left: 7px;
 }
 
 /* Islands: center */
-#backlight,
 #battery,
+#bluetooth,
 #memory {
   border-radius: 0px;
   border-left-style: none;
@@ -79,12 +78,32 @@ tooltip {
 }
 
 /* Islands: Right */
+#backlight,
+#custom-updates,
 #disk,
-#network,
-#pulseaudio {
+#network {
   border-bottom-left-radius: 0px;
   border-left-style: none;
   border-top-left-radius: 0px;
+}
+
+/* Islands: style icons */
+#cpu,
+#language,
+#pulseaudio,
+#workspaces {
+  margin-left: 7px;
+}
+
+/* Islands: add padding right */
+#battery,
+#bluetooth,
+#pulseaudio {
+  padding-right: 4px;
+}
+
+#clock {
+  padding-right: 2px;
 }
 
 /* Module: Backlight */
@@ -108,7 +127,6 @@ tooltip {
 /* Module: Bluetooth */
 #bluetooth {
   color: @blue;
-  padding-right: 4px;
 }
 
 /* Module: Clock */
@@ -119,6 +137,11 @@ tooltip {
 /* Module: Cpu */
 #cpu {
   color: @yellow;
+}
+
+/* Module: Custom Launcher */
+#custom-launcher {
+  color: @blue;
 }
 
 /* Module: Custom Expand */
@@ -176,10 +199,10 @@ tooltip {
 /* Module: Workspaces */
 #workspaces button {
   all: initial;
-  color: @sky;
+  color: @teal;
   margin: 0 4px;
-  padding: 5px;
   min-width: 9px;
+  padding: 5px;
 }
 
 #workspaces button.empty {
@@ -187,11 +210,11 @@ tooltip {
 }
 
 #workspaces button.visible {
-  color: @sky;
+  color: @teal;
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @yellow;
 }
 
 #workspaces button.urgent {

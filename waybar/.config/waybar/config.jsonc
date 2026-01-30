@@ -12,22 +12,23 @@
       "eDP-1"
     ],
     "modules-left": [
-      "clock",
-      "cpu",
-      "memory",
-      "disk"
+      "custom/launcher",
+      "hyprland/workspaces#pacman",
+      "pulseaudio",
+      "battery",
+      "bluetooth",
+      "network"
     ],
     "modules-center": [
-      "hyprland/workspaces#square"
+      "clock",
+      "custom/updates"
     ],
     "modules-right": [
       "tray",
       "hyprland/language",
-      "battery",
-      "backlight",
-      "pulseaudio",
-      "bluetooth",
-      "network"
+      "cpu",
+      "memory",
+      "disk"
     ],
     "reload_style_on_change": true
   },
@@ -44,22 +45,23 @@
       "DP-1"
     ],
     "modules-left": [
-      "clock",
-      "cpu",
-      "memory",
-      "disk"
+      "custom/launcher",
+      "hyprland/workspaces#pacman",
+      "pulseaudio",
+      "battery",
+      "bluetooth",
+      "network"
     ],
     "modules-center": [
-      "hyprland/workspaces#square"
+      "clock",
+      "custom/updates"
     ],
     "modules-right": [
       "tray",
       "hyprland/language",
-      "battery",
-      "backlight",
-      "pulseaudio",
-      "bluetooth",
-      "network"
+      "cpu",
+      "memory",
+      "disk"
     ],
     "reload_style_on_change": true
   },
@@ -76,22 +78,23 @@
       "DP-3"
     ],
     "modules-left": [
-      "clock",
-      "cpu",
-      "memory",
-      "disk"
+      "custom/launcher",
+      "hyprland/workspaces#pacman",
+      "pulseaudio",
+      "battery",
+      "bluetooth",
+      "network"
     ],
     "modules-center": [
-      "hyprland/workspaces#square"
+      "clock",
+      "custom/updates"
     ],
     "modules-right": [
       "tray",
       "hyprland/language",
-      "battery",
-      "backlight",
-      "pulseaudio",
-      "bluetooth",
-      "network"
+      "cpu",
+      "memory",
+      "disk"
     ],
     "reload_style_on_change": true
   }

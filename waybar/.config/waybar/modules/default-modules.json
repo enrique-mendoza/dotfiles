@@ -1,8 +1,65 @@
 {
-  "custom/launcher": {
-    "format": "",
-    "on-click": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi",
-    "on-click-right": "rofi -show drun -theme /home/wiru/.config/rofi/config.rasi"
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃚",
+      "󰃛",
+      "󰃜",
+      "󰃝",
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-discharging": "{icon}",
+    "format-charging": "{icon}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format": "{health}% of health with {cycles} cycles",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "bluetooth": {
+    "format": "",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh bluetui"
   },
   "clock": {
     "format": "{:L%A %H:%M}",
@@ -26,10 +83,32 @@
     "interval": 5,
     "on-click-right": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh btop"
   },
-  "memory": {
-    "format": " {}%",
-    "format-alt": " {used:0.1f}G/{total:0.1f}G",
-    "interval": 5
+  "custom/expand-icon": {
+    "format": "",
+    "tooltip": false,
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "on-scroll-left": "",
+    "on-scroll-right": ""
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "wofi --show drun"
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout &",
+    "format": "⏻"
+  },
+  "custom/updates": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": "",
+      "updated": "󰂪"
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
   },
   "disk": {
     "format": " {used}",
@@ -37,17 +116,22 @@
     "interval": 5,
     "path": "/home"
   },
-  "sway/workspaces": {
-    "all-outputs": true,
-    "format": "{name}: {icon}",
-    "disable-scroll": false,
-    "current-only": false,
-    "format-icons": {
-      "urgent": "",
-      "focused": "",
-      "default": "",
-      "sort-by-number": true
-    }
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": [
+      "custom/expand-icon",
+      "tray"
+    ]
+  },
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "us",
+    "format-es": "latam",
+    "on-click": "hyprctl switchxkblayout current next"
   },
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -76,8 +160,8 @@
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {
-      "active": "<span font='12'>󰮯</span>",
-      "empty": "<span font='8'></span>",
+      "active": "󰮯",
+      "empty": "<span font='5'></span>",
       "default": "󰊠",
       "sort-by-number": true
     },
@@ -117,59 +201,6 @@
       "5": []
     }
   },
-  "custom/updates": {
-    "format": " {}",
-    "interval": 3600,
-    "exec": "checkupdates | wc -l",
-    "exec-if": "exit 0",
-    "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
-    "signal": 8
-  },
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item"
-    },
-    "modules": [
-      "custom/expand-icon",
-      "tray"
-    ]
-  },
-  "custom/expand-icon": {
-    "format": "",
-    "tooltip": false,
-    "on-scroll-up": "",
-    "on-scroll-down": "",
-    "on-scroll-left": "",
-    "on-scroll-right": ""
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh wiremix",
-    "on-click-right": "pamixer -t",
-    "tooltip-format": "Playing at {volume}%",
-    "scroll-step": 5,
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
-  },
-  "sway/language": {
-    "format": "󰌌 {}",
-    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
-  },
-  "hyprland/language": {
-    "format": " {}",
-    "format-en": "us",
-    "format-es": "latam",
-    "on-click": "hyprctl switchxkblayout current next"
-  },
   "keyboard-state": {
     "numlock": false,
     "capslock": true,
@@ -182,58 +213,10 @@
       "unlocked": "unlocked"
     }
   },
-  "battery": {
-    "format": "{icon} {capacity}%",
-    "format-discharging": "{icon} {capacity}%",
-    "format-charging": "{icon} {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-icons": {
-      "charging": [
-        "󰢜",
-        "󰂆",
-        "󰂇",
-        "󰂈",
-        "󰢝",
-        "󰂉",
-        "󰢞",
-        "󰂊",
-        "󰂋",
-        "󰂅"
-      ],
-      "default": [
-        "󰁺",
-        "󰁻",
-        "󰁼",
-        "󰁽",
-        "󰁾",
-        "󰁿",
-        "󰂀",
-        "󰂁",
-        "󰂂",
-        "󰁹"
-      ]
-    },
-    "format-full": "󰂅",
-    "tooltip-format": "{health}% of health with {cycles} cycles",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
-    "interval": 5,
-    "states": {
-      "warning": 20,
-      "critical": 10
-    }
-  },
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "󰃚",
-      "󰃛",
-      "󰃜",
-      "󰃝",
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ]
+  "memory": {
+    "format": " {}%",
+    "format-alt": " {used:0.1f}G/{total:0.1f}G",
+    "interval": 5
   },
   "network": {
     "format-icons": [
@@ -254,22 +237,40 @@
     "spacing": 1,
     "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh gazelle"
   },
-  "bluetooth": {
-    "format": "",
-    "format-off": "󰂲",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
-    "format-no-controller": "",
-    "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh bluetui"
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "sway/language": {
+    "format": "󰌌 {}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+  },
+  "sway/workspaces": {
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "disable-scroll": false,
+    "current-only": false,
+    "format-icons": {
+      "urgent": "",
+      "focused": "",
+      "default": "",
+      "sort-by-number": true
+    }
   },
   "tray": {
     "icon-size": 12,
     "spacing": 17
-  },
-  "custom/power": {
-    "tooltip": false,
-    "on-click": "wlogout &",
-    "format": "⏻"
   }
 }
