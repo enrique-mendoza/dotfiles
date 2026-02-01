@@ -55,12 +55,13 @@ tooltip {
 #workspaces {
   background: @base;
   border: 0.1px solid @sky;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 4px 0 4px 0;
   padding: 0 10px;
 }
 
 /* Islands: Left */
+#clock,
 #cpu,
 #pulseaudio {
   border-top-right-radius: 0px;
@@ -72,8 +73,7 @@ tooltip {
 #battery,
 #bluetooth,
 #disk,
-#memory,
-#network {
+#memory {
   border-radius: 0px;
   border-left-style: none;
   border-right-style: none;
@@ -82,6 +82,7 @@ tooltip {
 /* Islands: Right */
 #backlight,
 #custom-updates,
+#network,
 #temperature {
   border-bottom-left-radius: 0px;
   border-left-style: none;
@@ -100,9 +101,12 @@ tooltip {
 /* Islands: add padding right */
 #battery,
 #bluetooth,
-#network,
 #pulseaudio {
   padding-right: 4px;
+}
+
+#clock {
+  padding-right: 2px;
 }
 
 /* Module: Backlight */
