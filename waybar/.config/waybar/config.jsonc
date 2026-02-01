@@ -17,18 +17,20 @@
       "pulseaudio",
       "battery",
       "bluetooth",
-      "network"
+      "network",
+      "custom/updates"
     ],
     "modules-center": [
       "clock",
-      "custom/updates"
+      "custom/weather"
     ],
     "modules-right": [
       "tray",
       "hyprland/language",
       "cpu",
       "memory",
-      "disk"
+      "disk",
+      "temperature"
     ],
     "reload_style_on_change": true
   },
@@ -50,18 +52,20 @@
       "pulseaudio",
       "battery",
       "bluetooth",
-      "network"
+      "network",
+      "custom/updates"
     ],
     "modules-center": [
       "clock",
-      "custom/updates"
+      "custom/weather"
     ],
     "modules-right": [
       "tray",
       "hyprland/language",
       "cpu",
       "memory",
-      "disk"
+      "disk",
+      "temperature"
     ],
     "reload_style_on_change": true
   },
@@ -83,18 +87,20 @@
       "pulseaudio",
       "battery",
       "bluetooth",
-      "network"
+      "network",
+      "custom/updates"
     ],
     "modules-center": [
       "clock",
-      "custom/updates"
+      "custom/weather"
     ],
     "modules-right": [
       "tray",
       "hyprland/language",
       "cpu",
       "memory",
-      "disk"
+      "disk",
+      "temperature"
     ],
     "reload_style_on_change": true
   }

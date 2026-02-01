@@ -4,7 +4,7 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
+  font-family: "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "AdwaitaMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
   font-size: 12px;
   font-weight: bold;
   min-height: 0;
@@ -49,6 +49,7 @@ tooltip {
 #memory,
 #network,
 #pulseaudio,
+#temperature,
 #tray,
 #window,
 #workspaces {
@@ -60,7 +61,6 @@ tooltip {
 }
 
 /* Islands: Left */
-#clock,
 #cpu,
 #pulseaudio {
   border-top-right-radius: 0px;
@@ -71,7 +71,9 @@ tooltip {
 /* Islands: center */
 #battery,
 #bluetooth,
-#memory {
+#disk,
+#memory,
+#network {
   border-radius: 0px;
   border-left-style: none;
   border-right-style: none;
@@ -80,8 +82,7 @@ tooltip {
 /* Islands: Right */
 #backlight,
 #custom-updates,
-#disk,
-#network {
+#temperature {
   border-bottom-left-radius: 0px;
   border-left-style: none;
   border-top-left-radius: 0px;
@@ -89,6 +90,7 @@ tooltip {
 
 /* Islands: style icons */
 #cpu,
+#custom-weather,
 #language,
 #pulseaudio,
 #workspaces {
@@ -98,12 +100,9 @@ tooltip {
 /* Islands: add padding right */
 #battery,
 #bluetooth,
+#network,
 #pulseaudio {
   padding-right: 4px;
-}
-
-#clock {
-  padding-right: 2px;
 }
 
 /* Module: Backlight */
@@ -194,6 +193,19 @@ tooltip {
 
 #pulseaudio.microphone {
   color: @pink;
+}
+
+/* Module: Temperature */
+#temperature {
+  color: @sky;
+}
+
+#temperature.warning {
+  color: @yellow;
+}
+
+#temperature.critical {
+  color: @red;
 }
 
 /* Module: Workspaces */

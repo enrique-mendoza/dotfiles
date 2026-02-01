@@ -110,6 +110,13 @@
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
   },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --observation-time",
+    "return-type": "json"
+  },
   "disk": {
     "format": " {used}",
     "format-alt": " {used}/{total}",
@@ -268,6 +275,21 @@
       "default": "",
       "sort-by-number": true
     }
+  },
+  "temperature": {
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "tray": {
     "icon-size": 12,
