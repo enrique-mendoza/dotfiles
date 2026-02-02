@@ -13,7 +13,7 @@
     ],
     "modules-left": [
       "custom/launcher",
-      "hyprland/workspaces#roman",
+      "hyprland/workspaces#square",
       "pulseaudio",
       "battery",
       "bluetooth",
@@ -47,7 +47,7 @@
     ],
     "modules-left": [
       "custom/launcher",
-      "hyprland/workspaces#roman",
+      "hyprland/workspaces#square",
       "pulseaudio",
       "battery",
       "bluetooth",
@@ -81,7 +81,7 @@
     ],
     "modules-left": [
       "custom/launcher",
-      "hyprland/workspaces#roman",
+      "hyprland/workspaces#square",
       "pulseaudio",
       "battery",
       "bluetooth",
