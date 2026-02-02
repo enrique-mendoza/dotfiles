@@ -1,0 +1,31 @@
+{
+  "include": [
+    "$HOME/.config/waybar/modules/backlight.jsonc",
+    "$HOME/.config/waybar/modules/battery.jsonc",
+    "$HOME/.config/waybar/modules/bluetooth.jsonc",
+    "$HOME/.config/waybar/modules/clock.jsonc",
+    "$HOME/.config/waybar/modules/cpu.jsonc",
+    "$HOME/.config/waybar/modules/custom-expand-icon.jsonc",
+    "$HOME/.config/waybar/modules/custom-launcher.jsonc",
+    "$HOME/.config/waybar/modules/custom-power.jsonc",
+    "$HOME/.config/waybar/modules/custom-updates.jsonc",
+    "$HOME/.config/waybar/modules/custom-weather.jsonc",
+    "$HOME/.config/waybar/modules/disk.jsonc",
+    "$HOME/.config/waybar/modules/group-tray-expander.jsonc",
+    "$HOME/.config/waybar/modules/hyprland-language.jsonc",
+    "$HOME/.config/waybar/modules/hyprland-workspaces#dots.jsonc",
+    "$HOME/.config/waybar/modules/hyprland-workspaces#kanji.jsonc",
+    "$HOME/.config/waybar/modules/hyprland-workspaces#pacman.jsonc",
+    "$HOME/.config/waybar/modules/hyprland-workspaces#roman.jsonc",
+    "$HOME/.config/waybar/modules/hyprland-workspaces#square.jsonc",
+    "$HOME/.config/waybar/modules/hyprland-workspaces.jsonc",
+    "$HOME/.config/waybar/modules/keyboard-state.jsonc",
+    "$HOME/.config/waybar/modules/memory.jsonc",
+    "$HOME/.config/waybar/modules/network.jsonc",
+    "$HOME/.config/waybar/modules/pulseaudio.jsonc",
+    "$HOME/.config/waybar/modules/sway-language.jsonc",
+    "$HOME/.config/waybar/modules/sway-workspaces.jsonc",
+    "$HOME/.config/waybar/modules/temperature.jsonc",
+    "$HOME/.config/waybar/modules/tray.jsonc"
+  ]
+}

@@ -53,6 +53,6 @@ tooltip {
   background: @base;
   border: 0.1px solid @sky;
   border-radius: 8px;
-  margin: 4px 0 4px 0;
+  margin: 4px 0px 0px 0px;
   padding: 0 10px;
 }

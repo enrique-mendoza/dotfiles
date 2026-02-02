@@ -1,5 +1,5 @@
 @import url("/home/kike/.config/waybar/themes/mocha.css");
-@import url("/home/kike/.config/waybar/include/general.css");
+@import url("/home/kike/.config/waybar/include/global.css");
 @import url("/home/kike/.config/waybar/styles/groups/island.css");
 
 /* Module: Backlight */

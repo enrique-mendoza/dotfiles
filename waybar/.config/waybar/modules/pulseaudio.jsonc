@@ -1,0 +1,18 @@
+{
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  }
+}
