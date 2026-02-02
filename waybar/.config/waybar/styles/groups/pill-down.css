@@ -1,0 +1,24 @@
+/* Pill down: left */
+#clock {
+ border-radius: 0px 0px 0px 10px;
+ margin: 0px 0px 0.3px 1px;
+}
+
+/* Pill down: left */
+#custom-weather {
+  border-left-style: none;
+  border-radius: 0px 0px 0px 0px;
+  border-right-style: none;
+  margin: 0px 0px 0.3px 0px;
+}
+
+/* Pill down: right */
+#custom-updates {
+  border-radius: 0px 0px 10px 0px;
+  margin: 0px 1px 0.3px 0px;
+}
+
+#custom-weather,
+#clock {
+  padding-right: 2px;
+}

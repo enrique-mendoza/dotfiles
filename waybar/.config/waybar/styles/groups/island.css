@@ -1,0 +1,48 @@
+/* Islands: Left */
+#clock,
+#cpu,
+#pulseaudio {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right-style: none;
+}
+
+/* Islands: center */
+#battery,
+#bluetooth,
+#disk,
+#memory {
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+/* Islands: Right */
+#backlight,
+#custom-updates,
+#network,
+#temperature {
+  border-bottom-left-radius: 0px;
+  border-left-style: none;
+  border-top-left-radius: 0px;
+}
+
+/* Islands: style icons */
+#cpu,
+#custom-weather,
+#language,
+#pulseaudio,
+#workspaces {
+  margin-left: 7px;
+}
+
+/* Islands: add padding right */
+#battery,
+#bluetooth,
+#pulseaudio {
+  padding-right: 4px;
+}
+
+#clock {
+  padding-right: 2px;
+}
