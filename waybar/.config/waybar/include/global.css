@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0px;
   font-family: "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "AdwaitaMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   min-height: 0;
 }
@@ -52,7 +52,7 @@ tooltip {
 #workspaces {
   background: @base;
   border: 0.1px solid @sky;
-  border-radius: 8px;
-  margin: 8px 0px 3px 0px;
+  border-radius: 11px;
+  margin: 4px 0px 4px 0px;
   padding: 0 10px;
 }

@@ -1,6 +1,7 @@
 @import url("/home/kike/.config/waybar/themes/mocha.css");
 @import url("/home/kike/.config/waybar/include/global.css");
 @import url("/home/kike/.config/waybar/styles/groups/island.css");
+@import url("/home/kike/.config/waybar/styles/modules/workspaces/simple.css");
 
 /* Module: Backlight */
 #backlight {
@@ -102,30 +103,5 @@
 }
 
 #temperature.critical {
-  color: @red;
-}
-
-/* Module: Workspaces */
-#workspaces button {
-  all: initial;
-  color: @teal;
-  margin: 0 4px;
-  min-width: 9px;
-  padding: 5px;
-}
-
-#workspaces button.empty {
-  opacity: 0.5;
-}
-
-#workspaces button.visible {
-  color: @teal;
-}
-
-#workspaces button.active {
-  color: @yellow;
-}
-
-#workspaces button.urgent {
   color: @red;
 }
