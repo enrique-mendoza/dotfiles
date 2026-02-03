@@ -17,11 +17,11 @@
       "pulseaudio",
       "battery",
       "bluetooth",
-      "network"
+      "network",
+      "custom/updates"
     ],
     "modules-center": [
-      "clock",
-      "custom/updates"
+      "clock"
     ],
     "modules-right": [
       "tray",
@@ -51,11 +51,11 @@
       "pulseaudio",
       "battery",
       "bluetooth",
-      "network"
+      "network",
+      "custom/updates"
     ],
     "modules-center": [
-      "clock",
-      "custom/updates"
+      "clock"
     ],
     "modules-right": [
       "tray",
@@ -85,11 +85,11 @@
       "pulseaudio",
       "battery",
       "bluetooth",
-      "network"
+      "network",
+      "custom/updates"
     ],
     "modules-center": [
-      "clock",
-      "custom/updates"
+      "clock"
     ],
     "modules-right": [
       "tray",
