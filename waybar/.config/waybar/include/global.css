@@ -50,9 +50,9 @@ tooltip {
 #tray,
 #window,
 #workspaces {
-  background: @base;
+  background: @mantle;
   border: 0.1px solid @sky;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 4px 0px 4px 0px;
   padding: 0 10px;
 }
