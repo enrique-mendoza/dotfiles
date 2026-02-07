@@ -1,0 +1,234 @@
+@import url("/home/kike/.config/waybar/styles/mocha.css");
+
+/* General */
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "AdwaitaMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
+  font-size: 11px;
+  font-weight: bold;
+  min-height: 0;
+}
+
+/* Waybar Window */
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: @text;
+}
+
+/* Tooltip */
+tooltip {
+  background: @base;
+  border-radius: 8px;
+  border: 0.5px solid @sky;
+  color: @text;
+}
+
+/* Modules: General */
+.modules-left {
+  margin-left: 10px;
+}
+
+.modules-right {
+  margin-right: 10px;
+}
+
+#backlight,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#custom-expand-icon,
+#custom-launcher,
+#custom-power,
+#custom-updates,
+#custom-weather,
+#disk,
+#keyboard-state,
+#language,
+#memory,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#window,
+#workspaces {
+  background: @mantle;
+  border: 0.1px solid @sky;
+  border-radius: 10px;
+  margin: 4px 0px 4px 0px;
+  padding: 0 10px;
+}
+
+/* Islands: Left */
+#cpu,
+#pulseaudio {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right-style: none;
+}
+
+/* Islands: center */
+#battery,
+#bluetooth,
+#disk,
+#memory,
+#network {
+  border-radius: 0px;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+/* Islands: Right */
+#backlight,
+#custom-updates,
+#temperature {
+  border-bottom-left-radius: 0px;
+  border-left-style: none;
+  border-top-left-radius: 0px;
+}
+
+/* Islands: style icons */
+#cpu,
+#custom-weather,
+#language,
+#pulseaudio,
+#workspaces {
+  margin-left: 7px;
+}
+
+/* Islands: add padding right */
+#battery,
+#bluetooth,
+#network,
+#pulseaudio {
+  padding-right: 5px;
+}
+
+/* Module: Backlight */
+#backlight {
+  color: @yellow;
+}
+
+/* Module: Battery */
+#battery {
+  color: @green;
+}
+
+#battery.warning {
+  color: @peach;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+/* Module: Bluetooth */
+#bluetooth {
+  color: @blue;
+}
+
+/* Module: Clock */
+#clock {
+  color: @peach;
+}
+
+/* Module: Cpu */
+#cpu {
+  color: @yellow;
+}
+
+/* Module: Custom Launcher */
+#custom-launcher {
+  color: @blue;
+}
+
+/* Module: Custom Expand */
+#custom-expand-icon {
+  color: @teal;
+}
+
+/* Module: Custom Updates */
+#custom-updates {
+  color: @blue;
+}
+
+/* Module: Disk */
+#disk {
+  color: @teal;
+}
+
+/* Module: Keyboard-state */
+#keyboard-state {
+  color: @rosewater;
+}
+
+/* Module: Language */
+#language {
+  color: @flamingo;
+}
+
+/* Module: Memory */
+#memory {
+  color: @blue;
+}
+
+/* Module: Network */
+#network {
+  color: @green;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.disabled {
+  color: @text;
+}
+
+/* Module: Pulseaudio */
+#pulseaudio {
+  color: @blue;
+}
+
+#pulseaudio.microphone {
+  color: @pink;
+}
+
+/* Module: Temperature */
+#temperature {
+  color: @sky;
+}
+
+#temperature.warning {
+  color: @yellow;
+}
+
+#temperature.critical {
+  color: @red;
+}
+
+/* Module: Workspaces */
+#workspaces button {
+  all: initial;
+  color: @teal;
+  margin: 0 4px;
+  min-width: 9px;
+  padding: 5px 4px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#workspaces button.visible {
+  color: @teal;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
