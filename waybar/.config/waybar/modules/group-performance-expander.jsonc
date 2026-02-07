@@ -1,0 +1,15 @@
+{
+  "group/performance-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "performance-group-item"
+    },
+    "modules": [
+      "custom/performance-expand-icon",
+      "cpu",
+      "memory",
+      "disk"
+    ]
+  }
+}

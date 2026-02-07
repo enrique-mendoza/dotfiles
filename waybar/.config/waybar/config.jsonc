@@ -15,6 +15,7 @@
     "modules-center": [
       "clock#minimal",
       "hyprland/workspaces#roman",
+      "group/performance-expander",
       "pulseaudio",
       "network",
       "battery",
@@ -39,6 +40,7 @@
     "modules-center": [
       "clock#minimal",
       "hyprland/workspaces#roman",
+      "group/performance-expander",
       "pulseaudio",
       "network",
       "battery",
@@ -63,6 +65,7 @@
     "modules-center": [
       "clock#minimal",
       "hyprland/workspaces#roman",
+      "group/performance-expander",
       "pulseaudio",
       "network",
       "battery",
