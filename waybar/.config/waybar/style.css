@@ -56,14 +56,14 @@ tooltip label {
   padding: 0 8px;
 }
 
+#clock,
+#tray {
+  margin: 0px;
+}
+
 #cpu,
 #performance-expander {
   color: @yellow;
-}
-
-/* Module: Clock */
-#clock {
-  padding-left: 8px;
 }
 
 /* Module: Battery */
