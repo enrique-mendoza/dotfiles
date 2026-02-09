@@ -61,6 +61,14 @@ tooltip label {
   margin: 0px;
 }
 
+#clock {
+  padding-left: 0px;
+}
+
+#tray {
+  padding-right: 0px;
+}
+
 #cpu,
 #performance-expander {
   color: @yellow;
