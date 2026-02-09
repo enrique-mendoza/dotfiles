@@ -62,19 +62,6 @@ tooltip label {
   margin: 0px;
 }
 
-#clock {
-  padding-left: 0px;
-}
-
-#tray {
-  padding-right: 0px;
-}
-
-#cpu,
-#performance-expander {
-  color: @yellow;
-}
-
 /* Module: Battery */
 #battery {
   color: @green;
@@ -91,6 +78,17 @@ tooltip label {
 /* Module: Pulseaudio */
 #bluetooth {
   color: @blue;
+}
+
+/* Module: Clock */
+#clock {
+  padding-left: 0px;
+}
+
+/* Module: Cpu */
+#cpu {
+  color: @yellow;
+  padding-left: 2.5px;
 }
 
 /* Module: Disk */
@@ -112,6 +110,11 @@ tooltip label {
   color: @red;
 }
 
+/* Module: Performance Group */
+#performance-expander {
+  color: @yellow;
+}
+
 #network.disabled {
   color: @text;
 }
@@ -123,6 +126,11 @@ tooltip label {
 
 #pulseaudio.microphone {
   color: @pink;
+}
+
+/* Module: Tray */
+#tray {
+  padding-right: 0px;
 }
 
 /* Module: Workspaces */
