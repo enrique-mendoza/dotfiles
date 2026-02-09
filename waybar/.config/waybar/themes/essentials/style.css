@@ -152,7 +152,7 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background: linear-gradient(135deg, @yellow 0%, @sky 50%, @red 100%);
+  background: linear-gradient(135deg, @sky 0%, @blue 50%, @red 100%);
   color: @mantle;
   min-width: 40px;
   transition: all 0.3s ease-in-out;
