@@ -38,6 +38,7 @@ tooltip label {
 }
 
 #battery,
+#bluetooth,
 #clock,
 #cpu,
 #disk,
@@ -85,6 +86,11 @@ tooltip label {
 
 #battery.critical {
   color: @red;
+}
+
+/* Module: Pulseaudio */
+#bluetooth {
+  color: @blue;
 }
 
 /* Module: Disk */

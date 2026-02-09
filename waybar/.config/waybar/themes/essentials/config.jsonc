@@ -15,8 +15,10 @@
     "modules-center": [
       "clock#minimal",
       "hyprland/workspaces#roman",
-      "pulseaudio",
+      "bluetooth",
       "network",
+      "pulseaudio",
+      "group/performance-expander",
       "battery",
       "hyprland/language#minimal",
       "tray"
@@ -39,8 +41,10 @@
     "modules-center": [
       "clock#minimal",
       "hyprland/workspaces#roman",
-      "pulseaudio",
+      "bluetooth",
       "network",
+      "pulseaudio",
+      "group/performance-expander",
       "battery",
       "hyprland/language#minimal",
       "tray"
@@ -63,8 +67,10 @@
     "modules-center": [
       "clock#minimal",
       "hyprland/workspaces#roman",
-      "pulseaudio",
+      "bluetooth",
       "network",
+      "pulseaudio",
+      "group/performance-expander",
       "battery",
       "hyprland/language#minimal",
       "tray"
