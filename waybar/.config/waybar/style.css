@@ -2,30 +2,45 @@
 
 /* General */
 * {
-  background-color: @mantle;
   border: none;
-  border-radius: 0;
-  color: @text;
+  border-radius: 0px;
   font-family: "JetBrainsMono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "AdwaitaMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
   font-size: 12px;
+  margin: 0;
   min-height: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* Waybar Window */
+window#waybar {
+  background: transparent;
+}
+
+/* Tooltip */
+tooltip {
+  background: @mantle;
+  border: 1px solid @sky;
+  border-radius: 12px;
+}
+
+tooltip label {
+  color: @text;
+  padding: 6px;
 }
 
 /* Modules: General */
-.modules-left {
-  margin-left: 8px;
-}
-
-.modules-right {
-  margin-right: 8px;
+.modules-center {
+  background: @mantle;
+  border-radius: 28px;
+  box-shadow: none;
+  padding: 6px 12px;
 }
 
 #battery,
 #bluetooth,
 #clock,
 #cpu,
-#custom-launcher,
-#custom-updates,
 #disk,
 #language,
 #memory,
@@ -33,18 +48,122 @@
 #performance-expander,
 #pulseaudio,
 #tray {
-  margin: 0 7.5px;
-  min-width: 12px;
+  background-color: @mantle;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: @text;
+  margin: 0 5px;
+  padding: 0 8px;
+}
+
+#clock,
+#tray {
+  margin: 0px;
+}
+
+#clock {
+  padding-left: 0px;
+}
+
+#tray {
+  padding-right: 0px;
+}
+
+#cpu,
+#performance-expander {
+  color: @yellow;
+}
+
+/* Module: Battery */
+#battery {
+  color: @green;
+}
+
+#battery.warning {
+  color: @peach;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+/* Module: Pulseaudio */
+#bluetooth {
+  color: @blue;
+}
+
+/* Module: Disk */
+#disk {
+  color: @teal;
+}
+
+/* Module: Memory */
+#memory {
+  color: @blue;
+}
+
+/* Module: Network */
+#network {
+  color: @green;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.disabled {
+  color: @text;
+}
+
+/* Module: Pulseaudio */
+#pulseaudio {
+  color: @blue;
+}
+
+#pulseaudio.microphone {
+  color: @pink;
 }
 
 /* Module: Workspaces */
+#workspaces {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0 10px 0 10px;
+  padding: 0;
+}
+
 #workspaces button {
-  all: initial;
-  margin: 0 1.5px;
-  min-width: 9px;
-  padding: 0 6px;
+  background: transparent;
+  border-radius: 16px;
+  color: @text;
+  margin: 0px 2px;
+  padding: 0px 6px;
+  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.empty {
   opacity: 0.5;
+}
+
+#workspaces button.visible {
+  color: @teal;
+}
+
+#workspaces button.active {
+  background: linear-gradient(135deg, @sky 0%, @blue 50%, @red 100%);
+  color: @mantle;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background-color: @mauve;
+  color: @mantle;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @mantle;
 }
