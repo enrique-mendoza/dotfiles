@@ -110,13 +110,13 @@ tooltip label {
   color: @red;
 }
 
+#network.disabled {
+  color: @text;
+}
+
 /* Module: Performance Group */
 #performance-expander {
   color: @yellow;
-}
-
-#network.disabled {
-  color: @text;
 }
 
 /* Module: Pulseaudio */
