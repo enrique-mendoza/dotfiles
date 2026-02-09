@@ -4,24 +4,27 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "layer": "top",
-    "margin-left": 10,
-    "margin-right": 10,
-    "margin-top": 7,
-    "margin-bottom": -2,
+    "spacing": 0,
+    "height": 26,
     "output": [
       "eDP-1"
     ],
     "position": "top",
+    "modules-left": [
+      "hyprland/workspaces#square"
+    ],
     "modules-center": [
-      "clock#minimal",
-      "hyprland/workspaces#roman",
+      "clock",
+      "custom/updates"
+    ],
+    "modules-right": [
+      "tray",
+      "hyprland/language#minimal",
       "bluetooth",
       "network",
       "pulseaudio",
       "group/performance-expander",
-      "battery",
-      "hyprland/language#minimal",
-      "tray"
+      "battery"
     ],
     "reload_style_on_change": true
   },
@@ -30,24 +33,27 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "layer": "top",
-    "margin-left": 10,
-    "margin-right": 10,
-    "margin-top": 7,
-    "margin-bottom": -2,
+    "spacing": 0,
+    "height": 26,
     "output": [
       "DP-1"
     ],
     "position": "top",
+    "modules-left": [
+      "hyprland/workspaces#square"
+    ],
     "modules-center": [
-      "clock#minimal",
-      "hyprland/workspaces#roman",
+      "clock",
+      "custom/updates"
+    ],
+    "modules-right": [
+      "tray",
+      "hyprland/language#minimal",
       "bluetooth",
       "network",
       "pulseaudio",
       "group/performance-expander",
-      "battery",
-      "hyprland/language#minimal",
-      "tray"
+      "battery"
     ],
     "reload_style_on_change": true
   },
@@ -56,24 +62,27 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "layer": "top",
-    "margin-left": 10,
-    "margin-right": 10,
-    "margin-top": 7,
-    "margin-bottom": -2,
+    "spacing": 0,
+    "height": 26,
     "output": [
       "DP-3"
     ],
     "position": "top",
+    "modules-left": [
+      "hyprland/workspaces#square"
+    ],
     "modules-center": [
-      "clock#minimal",
-      "hyprland/workspaces#roman",
+      "clock",
+      "custom/updates"
+    ],
+    "modules-right": [
+      "tray",
+      "hyprland/language#minimal",
       "bluetooth",
       "network",
       "pulseaudio",
       "group/performance-expander",
-      "battery",
-      "hyprland/language#minimal",
-      "tray"
+      "battery"
     ],
     "reload_style_on_change": true
   }
