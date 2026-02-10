@@ -38,6 +38,11 @@
 }
 
 /* Module: Workspaces */
+#clock {
+  margin-right: 3px;
+}
+
+/* Module: Workspaces */
 #workspaces button {
   all: initial;
   margin: 0 1.5px;
