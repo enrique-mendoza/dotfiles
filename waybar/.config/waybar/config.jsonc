@@ -6,8 +6,8 @@
     "layer": "top",
     "margin-left": 10,
     "margin-right": 10,
-    "margin-top": 7,
-    "margin-bottom": -2,
+    "margin-top": 6,
+    "margin-bottom": -5,
     "output": [
       "eDP-1"
     ],
@@ -32,8 +32,8 @@
     "layer": "top",
     "margin-left": 10,
     "margin-right": 10,
-    "margin-top": 7,
-    "margin-bottom": -2,
+    "margin-top": 6,
+    "margin-bottom": -5,
     "output": [
       "DP-1"
     ],
@@ -58,8 +58,8 @@
     "layer": "top",
     "margin-left": 10,
     "margin-right": 10,
-    "margin-top": 7,
-    "margin-bottom": -2,
+    "margin-top": 6,
+    "margin-bottom": -5,
     "output": [
       "DP-3"
     ],
