@@ -4,8 +4,8 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "AdwaitaMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
-  font-size: 11px;
+  font-family: "JetBrainsMono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", "GeistMono Nerd Font Propo", "AdwaitaMono Nerd Font Propo", "SFMono Nerd Font Mono", "Cartograph CF Nerd Font", "RobotoMono NF", "SauceCodePro NF", "FontAwesome";
+  font-size: 12px;
   font-weight: bold;
   min-height: 0;
 }
@@ -25,14 +25,6 @@ tooltip {
 }
 
 /* Modules: General */
-.modules-left {
-  margin-left: 10px;
-}
-
-.modules-right {
-  margin-right: 10px;
-}
-
 #backlight,
 #battery,
 #bluetooth,
@@ -56,7 +48,6 @@ tooltip {
   background: @mantle;
   border: 0.1px solid @sky;
   border-radius: 10px;
-  margin: 4px 0px 4px 0px;
   padding: 0 10px;
 }
 
@@ -226,7 +217,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  color: @text;
+  color: @yellow;
 }
 
 #workspaces button.urgent {

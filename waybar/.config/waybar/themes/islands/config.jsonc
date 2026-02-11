@@ -4,16 +4,16 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "position": "top",
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,
+    "margin-top": 6,
+    "margin-right": 10,
+    "margin-bottom": -2,
+    "margin-left": 10,
     "output": [
       "eDP-1"
     ],
     "modules-left": [
       "custom/launcher",
-      "hyprland/workspaces#square",
+      "hyprland/workspaces#pacman",
       "pulseaudio",
       "battery",
       "bluetooth",
@@ -21,7 +21,8 @@
       "custom/updates"
     ],
     "modules-center": [
-      "clock"
+      "clock",
+      "custom/weather"
     ],
     "modules-right": [
       "tray",
@@ -38,16 +39,16 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "position": "top",
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,
+    "margin-top": 6,
+    "margin-right": 10,
+    "margin-bottom": -2,
+    "margin-left": 10,
     "output": [
       "DP-1"
     ],
     "modules-left": [
       "custom/launcher",
-      "hyprland/workspaces#square",
+      "hyprland/workspaces#pacman",
       "pulseaudio",
       "battery",
       "bluetooth",
@@ -55,7 +56,8 @@
       "custom/updates"
     ],
     "modules-center": [
-      "clock"
+      "clock",
+      "custom/weather"
     ],
     "modules-right": [
       "tray",
@@ -72,16 +74,16 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "position": "top",
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,
+    "margin-top": 6,
+    "margin-right": 10,
+    "margin-bottom": -2,
+    "margin-left": 10,
     "output": [
       "DP-3"
     ],
     "modules-left": [
       "custom/launcher",
-      "hyprland/workspaces#square",
+      "hyprland/workspaces#pacman",
       "pulseaudio",
       "battery",
       "bluetooth",
@@ -89,7 +91,8 @@
       "custom/updates"
     ],
     "modules-center": [
-      "clock"
+      "clock",
+      "custom/weather"
     ],
     "modules-right": [
       "tray",

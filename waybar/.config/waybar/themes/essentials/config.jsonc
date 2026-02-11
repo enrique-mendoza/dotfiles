@@ -4,10 +4,10 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "layer": "top",
-    "margin-left": 10,
-    "margin-right": 10,
     "margin-top": 6,
-    "margin-bottom": -5,
+    "margin-right": 10,
+    "margin-bottom": -2,
+    "margin-left": 10,
     "output": [
       "eDP-1"
     ],
@@ -30,10 +30,10 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "layer": "top",
-    "margin-left": 10,
-    "margin-right": 10,
     "margin-top": 6,
-    "margin-bottom": -5,
+    "margin-right": 10,
+    "margin-bottom": -2,
+    "margin-left": 10,
     "output": [
       "DP-1"
     ],
@@ -56,10 +56,10 @@
       "$HOME/.config/waybar/include/includes.jsonc"
     ],
     "layer": "top",
-    "margin-left": 10,
-    "margin-right": 10,
     "margin-top": 6,
-    "margin-bottom": -5,
+    "margin-right": 10,
+    "margin-bottom": -2,
+    "margin-left": 10,
     "output": [
       "DP-3"
     ],
