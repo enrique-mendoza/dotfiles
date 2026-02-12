@@ -1,0 +1,18 @@
+{
+  "cpu#graph": {
+    "format": "{icon} {usage}%",
+    "format-alt": "{avg_frequency} GHz",
+    "format-icons": [
+      "󰝦",
+      "󰪞",
+      "󰪟",
+      "󰪠",
+      "󰪡",
+      "󰪢",
+      "󰪣",
+      "󰪤",
+      "󰪥"
+    ],
+    "interval": 5
+  }
+}
