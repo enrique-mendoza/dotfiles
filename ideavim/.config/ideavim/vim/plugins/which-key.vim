@@ -175,7 +175,7 @@ if is_ide_intellij_idea |
 | endif
 
 " Search ---------------------
-let g:WhichKeyDesc_search = "<leader>s search"
+let g:WhichKeyDesc_search = "<leader>s Search"
 
 let g:WhichKeyDesc_search_registers = "<leader>s\"  Registers"
 let g:WhichKeyDesc_search_action = "<leader>sC  Commands"
