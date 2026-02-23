@@ -12,7 +12,7 @@
 # ██║   ██║██████╔╝
 # ██║   ██║██╔══██╗
 # ╚██████╔╝██║  ██║
-# ╚═════╝ ╚═╝  ╚═╝
+#  ╚═════╝ ╚═╝  ╚═╝
 #
 # ███████╗ ██████╗  ██████╗██╗   ██╗███████╗    ████████╗██╗   ██╗██╗
 # ██╔════╝██╔═══██╗██╔════╝██║   ██║██╔════╝    ╚══██╔══╝██║   ██║██║
@@ -23,6 +23,6 @@
 # See https://github.com/basecamp/omarchy/blob/master/bin/omarchy-launch-or-focus-tui
 
 APP_ID="$1"
-LAUNCH_COMMAND="/home/kike/.config/hypr/modules/utilities/launch/launch-tui.sh $@"
+LAUNCH_COMMAND="/home/kike/.config/hypr/config.d/utils/scripts/launch/launch-tui.sh $@"
 
-exec "/home/kike/.config/hypr/modules/utilities/launch/launch-or-focus.sh" "$APP_ID" "$LAUNCH_COMMAND"
+exec "/home/kike/.config/hypr/config.d/utils/scripts/launch/launch-or-focus.sh" "$APP_ID" "$LAUNCH_COMMAND"
