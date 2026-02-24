@@ -330,7 +330,7 @@ alias eatcpu="ps auxf | sort -nr -k 3 | head -5" # Get top process eating cpu
 
 # Pacman
 alias paci="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
-alias pacpacks="pacman -Qet | awk '{print $1}' > eos_$(date +%m%d%Y)"
+alias pacpacks="pacman -Qet | awk '{print $1}' > arch_$(date +%m%d%Y)"
 alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 
 # Password manager
