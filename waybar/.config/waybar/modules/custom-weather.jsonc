@@ -1,9 +1,0 @@
-{
-  "custom/weather": {
-    "format": "{}°",
-    "tooltip": true,
-    "interval": 3600,
-    "exec": "wttrbar --observation-time",
-    "return-type": "json"
-  }
-}

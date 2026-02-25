@@ -1,8 +1,0 @@
-{
-  "clock": {
-    "format": "{:L%A %H:%M}",
-    "format-alt": "{:L%B %d, %Y}",
-    "tooltip": "true",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  }
-}

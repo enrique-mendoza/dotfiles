@@ -292,7 +292,8 @@ font_size 12.0
 #: }}}
 
 #: Text cursor customization {{{
-# cursor #f5e0dc
+
+cursor #f5e0dc
 
 #: Default text cursor color. If set to the special value none the
 #: cursor will be rendered with a "reverse video" effect. Its color
@@ -303,7 +304,8 @@ font_size 12.0
 #: background and foreground colors have very low contrast. Note that
 #: some themes set this value, so if you want to override it, place
 #: your value after the lines where the theme file is included.
-# cursor_text_color #1e1e2e
+
+cursor_text_color #1e1e2e
 
 #: The color of text under the cursor. If you want it rendered with
 #: the background color of the cell underneath instead, use the
@@ -520,7 +522,8 @@ mouse_hide_wait 1.0
 #:  - 1.0
 #:  - -1.0
 #:  - 0.1 3.0 40 yes
-# url_color #f5e0dc
+
+url_color #f5e0dc
 # url_style curly
 
 #: The color and style for highlighting URLs on mouse-over. url_style
@@ -1049,14 +1052,17 @@ placement_strategy center
 #: only at the bottom and right edges. The value can be one of: top-
 #: left, top, top-right, left, center, right, bottom-left, bottom,
 #: bottom-right.
-# active_border_color #b4befe
+
+active_border_color #b4befe
 
 #: The color for the border of the active window. Set this to none to
 #: not draw borders around the active window.
-# inactive_border_color #6c7086
+
+inactive_border_color #6c7086
 
 #: The color for the border of inactive windows.
-# bell_border_color #f9e2af
+
+bell_border_color #f9e2af
 
 #: The color for the border of inactive windows in which a bell has
 #: occurred.
@@ -1309,15 +1315,17 @@ confirm_os_window_close 0
 
 #: Template to use for active tabs. If not specified falls back to
 #: tab_title_template.
-# active_tab_foreground   #11111b
-# active_tab_background   #cba6f7
+
+active_tab_foreground   #11111b
+active_tab_background   #cba6f7
 # active_tab_font_style   bold-italic
-# inactive_tab_foreground #cdd6f4
-# inactive_tab_background #181825
+inactive_tab_foreground #cdd6f4
+inactive_tab_background #181825
 # inactive_tab_font_style normal
 
 #: Tab bar colors and styles.
-# tab_bar_background #11111b
+
+tab_bar_background #11111b
 
 #: Background color for the tab bar. Defaults to using the terminal
 #: background color.
@@ -1332,8 +1340,9 @@ confirm_os_window_close 0
 #: }}}
 
 #: Color scheme {{{
-# foreground #cdd6f4
-# background #1e1e2e
+
+foreground #cdd6f4
+background #1e1e2e
 
 #: The foreground and background colors.
 
@@ -1459,8 +1468,9 @@ confirm_os_window_close 0
 
 #: How much to dim text that has the DIM/FAINT attribute set. One
 #: means no dimming and zero means fully dimmed (i.e. invisible).
-# selection_foreground #1e1e2e
-# selection_background #f5e0dc
+
+selection_foreground #1e1e2e
+selection_background #f5e0dc
 
 #: The foreground and background colors for text selected with the
 #: mouse. Setting both of these to none will cause a "reverse video"
@@ -1475,54 +1485,68 @@ confirm_os_window_close 0
 #: The 256 terminal colors. There are 8 basic colors, each color has a
 #: dull and bright version, for the first 16 colors. You can set the
 #: remaining 240 colors as color16 to color255.
-# color0 #45475a
-# color8 #585b70
+
+color0 #45475a
+color8 #585b70
 
 #: black
-# color1 #f38ba8
-# color9 #f38ba8
+
+color1 #f38ba8
+color9 #f38ba8
 
 #: red
-# color2  #a6e3a1
-# color10 #a6e3a1
+
+color2  #a6e3a1
+color10 #a6e3a1
 
 #: green
-# color3  #f9e2af
-# color11 #f9e2af
+
+color3  #f9e2af
+color11 #f9e2af
 
 #: yellow
-# color4  #89b4fa
-# color12 #89b4fa
+
+color4  #89b4fa
+color12 #89b4fa
 
 #: blue
-# color5  #f5c2e7
-# color13 #f5c2e7
+
+color5  #f5c2e7
+color13 #f5c2e7
 
 #: magenta
-# color6  #94e2d5
-# color14 #94e2d5
+
+color6  #94e2d5
+color14 #94e2d5
 
 #: cyan
-# color7  #bac2de
-# color15 #a6adc8
+
+color7  #bac2de
+color15 #a6adc8
 
 #: white
-# mark1_foreground #1e1e2e
+
+mark1_foreground #1e1e2e
 
 #: Color for marks of type 1
-# mark1_background #b4befe
+
+mark1_background #b4befe
 
 #: Color for marks of type 1 (light steel blue)
-# mark2_foreground #1e1e2e
+
+mark2_foreground #1e1e2e
 
 #: Color for marks of type 2
-# mark2_background #cba6f7
+
+mark2_background #cba6f7
 
 #: Color for marks of type 1 (beige)
-# mark3_foreground #1e1e2e
+
+mark3_foreground #1e1e2e
 
 #: Color for marks of type 3
-# mark3_background #74c7ec
+
+mark3_background #74c7ec
 
 #: Color for marks of type 3 (violet)
 
@@ -1925,7 +1949,8 @@ term xterm-kitty
 #: }}}
 
 #: OS specific tweaks {{{
-# wayland_titlebar_color system
+
+wayland_titlebar_color system
 
 #: The color of the kitty window's titlebar on Wayland systems with
 #: client side window decorations such as GNOME. A value of system
@@ -2787,9 +2812,3 @@ term xterm-kitty
 #: }}}
 
 #: }}}
-
-
-# BEGIN_KITTY_THEME
-# Noctalia
-include current-theme.conf
-# END_KITTY_THEME
