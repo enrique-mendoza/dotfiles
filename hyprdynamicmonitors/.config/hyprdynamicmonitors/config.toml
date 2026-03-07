@@ -28,7 +28,7 @@ post_apply_exec = "notify-send '󰍺  Workstation profile applied'"
 [profiles.workstation.conditions]
 
 [profiles.workstation.static_template_values]
-mode = "workspace-left"
+mode = "workspace-center"
 
 [[profiles.workstation.conditions.required_monitors]]
 description = "Lenovo Group Limited 0x8AB1"
