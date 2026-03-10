@@ -344,7 +344,7 @@ alias ff="fastfetch"
 alias tclock="tty-clock -c -b -s"
 
 # tmux
-alias t='tmux attach || tmux new -s personal'
+alias t="tmux attach || tmux new -s personal"
 
 # Yazi Shell Wrapper
 function y() {
