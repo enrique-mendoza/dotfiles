@@ -1,0 +1,11 @@
+{
+  "bluetooth": {
+    "format": "",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "$HOME/.config/hypr/modules/utilities/launch-or-focus-tui.sh bluetui"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "hyprland/workspaces#pacman": {
+    "all-outputs": true,
+    "current-only": false,
+    "disable-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "󰮯",
+      "empty": "<span font='5'></span>",
+      "default": "󰊠"
+    },
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "sort-by-number": true
+  }
+}
