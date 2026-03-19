@@ -32,17 +32,11 @@
   interactive = auto
   status = auto
   ui = auto
-# [commit]
-#   gpgsign = true
 [core]
   editor = nvim
   ignorecase = false
-[credential]
-  helper = store
 [diff]
   submodule = log
-[fetch]
-  prune = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
@@ -50,10 +44,6 @@
   smudge = git-lfs smudge -- %f
 [ghq]
   root = ~/.ghq
-[gpg]
-  format = ssh
-[init]
-  defaultBranch = main
 [github]
   user = enrique-mendoza
 [merge]
@@ -69,6 +59,5 @@
 [user]
   email = luis.e.1998@hotmail.com
   name = Enrique Mendoza
-  signingkey = /home/kike/.ssh/id_ed25519.pub
-[includeIf "gitdir:~/code/work/"]
+[includeIf "gitdir:~/code/work/infotec/"]
   path = ~/.gitconfig-infotec

@@ -31,6 +31,6 @@ gui:
   nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
 os:
   editCommand: 'nvim'
-confirmOnQuit: false
+confirmOnQuit: true
 disableStartupPopups: true
 notARepository: 'skip' # one of: 'prompt' | 'create' | 'skip'

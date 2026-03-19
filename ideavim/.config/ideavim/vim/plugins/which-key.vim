@@ -6,7 +6,7 @@
 "  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝      ╚═╝  ╚═╝╚══════╝   ╚═╝
 
 let g:WhichKey_CommandStyle = "none"
-let g:WhichKey_FontFamily = "JetBrainsMono NF"
+let g:WhichKey_FontFamily = "JetBrainsMono Nerd Font"
 let g:WhichKey_FontSize = 15
 let g:WhichKey_KeyStyle = "none"
 let g:WhichKey_ShowTypedSequence = "true"
@@ -175,7 +175,7 @@ if is_ide_intellij_idea |
 | endif
 
 " Search ---------------------
-let g:WhichKeyDesc_search = "<leader>s Search"
+let g:WhichKeyDesc_search = "<leader>s search"
 
 let g:WhichKeyDesc_search_registers = "<leader>s\"  Registers"
 let g:WhichKeyDesc_search_action = "<leader>sC  Commands"
