@@ -1,7 +1,6 @@
 [general]
 destination = "$HOME/.config/hypr/monitors.conf"
 debounce_time_ms = 1500
-pre_apply_exec = "notify-send '󰍹  Switching profile...'"
 
 [power_events]
 
@@ -14,7 +13,6 @@ object_path = "/org/freedesktop/UPower/devices/line_power_AC"
 [profiles.laptop]
 config_file = "/home/kike/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
 config_file_type = "template"
-post_apply_exec = "notify-send '  Laptop profile applied'"
 [profiles.laptop.conditions]
 
 [[profiles.laptop.conditions.required_monitors]]
@@ -24,11 +22,10 @@ monitor_tag = "monitor0"
 [profiles.workstation]
 config_file = "/home/kike/.config/hyprdynamicmonitors/hyprconfigs/workstation.go.tmpl"
 config_file_type = "template"
-post_apply_exec = "notify-send '󰍺  Workstation profile applied'"
 [profiles.workstation.conditions]
 
 [profiles.workstation.static_template_values]
-mode = "workspace-left"
+mode = "workspace-center"
 
 [[profiles.workstation.conditions.required_monitors]]
 description = "Lenovo Group Limited 0x8AB1"

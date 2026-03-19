@@ -343,6 +343,9 @@ alias ff="fastfetch"
 # tty-clock
 alias tclock="tty-clock -c -b -s"
 
+# tmux
+alias t="tmux attach || tmux new -s personal"
+
 # Yazi Shell Wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
