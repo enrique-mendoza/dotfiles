@@ -58,5 +58,7 @@ use = "Lil-Dank/lazygit"
 rev = "8f37dc5"
 hash = "ee71543790f0ce3951161045a3787abd"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "619fdc5"
+hash = "d4c7003ec6dc4efd5d3a050d5c2f2575"

@@ -1,8 +1,0 @@
-{
-  "disk": {
-    "format": " {used}",
-    "format-alt": " {used}/{total}",
-    "interval": 5,
-    "path": "/home"
-  }
-}
