@@ -41,6 +41,11 @@
       "keyColor": "cyan",
     },
     {
+      "type": "shell",
+      "key": "shell ",
+      "keyColor": "red",
+    },
+    {
       "type": "packages",
       "key": "pkgs  ",
       "keyColor": "blue",
