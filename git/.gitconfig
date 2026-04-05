@@ -70,5 +70,3 @@
   email = luis.e.1998@hotmail.com
   name = Enrique Mendoza
   signingkey = /home/kike/.ssh/id_ed25519.pub
-[includeIf "gitdir:~/code/work/"]
-  path = ~/.gitconfig-infotec
