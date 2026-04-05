@@ -2,8 +2,6 @@
 
 ![preview-arch](./.screenshots/arch.png)
 
-![preview-eos](./.screenshots/eos.png)
-
 ## Installation
 
 1. Download `git` and GNU `stow`.
