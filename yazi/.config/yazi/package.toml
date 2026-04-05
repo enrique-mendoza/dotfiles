@@ -16,7 +16,7 @@ hash = "f9c1e66eb490e17f88659034cbc6fb10"
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
 rev = "e95c7b3"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+hash = "aeb9aa2b11f9dcaed2538b5e8870f693"
 
 [[plugin.deps]]
 use = "AnirudhG07/plugins-yazi:copy-file-contents"
