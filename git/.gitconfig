@@ -20,8 +20,12 @@
 [core]
   editor = nvim
   ignorecase = false
+[credential]
+  helper = store
 [diff]
   submodule = log
+[fetch]
+  prune = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
@@ -29,6 +33,10 @@
   smudge = git-lfs smudge -- %f
 [ghq]
   root = ~/.ghq
+[gpg]
+  format = ssh
+[init]
+  defaultBranch = main
 [github]
   user = enrique-mendoza
 [merge]
