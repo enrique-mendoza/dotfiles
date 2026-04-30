@@ -1,28 +1,13 @@
 [alias]
-  # note: you'll need hub and peco for some alias
-  a = "!git status --short | peco | awk '{print $2}' | xargs git add"
-  # add conflicted file on merge
-  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
   br = branch
-  ba = branch -a
-  bm = branch --merged
-  bn = branch --no-merged
-  ca = commit -a
   ci = commit
   co = checkout
-  d = diff
-  df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
-  dump = cat-file -p
-  # edit conflicted file on merge
-  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
-  find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
+  df = "!git hist | fzf | awk '{print $2}' | xargs -I {} git diff {}^ {}"
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
   llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
-  open = "!hub browse"
   ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
   pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
   st = status
-  type = cat-file -t
 [branch]
   sort = committerdate
 [color]
@@ -32,8 +17,6 @@
   interactive = auto
   status = auto
   ui = auto
-# [commit]
-#   gpgsign = true
 [core]
   editor = nvim
   ignorecase = false
