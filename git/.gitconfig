@@ -47,7 +47,11 @@
 [github]
   user = enrique-mendoza
 [merge]
+  conflictStyle = diff3
   ff = false
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 [pull]
   ff = true
 [push]
@@ -55,7 +59,7 @@
 [status]
   submoduleSummary = true
 [url "git@github.com:"]
-    insteadOf = "gh:"
+  insteadOf = "gh:"
 [user]
   email = luis.e.1998@hotmail.com
   name = Enrique Mendoza
