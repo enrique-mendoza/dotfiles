@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:/opt/homebrew/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -92,6 +92,7 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  brew
   git
   fzf-tab
   mise
@@ -114,8 +115,6 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-bindkey ' ' magic-space
 
 # User configuration
 
@@ -249,26 +248,19 @@ alias lg="lazygit"
 alias lzd="lazydocker"
 
 # System Utils
+alias pacpack="pacman -Qet | awk '{print $1}'"
 alias df="df -h" # human-readable sizes
 alias free="free -m" # show sizes in MB
 alias eatcpu="ps auxf | sort -nr -k 3 | head -5" # Get top process eating cpu
-
-# Pacman
-alias paci="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
-alias pacpacks="pacman -Qet | awk '{print $1}' > arch_noctalia_$(date +%m%d%Y)"
-alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 
 # Password manager
 alias pmc="pass show -c"
 alias pms="pass show"
 
-# Fastfetch
+# Fasfetch
 alias ff="fastfetch"
 
-# tty-clock
-alias tclock="tty-clock -c -b -s"
-
-# tmux
+# Tmux
 alias t="tmux attach || tmux new -s personal"
 
 # Yazi Shell Wrapper
@@ -281,15 +273,15 @@ function y() {
 }
 
 # Autocompletions
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"

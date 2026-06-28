@@ -41,19 +41,14 @@
       "keyColor": "cyan",
     },
     {
-      "type": "shell",
-      "key": "shell ",
-      "keyColor": "red",
-    },
-    {
       "type": "packages",
       "key": "pkgs  ",
       "keyColor": "blue",
     },
     {
-      "type": "disk",
-      "format": "{create-time:10} ({days} days)",
-      "key": "age   ",
+      "type": "uptime",
+      "format": "{?days}{days}d {?}{hours}h {minutes}m",
+      "key": "uptime",
       "keyColor": "magenta",
     },
     "break",

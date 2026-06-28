@@ -24,7 +24,7 @@ prepend_keymap = [
 	{ on = "<C-d>", run = "plugin diff", desc = "Diff the selected with the hovered file" },
 
   # Drag and drop via dragon
-	{ on = "<C-n>", run = 'shell -- dragon-drop -x -i -T "$@"' },
+	{ on = "<C-n>", run = 'shell -- dragon -x -i -T "$@"' },
 
   # lazygit.yazi: Plugin for Yazi to manage git repos with lazygit
   { on = [ "g", "i" ], run = "plugin lazygit", desc = "Run Lazygit" },
