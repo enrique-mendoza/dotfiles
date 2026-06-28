@@ -1,0 +1,8 @@
+{
+  "editorMode": "vim",
+  "statusLine": {
+    "type": "command",
+    "command": "npx ccusage@latest statusline"
+  },
+  "theme": "auto"
+}

@@ -1,0 +1,59 @@
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  df = "!git hist | fzf | awk '{print $2}' | xargs -I {} git diff {}^ {}"
+  hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+  llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+  pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+  st = status
+[branch]
+  sort = committerdate
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
+  ui = auto
+[core]
+  editor = nvim
+  ignorecase = false
+[credential]
+  helper = store
+[diff]
+  submodule = log
+[fetch]
+  prune = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  process = git-lfs filter-process
+  required = true
+  smudge = git-lfs smudge -- %f
+[ghq]
+  root = ~/.ghq
+[gpg]
+  format = ssh
+[init]
+  defaultBranch = main
+[github]
+  user = enrique-mendoza
+[merge]
+  conflictStyle = diff3
+  ff = false
+[merge "mergiraf"]
+  name = mergiraf
+  driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+[pull]
+  ff = true
+[push]
+  default = simple
+[status]
+  submoduleSummary = true
+[url "git@github.com:"]
+  insteadOf = "gh:"
+[user]
+  email = luis.e.1998@hotmail.com
+  name = Enrique Mendoza
+  signingkey = /home/kike/.ssh/id_ed25519.pub
