@@ -221,18 +221,18 @@ alias fgrep="fgrep --color=auto"
 alias grep="grep --color=auto"
 
 # Docker
-alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
-alias dl='docker logs --tail=100'
-alias dc='docker-compose'
+alias dls='docker container ls --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias dl='docker container logs --tail=100'
+alias dc='docker compose'
 
 dfu() {
   local compose_file="$1"
-  dc -f "$compose_file" up
+  docker compose -f "$compose_file" up
 }
 
 dfd() {
   local compose_file="$1"
-  dc -f "$compose_file" -v down
+  docker compose -f "$compose_file" down -v
 }
 
 # ls (exa is unmaintained, use eza instead)
