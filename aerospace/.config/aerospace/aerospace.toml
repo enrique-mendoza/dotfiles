@@ -210,11 +210,27 @@ automatically-unhide-macos-hidden-apps = false
     run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-    if.app-id = 'com.dmitrynikolaev.numi'
+    if.app-id = 'com.apple.AppStore'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.DiskUtility'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.mail'
     run = 'layout floating'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.QuickTimePlayerX'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.dmitrynikolaev.numi'
     run = 'layout floating'
 
 [[on-window-detected]]
@@ -230,7 +246,6 @@ automatically-unhide-macos-hidden-apps = false
 #     5 = '^built-in retina display$'  # Case insensitive regex match
 #     6 = ['secondary', 'dell']        # You can specify multiple patterns.
 #                                      # The first matching pattern will be used
-
 [workspace-to-monitor-force-assignment]
     1 = ['secondary', 'main']
     2 = ['secondary', 'main']
