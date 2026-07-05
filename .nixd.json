@@ -1,0 +1,13 @@
+{
+  "nixpkgs": {
+    "expr": "(builtins.getFlake \"/home/asa/dotfiles\").inputs.nixpkgs.legacyPackages.x86_64-linux"
+  },
+  "options": {
+    "nixos": {
+      "expr": "(builtins.getFlake \"/home/asa/dotfiles\").nixosConfigurations.desktop.options"
+    },
+    "home-manager": {
+      "expr": "(builtins.getFlake \"/home/asa/dotfiles\").nixosConfigurations.desktop.options.home-manager.users.type.functor.wrapped"
+    }
+  }
+}

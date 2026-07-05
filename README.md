@@ -1,23 +1,32 @@
 <h1 id="top" align="center">Dotfiles 🚀</h1>
 
-![preview](./.screenshots/cachyos.png)
+![preview](./.screenshots/nixos.png)
 
 ## Installation
 
-1. Download `git` and GNU `stow`.
+### Prerequisites
 
-2. Clone into your `$HOME` directory or `~`.
+Install NixOS with the [graphical ISO](https://nixos.org/download/), then reboot into the new system.
 
-   ```bash
-   git clone git@github.com:enrique-mendoza/dotfiles.git ~/dotfiles
-   ```
+### Steps
 
-3. Run `stow` to symlink everything or just select what you want:
+1. Clone the repo:
 
    ```bash
-   stow */ # Everything (the '/' ignores the README)
+   nix-shell -p git --run "git clone -b nixos https://github.com/enrique-mendoza/dotfiles.git ~/dotfiles"
    ```
 
+2. Add the hardware config (gitignored, but Nix needs it tracked to see it):
+
    ```bash
-   stow zsh # Just zsh config
+   cp /etc/nixos/hardware-configuration.nix ~/dotfiles/hosts/desktop/hardware-configuration.nix
+   git -C ~/dotfiles add -N -f hosts/desktop/hardware-configuration.nix
    ```
+
+3. Rebuild:
+
+   ```bash
+   sudo nixos-rebuild switch --flake ~/dotfiles#desktop
+   ```
+
+   This registers the flake as `nixcfg`, so future rebuilds can just run `rebuild`.
