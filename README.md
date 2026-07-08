@@ -62,7 +62,7 @@ Install NixOS with the [graphical ISO](https://nixos.org/download/). During inst
 
    This registers the flake as `nixcfg`, so future rebuilds can just run `rebuild`.
 
-   Reboot, then run `rebuild` in `~/dotfiles`, and reboot again.
+   Reboot. If Noctalia Shell doesn't start, reboot again.
 
 ## Post-installation
 
