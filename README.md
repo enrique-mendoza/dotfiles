@@ -68,5 +68,5 @@ Install NixOS with the [graphical ISO](https://nixos.org/download/). During inst
 2. (Recommended) Use SSH instead of HTTPS for the remote, so you don't need to enter credentials on every push:
 
    ```bash
-   git -C ~/dotfiles remote set-url origin git@github.com:enrique-mendoza/dotfiles.git
+   git remote set-url origin git@github.com:enrique-mendoza/dotfiles.git
    ```
