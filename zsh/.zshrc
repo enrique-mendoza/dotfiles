@@ -175,20 +175,20 @@ alias zshconfig="nvim ~/.zshrc"
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
 #   - Exit if there's no match (--exit-0)
-fe() {
+function fe() {
   IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR} "${files[@]}"
 }
 
 # fd - cd to selected directory including hidden directories.
-fd() {
+function fd() {
   local dir
   dir=$(find ${1:-.} -type d 2> /dev/null | fzf --multi) && cd "$dir"
 }
 
 # Using ripgrep combined with preview
 # find-in-file - usage: fif <searchTerm>
-fif() {
+function fif() {
   if [ ! "$#" -gt 0 ]; then echo "Need a string to search for\!"; return 1; fi
   rg --files-with-matches --no-messages "$1" | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
 }
@@ -225,12 +225,12 @@ alias dls='docker container ls --format "table {{.Names}}\t{{.Status}}\t{{.Ports
 alias dl='docker container logs --tail=100'
 alias dc='docker compose'
 
-dfu() {
+function dfu() {
   local compose_file="$1"
   docker compose -f "$compose_file" up
 }
 
-dfd() {
+function dfd() {
   local compose_file="$1"
   docker compose -f "$compose_file" down -v
 }
