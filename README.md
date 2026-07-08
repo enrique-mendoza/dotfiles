@@ -40,9 +40,10 @@ Install NixOS with the [graphical ISO](https://nixos.org/download/). During inst
    sudo nixos-rebuild switch
    ```
 
-6. Clone the repo:
+6. Go to your home directory and clone the repo:
 
    ```bash
+   cd ~
    nix-shell -p git --run "git clone -b nixos https://github.com/enrique-mendoza/dotfiles.git ~/dotfiles"
    ```
 
