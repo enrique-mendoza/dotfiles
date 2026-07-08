@@ -34,20 +34,26 @@ Install NixOS with the [graphical ISO](https://nixos.org/download/). During inst
 
 4. Add `git` to `environment.systemPackages` and save the file.
 
-5. Clone the repo:
+5. Rebuild so `git` is available:
+
+   ```bash
+   sudo nixos-rebuild switch
+   ```
+
+6. Clone the repo:
 
    ```bash
    nix-shell -p git --run "git clone -b nixos https://github.com/enrique-mendoza/dotfiles.git ~/dotfiles"
    ```
 
-6. Add the hardware config (gitignored, but Nix needs it tracked to see it):
+7. Add the hardware config (gitignored, but Nix needs it tracked to see it):
 
    ```bash
    cp /etc/nixos/hardware-configuration.nix ~/dotfiles/hosts/desktop/hardware-configuration.nix
    git -C ~/dotfiles add -N -f hosts/desktop/hardware-configuration.nix
    ```
 
-7. Rebuild:
+8. Rebuild:
 
    ```bash
    sudo nixos-rebuild switch --flake ~/dotfiles#desktop
