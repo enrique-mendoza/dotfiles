@@ -229,10 +229,11 @@ source <(ng completion script)
 eval "$(zoxide init --cmd cd zsh)"
 
 # ----------------------------------------------------
-# History Substring Search
+# Key Bindings
 # ----------------------------------------------------
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey ' ' magic-space
 
 # ----------------------------------------------------
 # SDKMAN
