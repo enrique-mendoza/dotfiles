@@ -1,1 +1,4 @@
 tmux/.config/tmux/plugins
+yazi/.config/yazi/plugins/*
+!yazi/.config/yazi/plugins/smart-switch.yazi
+!yazi/.config/yazi/plugins/smart-tab.yazi
