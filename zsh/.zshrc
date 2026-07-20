@@ -92,15 +92,8 @@ alias dc='docker compose'
 alias dl='docker container logs --tail=100'
 alias dls='docker container ls --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 
-function dfd() {
-  local compose_file="$1"
-  docker compose -f "$compose_file" down -v
-}
-
-function dfu() {
-  local compose_file="$1"
-  docker compose -f "$compose_file" up
-}
+function dfd() { docker compose -f "$1" down -v }
+function dfu() { docker compose -f "$1" up }
 
 # ----------------------------------------------------
 # Fastfetch
