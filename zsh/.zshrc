@@ -83,12 +83,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=selected-bg:#45475A \
   --color=border:#6C7086,label:#CDD6F4
 "
-export FZF_CTRL_R_OPTS="--style minimal \
-  --color 16 \
-  --info inline \
-  --no-sort \
-  --no-preview
-"
+export FZF_CTRL_R_OPTS="--info inline --no-sort --no-preview"
 
 # ----------------------------------------------------
 # Docker
@@ -152,7 +147,6 @@ alias gco="git checkout"
 alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
 alias gds="gd --staged"
 alias gi="git init"
-alias gl="git log --graph --all --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(blue)  %D%n%s%n'"
 alias gm="git merge"
 alias gn="git checkout -b" # new branch
 alias gp="git push"
