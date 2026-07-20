@@ -1,8 +1,5 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "npx ccusage@latest statusline"
-  },
+  "editorMode": "vim",
   "enabledPlugins": {
     "ponytail@ponytail": true,
     "remember@claude-plugins-official": true
@@ -10,14 +7,31 @@
   "extraKnownMarketplaces": {
     "ponytail": {
       "source": {
-        "source": "github",
-        "repo": "DietrichGebert/ponytail"
+        "repo": "DietrichGebert/ponytail",
+        "source": "github"
       }
     }
   },
-  "theme": "auto",
-  "editorMode": "vim",
   "permissions": {
-    "defaultMode": "auto"
-  }
+    "allow": [
+      "Agent(*)",
+      "Bash",
+      "WebFetch(domain:*)"
+    ],
+    "ask": [
+      "Edit",
+      "NotebookEdit",
+      "Write"
+    ],
+    "defaultMode": "default",
+    "deny": [
+      "Read(.env)",
+      "Read(./secrets/**)"
+    ]
+  },
+  "statusLine": {
+    "command": "npx ccusage@latest statusline",
+    "type": "command"
+  },
+  "theme": "auto"
 }
