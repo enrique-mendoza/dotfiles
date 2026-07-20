@@ -1,8 +1,23 @@
 {
-  "editorMode": "vim",
   "statusLine": {
     "type": "command",
     "command": "npx ccusage@latest statusline"
   },
-  "theme": "auto"
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "remember@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    }
+  },
+  "theme": "auto",
+  "editorMode": "vim",
+  "permissions": {
+    "defaultMode": "auto"
+  }
 }
