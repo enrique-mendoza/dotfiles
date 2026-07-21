@@ -10,8 +10,6 @@ export TERMINAL="kitty"
 # Shell Options
 # ----------------------------------------------------
 setopt auto_cd # Type a dir to cd
-setopt extended_glob # Match ~ # ^
-setopt glob_dots # Include dotfiles
 
 # ----------------------------------------------------
 # History
@@ -88,9 +86,9 @@ export FZF_CTRL_R_OPTS="--info inline --no-sort --no-preview"
 # ----------------------------------------------------
 # Docker
 # ----------------------------------------------------
-alias dc='docker compose'
-alias dl='docker container logs --tail=100'
-alias dls='docker container ls --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias dc="docker compose"
+alias dl="docker container logs --tail=100"
+alias dls="docker container ls --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'"
 
 function dfd() { docker compose -f "$1" down -v }
 function dfu() { docker compose -f "$1" up }
@@ -167,7 +165,7 @@ alias l="eza -F --icons --color=always --group-directories-first"
 alias l.="eza -a | grep -E '^\.'"
 alias la="eza -a --icons --color=always --group-directories-first"
 alias ll="eza -alF --icons --color=always --group-directories-first"
-alias ls="eza --icons --color=always --group-directories-first" # exa is unmaintained, use eza instead
+alias ls="eza --icons --color=always --group-directories-first"
 alias lt="eza --icons --color=always --tree --level=2 --long"
 
 # ----------------------------------------------------
