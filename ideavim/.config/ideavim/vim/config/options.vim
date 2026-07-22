@@ -26,7 +26,6 @@ set shortmess=filnxtToOF
 set sidescrolloff=8
 set smartcase
 set smartindent
-set timeoutlen=10000
 set undolevels=10000
 set visualbell
 

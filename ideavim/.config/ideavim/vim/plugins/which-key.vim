@@ -21,10 +21,6 @@ let g:WhichKey_Divider = "  "
 "   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
 "   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 
-" Variables for custom keymaps based on the current IDE flavor (:echo &ide).
-" https://github.com/JetBrains/ideavim/discussions/375
-let is_ide_intellij_idea = &ide =~? 'intellij idea'
-
 let g:WhichKeyDesc_leader = "<leader> Leader"
 let mapleader=" "
 
@@ -57,15 +53,15 @@ let g:WhichKeyDesc_goto_definition = "gd Goto Definition"
 let g:WhichKeyDesc_goto_implementation = "gI Goto Implementation"
 let g:WhichKeyDesc_signature_help = "gK Signature Help"
 let g:WhichKeyDesc_references = "gr References"
-let g:WhichKeyDesc_goto_type = "gy Goto T[y]pe Definition"
+let g:WhichKeyDesc_goto_type = "gy Goto Type Definition"
 
-let g:WhichKeyDesc_split_horizontally = "<leader>|  Split Horizontally"
-let g:WhichKeyDesc_split_vertically = "<leader>-  Split Horizontally"
+let g:WhichKeyDesc_split_horizontally = "<leader>-  Split Horizontally"
+let g:WhichKeyDesc_split_vertically = "<leader>|  Split Vertically"
 
 let g:WhichKeyDesc_plugins = "<leader>p  Plugins"
 let g:WhichKeyDesc_reload_idea_vim = "<leader>r  Reload IdeaVim"
-let g:WhichKeyDesc_bookmarks_show_list = "<leader>h  Harpoon Quick Menu"
-let g:WhichKeyDesc_bookmarks_toggle = "<leader>H  Harpoon File"
+let g:WhichKeyDesc_bookmarks_show_list = "<leader>h  Show Bookmarks"
+let g:WhichKeyDesc_bookmarks_toggle = "<leader>H  Toggle Bookmark"
 
 " Tab ------------------------
 let g:WhichKeyDesc_tab = "<leader><tab>  Tabs"

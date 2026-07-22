@@ -5,10 +5,6 @@
 " ██║  ██╗███████╗   ██║   ██║ ╚═╝ ██║██║  ██║██║     ███████║
 " ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
 
-" Variables for custom keymaps based on the current IDE flavor (:echo &ide).
-" https://github.com/JetBrains/ideavim/discussions/375
-let is_ide_intellij_idea = &ide =~? 'intellij idea'
-
 " ========================================
 " Neovim Default Mappings
 " ========================================
