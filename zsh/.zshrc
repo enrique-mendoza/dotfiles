@@ -166,7 +166,8 @@ alias l.="eza -a | grep -E '^\.'"
 alias la="eza -a --icons --color=always --group-directories-first"
 alias ll="eza -alF --icons --color=always --group-directories-first"
 alias ls="eza --icons --color=always --group-directories-first"
-alias lt="eza --icons --color=always --tree --level=2 --long"
+alias lt="eza --icons --color=always --tree --level=2 --long --git"
+alias lta="eza -a --icons --color=always --tree --level=2 --long --git"
 
 # ----------------------------------------------------
 # Password Manager
