@@ -1,39 +1,46 @@
 {
-  "editorMode": "vim",
-  "enabledPlugins": {
-    "ponytail@ponytail": true,
-    "remember@claude-plugins-official": true
-  },
-  "extraKnownMarketplaces": {
-    "ponytail": {
-      "source": {
-        "repo": "DietrichGebert/ponytail",
-        "source": "github"
-      }
-    }
-  },
   "permissions": {
     "allow": [
       "Agent(*)",
       "Bash",
       "WebFetch(domain:*)"
     ],
-    "ask": [
-      "Edit",
-      "NotebookEdit",
-      "Write"
-    ],
-    "defaultMode": "default",
     "deny": [
       "Read(.env)",
       "Read(./secrets/**)",
       "Bash(git commit*)",
       "Bash(git -C * commit*)"
-    ]
+    ],
+    "ask": [
+      "Edit",
+      "NotebookEdit",
+      "Write"
+    ],
+    "defaultMode": "default"
   },
   "statusLine": {
-    "command": "npx ccusage@latest statusline",
-    "type": "command"
+    "type": "command",
+    "command": "npx ccusage@latest statusline"
   },
-  "theme": "auto"
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "remember@claude-plugins-official": true,
+    "caveman@caveman": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
+  },
+  "theme": "auto",
+  "editorMode": "vim"
 }
