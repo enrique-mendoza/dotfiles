@@ -69,9 +69,9 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --style minimal \
   --color 16 \
-  --height 30% \
+  --height 100% \
   --ansi \
-  --preview='bat -p --color=always {}' \
+  --preview='fzf-preview.sh {}' \
   --highlight-line \
   --info=inline-right \
   --layout=reverse \
