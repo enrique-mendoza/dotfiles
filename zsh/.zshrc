@@ -69,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --style minimal \
   --color 16 \
-  --height 100% \
+  --height 95% \
   --ansi \
   --preview='fzf-preview.sh {}' \
   --highlight-line \
