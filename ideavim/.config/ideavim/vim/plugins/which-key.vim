@@ -58,10 +58,23 @@ let g:WhichKeyDesc_goto_type = "gy Goto Type Definition"
 let g:WhichKeyDesc_split_horizontally = "<leader>-  Split Horizontally"
 let g:WhichKeyDesc_split_vertically = "<leader>|  Split Vertically"
 
+let g:WhichKeyDesc_harpoon_reset_menu = "<leader>,  Harpoon Clear Menu"
+
+let g:WhichKeyDesc_harpoon_to_file_1 = "<leader>1  Harpoon to File 1"
+let g:WhichKeyDesc_harpoon_to_file_2 = "<leader>2  Harpoon to File 2"
+let g:WhichKeyDesc_harpoon_to_file_3 = "<leader>3  Harpoon to File 3"
+let g:WhichKeyDesc_harpoon_to_file_4 = "<leader>4  Harpoon to File 4"
+let g:WhichKeyDesc_harpoon_to_file_5 = "<leader>5  Harpoon to File 5"
+let g:WhichKeyDesc_harpoon_to_file_6 = "<leader>6  Harpoon to File 6"
+let g:WhichKeyDesc_harpoon_to_file_7 = "<leader>7  Harpoon to File 7"
+let g:WhichKeyDesc_harpoon_to_file_8 = "<leader>8  Harpoon to File 8"
+let g:WhichKeyDesc_harpoon_to_file_9 = "<leader>9  Harpoon to File 9"
+
+let g:WhichKeyDesc_harpoon_quick_menu = "<leader>h  Harpoon Quick Menu"
+let g:WhichKeyDesc_harpoon_file = "<leader>H  Harpoon File"
+
 let g:WhichKeyDesc_plugins = "<leader>p  Plugins"
 let g:WhichKeyDesc_reload_idea_vim = "<leader>r  Reload IdeaVim"
-let g:WhichKeyDesc_bookmarks_show_list = "<leader>h  Show Bookmarks"
-let g:WhichKeyDesc_bookmarks_toggle = "<leader>H  Toggle Bookmark"
 
 " Tab ------------------------
 let g:WhichKeyDesc_tab = "<leader><tab>  Tabs"

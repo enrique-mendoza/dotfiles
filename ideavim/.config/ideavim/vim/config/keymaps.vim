@@ -128,11 +128,23 @@ nmap gy <Action>(QuickTypeDefinition)
 nmap <leader><bar> <c-w>v
 nmap <leader>- <c-w>s
 
+nmap <leader>, <Action>(HarpoonerClearMenu)
+
+nmap <leader>1 <Action>(HarpoonerOpenFile0)
+nmap <leader>2 <Action>(HarpoonerOpenFile1)
+nmap <leader>3 <Action>(HarpoonerOpenFile2)
+nmap <leader>4 <Action>(HarpoonerOpenFile3)
+nmap <leader>5 <Action>(HarpoonerOpenFile4)
+nmap <leader>6 <Action>(HarpoonerOpenFile5)
+nmap <leader>7 <Action>(HarpoonerOpenFile6)
+nmap <leader>8 <Action>(HarpoonerOpenFile7)
+nmap <leader>9 <Action>(HarpoonerOpenFile8)
+
+nmap <leader>H <Action>(HarpoonerToggleFile)
+nmap <leader>h <Action>(HarpoonerToggleMenu)
+
 nmap <leader>p <Action>(WelcomeScreen.Plugins)
 nmap <Leader>r <Action>(IdeaVim.ReloadVimRc.reload)
-
-nmap <leader>H <Action>(ToggleBookmark)
-nmap <leader>h <Action>(ShowBookmarks)
 
 " Tabs ---------------------
 nmap <leader><tab>[ <Action>(PreviousTab)
