@@ -222,6 +222,10 @@ gaps.outer.right =      8
     run = 'layout floating'
 
 [[on-window-detected]]
+    if.app-id = 'com.hnc.Discord'
+    run = 'layout floating'
+
+[[on-window-detected]]
     if.app-id = 'com.apple.DiskUtility'
     run = 'layout floating'
 
