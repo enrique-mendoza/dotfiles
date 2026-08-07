@@ -4,8 +4,28 @@
 # to add or generate new passwords, and synchronize them (with git).
 # Dependencies: fd, fzf, pass
 # Optional dependencies: git, pass-tomb
-#
-# MIT License, Copyright © [2022] Mathieu Laparie <mlaparie [at] disr [dot] it>
+# 
+# MIT License
+# 
+# Copyright © [2022] Mathieu Laparie <mlaparie [at] disr [dot] it>
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
 store="$HOME/.password-store/"
 swapfile="/swap/swapfile" # Set path to any swapfile not listed in /etc/fstab
@@ -30,9 +50,9 @@ main() {
                             --no-multi \
                             --cycle \
                             --header='
-Ret: copy, C-s: show, C-e: edit, C-r: rename, C-d: duplicate,
-C-a: add, C-g: generate and copy new password, C-t: trash
-C-p: git pull, M-p: git push, C-c/C-q/Esc: clear query or exit' \
+Ret: copy, C-s: show, C-e: edit, C-r: rename, C-d: duplicate, C-a: add,
+C-g: generate and copy new password, C-t: trash, C-o: copy OTP
+M-<: git pull, M->: git push, C-c/C-q/Esc: clear query or exit' \
                             --margin='1,2,1,2' \
                             --bind="tab:down" \
                             --bind="btab:up" \
@@ -42,9 +62,10 @@ C-p: git pull, M-p: git push, C-c/C-q/Esc: clear query or exit' \
                             --bind="ctrl-d:execute(echo 'cp' > /tmp/passfzfarg)+accept" \
                             --bind="ctrl-a:execute(echo 'add' > /tmp/passfzfarg)+print-query" \
                             --bind="ctrl-g:execute(echo 'generate --clip' > /tmp/passfzfarg)+print-query" \
+                            --bind="ctrl-o:execute(echo 'otp --clip' > /tmp/passfzfarg)+accept" \
                             --bind="ctrl-t:execute(echo 'rm' > /tmp/passfzfarg)+accept" \
-                            --bind="ctrl-p:abort+execute(echo 'git pull' > /tmp/passfzfarg)" \
-                            --bind="alt-p:abort+execute(echo 'git push -u --all' > /tmp/passfzfarg)" \
+                            --bind="alt-<:execute(echo 'git pull' > /tmp/passfzfarg)+abort" \
+                            --bind="alt->:execute(echo 'git push -u --all' > /tmp/passfzfarg)+abort" \
                             --bind="ctrl-c:execute(echo 'quit' > /tmp/passfzfarg)+cancel" \
                             --bind="ctrl-q:execute(echo 'quit' > /tmp/passfzfarg)+cancel" \
                             --bind="esc:execute(echo 'quit' > /tmp/passfzfarg)+cancel")
@@ -96,6 +117,21 @@ C-p: git pull, M-p: git push, C-c/C-q/Esc: clear query or exit' \
                     read -rsn1
                     continue
                     ;;
+                "otp --clip")
+                    if ! pass otp 2>&1 | grep -q "Usage: pass otp"; then
+                        echo -e "\033[0;31mError:\033[0m the pass-otp extension not installed."
+                    else
+                        if [[ -n "$selection" ]]; then
+                            tmp=${selection::-4} && tmp=${tmp#"$store"}
+                            pass otp --clip "${tmp}"
+                        else
+                            pass otp --clip
+                        fi
+                    fi
+                    printf "\nPress any key to continue. "
+                    read -rsn1
+                    continue
+                    ;;
                 quit)
                     pkill -P $$
                     return
@@ -124,3 +160,5 @@ if [[ -e "$HOME/.password.tomb" ]]; then
     pass close
     sudo swapon -a && sudo swapon "${swapfile}" 2> /dev/null
 fi
+
+printf "\nPress any key to quit. " && read -rsn1
