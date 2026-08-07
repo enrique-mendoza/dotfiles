@@ -69,12 +69,11 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --style minimal \
   --color 16 \
-  --height 95% \
+  --height 100% \
   --ansi \
-  --preview='fzf-preview.sh {}' \
   --highlight-line \
   --info=inline-right \
-  --layout=reverse \
+  --layout=default \
   --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
   --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
   --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
@@ -184,7 +183,7 @@ alias eatcpu="ps auxf | sort -nr -k 3 | head -5" # Get top process eating cpu
 # ----------------------------------------------------
 # Tmux
 # ----------------------------------------------------
-alias t="tmux attach || tmux new -s personal"
+alias t="tmux attach || tmux-sessionizer ~/"
 
 # ----------------------------------------------------
 # Yazi
