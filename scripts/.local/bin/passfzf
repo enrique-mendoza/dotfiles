@@ -66,9 +66,9 @@ M-<: git pull, M->: git push, C-c/C-q/Esc: clear query or exit' \
                             --bind="ctrl-t:execute(echo 'rm' > /tmp/passfzfarg)+accept" \
                             --bind="alt-<:execute(echo 'git pull' > /tmp/passfzfarg)+abort" \
                             --bind="alt->:execute(echo 'git push -u --all' > /tmp/passfzfarg)+abort" \
-                            --bind="ctrl-c:execute(echo 'quit' > /tmp/passfzfarg)+cancel" \
-                            --bind="ctrl-q:execute(echo 'quit' > /tmp/passfzfarg)+cancel" \
-                            --bind="esc:execute(echo 'quit' > /tmp/passfzfarg)+cancel")
+                            --bind="ctrl-c:transform:if [[ -n {q} ]]; then echo 'clear-query'; else echo 'execute(echo quit > /tmp/passfzfarg)+cancel'; fi" \
+                            --bind="ctrl-q:transform:if [[ -n {q} ]]; then echo 'clear-query'; else echo 'execute(echo quit > /tmp/passfzfarg)+cancel'; fi" \
+                            --bind="esc:transform:if [[ -n {q} ]]; then echo 'clear-query'; else echo 'execute(echo quit > /tmp/passfzfarg)+cancel'; fi")
 
         if [[ -f "/tmp/passfzfarg" ]]; then
             arg=$(cat /tmp/passfzfarg)
@@ -128,6 +128,7 @@ M-<: git pull, M->: git push, C-c/C-q/Esc: clear query or exit' \
                             pass otp --clip
                         fi
                     fi
+                    tmp=""
                     printf "\nPress any key to continue. "
                     read -rsn1
                     continue
@@ -143,6 +144,7 @@ M-<: git pull, M->: git push, C-c/C-q/Esc: clear query or exit' \
                     else
                         pass ${arg}
                     fi
+                    tmp=""
                     printf "\nPress any key to continue. "
                     read -rsn1
                     continue
@@ -160,5 +162,3 @@ if [[ -e "$HOME/.password.tomb" ]]; then
     pass close
     sudo swapon -a && sudo swapon "${swapfile}" 2> /dev/null
 fi
-
-printf "\nPress any key to quit. " && read -rsn1
