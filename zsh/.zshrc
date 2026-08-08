@@ -183,7 +183,7 @@ alias eatcpu="ps auxf | sort -nr -k 3 | head -5" # Get top process eating cpu
 # ----------------------------------------------------
 # Tmux
 # ----------------------------------------------------
-alias t="tmux attach || tmux-sessionizer ~/"
+alias t="tmux attach || tmux new -s $USER"
 
 # ----------------------------------------------------
 # Yazi
