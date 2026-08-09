@@ -112,10 +112,11 @@ gaps.outer.right =      8
     # '''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    alt-tab = 'layout tiles horizontal vertical'
-    alt-w = 'layout h_accordion'
     alt-s = 'layout v_accordion'
-    alt-t = 'layout floating tiling'
+    alt-w = 'layout h_accordion'
+    alt-e = 'layout tiles horizontal vertical'
+
+    alt-space = 'layout floating tiling'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
