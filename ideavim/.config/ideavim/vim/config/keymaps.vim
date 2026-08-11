@@ -87,6 +87,16 @@ xmap gw<C-n> <Plug>AllWholeOccurrences
 nmap ga<C-n> <Plug>AllOccurrences
 xmap ga<C-n> <Plug>AllOccurrences
 
+" Surround
+nmap gsa <Plug>YSurround
+xmap gsa <Plug>VSurround
+nmap gsd <Plug>DSurround
+nmap gsr <Plug>CSurround
+
+" Commentary
+nmap gco o<c-o>gcc
+nmap gcO O<c-o>gcc
+
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
 "   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
