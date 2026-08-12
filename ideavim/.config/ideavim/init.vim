@@ -31,6 +31,8 @@ source ~/.config/ideavim/vim/ide/debug.vim
 source ~/.config/ideavim/vim/ide/file.vim
 source ~/.config/ideavim/vim/ide/git.vim
 source ~/.config/ideavim/vim/ide/intellij.vim
+source ~/.config/ideavim/vim/ide/lsp.vim
+source ~/.config/ideavim/vim/ide/navigation.vim
 source ~/.config/ideavim/vim/ide/search.vim
 source ~/.config/ideavim/vim/ide/selection.vim
 source ~/.config/ideavim/vim/ide/ui.vim
