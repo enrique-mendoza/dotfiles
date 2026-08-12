@@ -26,7 +26,7 @@ source ~/.config/ideavim/vim/config/keymaps.vim
 source ~/.config/ideavim/vim/ide/general.vim
 source ~/.config/ideavim/vim/ide/tabs.vim
 source ~/.config/ideavim/vim/ide/code.vim
-source ~/.config/ideavim/vim/ide/buffers.vim
+source ~/.config/ideavim/vim/ide/buffer.vim
 source ~/.config/ideavim/vim/ide/debug.vim
 source ~/.config/ideavim/vim/ide/file.vim
 source ~/.config/ideavim/vim/ide/git.vim

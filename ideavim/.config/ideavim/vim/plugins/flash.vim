@@ -16,3 +16,10 @@ xmap , <Action>(flash.repeat_backward)
 nmap S <Action>(flash.treesitter)
 xmap S <Action>(flash.treesitter)
 omap r <Action>(flash.remote)
+
+" Catppuccin theme
+"                text     background
+" label:         1E1E2E   A6E3A1
+" label hit:     1E1E2E   A6E3A1
+" match:         1E1E2E   89B4FA
+" match nearest: 1E1E2E   EBA0AC

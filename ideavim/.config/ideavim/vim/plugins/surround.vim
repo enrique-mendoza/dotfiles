@@ -2,9 +2,9 @@
 let g:surround_no_mappings = 1
 
 let g:WhichKeyDesc_surround = "gs +surround"
-nmap gsa <Plug>YSurround
 
 let g:WhichKeyDesc_surround_add = "gsa Add Surrounding"
+nmap gsa <Plug>YSurround
 xmap gsa <Plug>VSurround
 
 let g:WhichKeyDesc_surround_delete = "gsd Delete Surrounding"
