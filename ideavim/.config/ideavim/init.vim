@@ -13,6 +13,7 @@ source ~/.config/ideavim/vim/plugins/dial.vim
 source ~/.config/ideavim/vim/plugins/flash.vim
 source ~/.config/ideavim/vim/plugins/harpoon.vim
 source ~/.config/ideavim/vim/plugins/highlightedyank.vim
+source ~/.config/ideavim/vim/plugins/mini-ai.vim
 source ~/.config/ideavim/vim/plugins/multicursor.vim
 source ~/.config/ideavim/vim/plugins/nerdtree.vim
 source ~/.config/ideavim/vim/plugins/surround.vim
