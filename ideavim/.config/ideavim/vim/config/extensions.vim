@@ -1,0 +1,17 @@
+set argtextobj
+set commentary
+set dial
+set functiontextobj
+set highlightedyank
+set ideajoin
+set ideamarks
+set ideaput
+set matchit
+set mini-ai
+set multiple-cursors
+set NERDTree
+set surround
+set textobj-entire
+set textobj-indent
+set vim-paragraph-motion
+set which-key
