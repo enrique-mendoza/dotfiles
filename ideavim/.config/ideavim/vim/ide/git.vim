@@ -1,8 +1,8 @@
 " Git Keymaps (<leader>g)
 let g:WhichKeyDesc_git = "<leader>g +git"
 
-let g:WhichKeyDesc_git_editor_gutter_vcs_popup_menu = "<leader>gB Git Blame"
-nmap <leader>gB <Action>(EditorGutterVcsPopupMenu)
+let g:WhichKeyDesc_git_annotate = "<leader>gB Git Blame"
+nmap <leader>gB <Action>(Annotate)
 
 let g:WhichKeyDesc_git_show_log = "<leader>gL Git Log (cwd)"
 nmap <leader>gL <Action>(Vcs.Show.Log)
@@ -18,9 +18,6 @@ nmap <leader>gf <Action>(Vcs.ShowTabbedFileHistory)
 
 " Git Hunks (<leader>gh)
 let g:WhichKeyDesc_git_hunks = "<leader>gh +hunks"
-
-let g:WhichKeyDesc_git_hunks_annotate = "<leader>ghb Blame Line"
-nmap <leader>ghb <Action>(Annotate)
 
 let g:WhichKeyDesc_git_hunks_show_diff_changed_lines = "<leader>ghd Diff this"
 nmap <leader>ghd <Action>(Vcs.ShowDiffChangedLines)
