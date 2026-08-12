@@ -1,13 +1,13 @@
 let g:WhichKeyDesc_search = "<leader>s Search"
 
 let g:WhichKeyDesc_search_registers = "<leader>s\" Registers"
-nmap <leader>s" :registers<cr>
+nmap <leader>s" :registers<CR>
 
 let g:WhichKeyDesc_search_action = "<leader>sC Commands"
 nmap <leader>sC <Action>(GotoAction)
 
 let g:WhichKeyDesc_search_history = "<leader>sc Command History"
-nmap <leader>sc :history<cr>
+nmap <leader>sc :history<CR>
 
 let g:WhichKeyDesc_search_diagnostics = "<leader>sd Diagnostics"
 nmap <leader>sd <Action>(ActivateProblemsViewToolWindow)
@@ -25,10 +25,10 @@ let g:WhichKeyDesc_search_jumps = "<leader>sj Jumps"
 nmap <leader>sj <Action>(RecentLocations)
 
 let g:WhichKeyDesc_search_keymaps = "<leader>sk Keymaps"
-nmap <leader>sk :map<cr>
+nmap <leader>sk :map<CR>
 
 let g:WhichKeyDesc_search_marks = "<leader>sm Marks"
-nmap <leader>sm :marks<cr>
+nmap <leader>sm :marks<CR>
 
 let g:WhichKeyDesc_search_symbols = "<leader>ss Symbols"
 nmap <leader>ss <Action>(GotoSymbol)

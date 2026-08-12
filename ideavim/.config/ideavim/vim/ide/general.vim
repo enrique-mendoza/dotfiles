@@ -26,10 +26,10 @@ let g:WhichKeyDesc_error_next = "]e Next Error"
 nmap ]e <Action>(GotoNextError)
 
 let g:WhichKeyDesc_todo_prev = "[t Previous Todo Comment"
-nmap [t ?\(TODO\|FIX\|HACK\|WARN\|PERF\|NOTE\|TEST\):<cr>
+nmap [t ?\(TODO\|FIX\|HACK\|WARN\|PERF\|NOTE\|TEST\):<CR>
 
 let g:WhichKeyDesc_todo_next = "]t Next Todo Comment"
-nmap ]t /\(TODO\|FIX\|HACK\|WARN\|PERF\|NOTE\|TEST\):<cr>
+nmap ]t /\(TODO\|FIX\|HACK\|WARN\|PERF\|NOTE\|TEST\):<CR>
 
 let g:WhichKeyDesc_quickfix_previous = "[q Previous Quickfix"
 nmap [q <Action>(GotoPreviousError)

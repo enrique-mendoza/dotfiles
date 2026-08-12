@@ -10,5 +10,5 @@ let g:dial_custom_definitions = [
     ['pattern', ['start', 'middle', 'end']]
 ]
 
-nnoremap <C-a> :DialIncrement<cr>
-nnoremap <C-x> :DialDecrement<cr>
+nnoremap <C-a> :DialIncrement<CR>
+nnoremap <C-x> :DialDecrement<CR>
