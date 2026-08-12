@@ -34,7 +34,7 @@ nmap <leader>sk :map<CR>
 let g:WhichKeyDesc_search_marks = "<leader>sm Marks"
 nmap <leader>sm :marks<CR>
 
-" Notifications Keymaps (<leader>sn)
+" Notification Management Keymaps (<leader>sn)
 let g:WhichKeyDesc_search_notifications = "<leader>sn +notifications"
 
 let g:WhichKeyDesc_search_notifications_activate_notifications_tool_window = "<leader>sna All"
