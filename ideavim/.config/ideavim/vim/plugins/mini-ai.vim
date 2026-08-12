@@ -1,4 +1,4 @@
-" See: https://github.com/JetBrains/ideavim/wiki/mini.ai-support
+" See: https://github.com/echasnovski/mini.ai
 let g:WhichKeyDesc_textobj_aq = "aq `\"' quote"
 let g:WhichKeyDesc_textobj_iq = "iq `\"' quote"
 let g:WhichKeyDesc_textobj_ab = "ab )]} block"

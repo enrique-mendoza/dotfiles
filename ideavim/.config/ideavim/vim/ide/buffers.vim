@@ -22,7 +22,7 @@ let g:WhichKeyDesc_buffers_move_to_opposite_tab_group = "<leader>bt Move Editor 
 nmap <leader>bt <Action>(MoveEditorToOppositeTabGroup)
 
 let g:WhichKeyDesc_buffers_unsplit = "<leader>bu Unsplit"
-nmap <leader>bu <action>(Unsplit)
+nmap <leader>bu <Action>(Unsplit)
 
 let g:WhichKeyDesc_buffers_change_split_orientation = "<leader>by Change Split Orientation"
 nmap <leader>by <Action>(ChangeSplitOrientation)
