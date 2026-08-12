@@ -116,7 +116,7 @@ gaps.outer.right =      8
     alt-w = 'layout h_accordion'
     alt-e = 'layout tiles horizontal vertical'
 
-    alt-space = 'layout floating tiling'
+    alt-shift-space = 'layout floating tiling'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
