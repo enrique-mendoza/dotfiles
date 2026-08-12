@@ -1,4 +1,6 @@
 " See: https://github.com/tpope/vim-commentary/blob/master/doc/commentary.txt
+let g:WhichKeyDesc_comment = "gc Toggle Comment"
+let g:WhichKeyDesc_comment_line = "gcc Toggle Comment Line"
 let g:WhichKeyDesc_comment_below = "gco Add Comment Below"
 nmap gco o<c-o>gcc
 
