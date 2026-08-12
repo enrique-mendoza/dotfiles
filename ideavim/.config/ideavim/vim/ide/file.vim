@@ -1,3 +1,4 @@
+" Find Keymaps (<leader>f)
 let g:WhichKeyDesc_find = "<leader>f Find"
 
 let g:WhichKeyDesc_find_everywhere = "<leader>fe Everywhere"

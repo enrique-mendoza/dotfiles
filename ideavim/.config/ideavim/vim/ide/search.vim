@@ -1,3 +1,4 @@
+" Search Keymaps (<leader>s)
 let g:WhichKeyDesc_search = "<leader>s Search"
 
 let g:WhichKeyDesc_search_registers = "<leader>s\" Registers"

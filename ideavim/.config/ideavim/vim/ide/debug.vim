@@ -1,3 +1,4 @@
+" Debug Keymaps (<leader>d)
 let g:WhichKeyDesc_debug = "<leader>d Debug"
 
 let g:WhichKeyDesc_debug_step_back = "<leader>db Step Back"

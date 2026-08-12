@@ -1,3 +1,4 @@
+" Smart Selection
 sethandler <C-Space> n:vim v:vim i:ide
 
 let g:WhichKeyDesc_selection_increment = "<C-Space> Increment Selection"

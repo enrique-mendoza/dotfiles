@@ -1,3 +1,4 @@
+" Neovim Standard Mappings
 nnoremap Y y$
 inoremap <C-U> <C-G>u<C-U>
 inoremap <C-W> <C-G>u<C-W>

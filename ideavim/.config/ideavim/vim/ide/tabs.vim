@@ -1,3 +1,4 @@
+" Tab Management Keymaps (<leader><tab>)
 let g:WhichKeyDesc_tab = "<leader><tab> Tabs"
 
 let g:WhichKeyDesc_tab_previous = "<leader><tab>[ Previous Tab"

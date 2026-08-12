@@ -1,6 +1,7 @@
 " Only load these IntelliJ IDEA-specific mappings when running inside
 " IntelliJ IDEA itself (see is_ide_intellij_idea in options.vim).
 if is_ide_intellij_idea |
+  " IntelliJ IDEA Keymaps (<leader>i)
   let g:WhichKeyDesc_intellij_idea = "<leader>i Intellij IDEA"
 
   let g:WhichKeyDesc_intellij_idea_run_configuration = "<leader>ic Run Configuration"

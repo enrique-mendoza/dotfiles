@@ -1,3 +1,4 @@
+" LazyVim Default Settings
 let mapleader=" "
 let maplocalleader="\\"
 

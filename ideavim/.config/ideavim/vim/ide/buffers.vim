@@ -1,3 +1,4 @@
+" Buffer Keymaps (<leader>b)
 let g:WhichKeyDesc_buffers = "<leader>b Buffers"
 
 let g:WhichKeyDesc_buffers_delete = "<leader>bd Delete buffer"

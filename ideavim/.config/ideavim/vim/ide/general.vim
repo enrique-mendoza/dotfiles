@@ -1,3 +1,4 @@
+" General Keymaps
 let g:WhichKeyDesc_terminal = "<C-/> Terminal (Root Dir)"
 nmap <C-/> <Action>(ActivateDebugToolWindow)
 

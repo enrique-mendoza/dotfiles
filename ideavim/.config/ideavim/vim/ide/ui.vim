@@ -1,3 +1,4 @@
+" UI Keymaps (<leader>u)
 let g:WhichKeyDesc_ui_toggles = "<leader>u UI"
 
 let g:WhichKeyDesc_ui_color_schema = "<leader>uc Colorscheme"

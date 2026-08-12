@@ -1,3 +1,4 @@
+" Code Keymaps (<leader>c)
 let g:WhichKeyDesc_code = "<leader>c Code"
 
 let g:WhichKeyDesc_code_source_action = "<leader>cA Source Action"

@@ -1,3 +1,4 @@
+" Git Keymaps (<leader>g)
 let g:WhichKeyDesc_git = "<leader>g Git"
 
 let g:WhichKeyDesc_git_blame = "<leader>gB Git Blame"
