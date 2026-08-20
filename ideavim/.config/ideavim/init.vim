@@ -24,6 +24,7 @@ source ~/.config/ideavim/vim/plugins/textobj-indent.vim
 source ~/.config/ideavim/vim/config/keymaps.vim
 
 source ~/.config/ideavim/vim/ide/general.vim
+source ~/.config/ideavim/vim/ide/ai.vim
 source ~/.config/ideavim/vim/ide/tabs.vim
 source ~/.config/ideavim/vim/ide/code.vim
 source ~/.config/ideavim/vim/ide/buffer.vim
