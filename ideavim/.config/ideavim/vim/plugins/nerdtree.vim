@@ -10,4 +10,4 @@ let g:NERDTreeMapCloseDir = "h"
 let g:NERDTreeMapCloseChildren = "z"
 let g:NERDTreeQuitOnOpen = 1
 
-nnoremap _ :NERDTree<CR>
+nnoremap _ :NERDTreeToggle<CR>

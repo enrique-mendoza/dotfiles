@@ -47,7 +47,7 @@ nmap <leader>dma <Action>(Debugger.RemoveAllBreakpoints)
 let g:WhichKeyDesc_debug_breakpoints_remove_all_breakpoints_in_file = "<leader>dmi Remove All Breakpoints In File"
 nmap <leader>dmi <Action>(Debugger.RemoveAllBreakpointsInFile)
 
-let g:WhichKeyDesc_debug_mute_breakpoints = "<leader>dmm Mute All Breakpoints"
+let g:WhichKeyDesc_debug_mute_breakpoints = "<leader>dmm Toggle Mute All Breakpoints"
 nmap <leader>dmm <Action>(XDebugger.MuteBreakpoints)
 
 let g:WhichKeyDesc_debug_step_out = "<leader>do Step Out"
