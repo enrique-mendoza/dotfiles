@@ -85,7 +85,6 @@ export FZF_CTRL_R_OPTS="--info inline --no-sort --no-preview"
 # ----------------------------------------------------
 # Docker
 # ----------------------------------------------------
-alias dc="docker compose"
 alias dl="docker container logs --tail=100"
 alias dls="docker container ls --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'"
 
@@ -122,36 +121,6 @@ function fif() {
 }
 
 # ----------------------------------------------------
-# Git
-# ----------------------------------------------------
-alias g="git"
-alias ga="git add"
-alias gap="ga --patch"
-alias gb="git branch"
-alias gba="gb --all"
-alias gc="git commit"
-alias gca="gc --amend --no-edit"
-alias gce="gc --amend"
-alias gcl="git clone --recursive"
-alias gco="git checkout"
-alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
-alias gds="gd --staged"
-alias gi="git init"
-alias gm="git merge"
-alias gn="git checkout -b" # new branch
-alias gp="git push"
-alias gr="git reset"
-alias gs="git status --short"
-alias gu="git pull"
-
-# ----------------------------------------------------
-# Grep
-# ----------------------------------------------------
-alias egrep="egrep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias grep="grep --color=auto"
-
-# ----------------------------------------------------
 # Lazy
 # ----------------------------------------------------
 alias lg="lazygit"
@@ -167,18 +136,6 @@ alias ll="eza -alF --icons --color=always --group-directories-first"
 alias ls="eza --icons --color=always --group-directories-first"
 alias lt="eza --icons --color=always --tree --level=2 --long --git"
 alias lta="eza -a --icons --color=always --tree --level=2 --long --git"
-
-# ----------------------------------------------------
-# Password Manager
-# ----------------------------------------------------
-alias pmc="pass show -c"
-alias pms="pass show"
-
-# ----------------------------------------------------
-# System Utils
-# ----------------------------------------------------
-alias df="df -h" # human-readable sizes
-alias eatcpu="ps auxf | sort -nr -k 3 | head -5" # Get top process eating cpu
 
 # ----------------------------------------------------
 # Tmux
