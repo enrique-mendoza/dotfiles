@@ -1,7 +1,7 @@
 # ----------------------------------------------------
 # Environment
 # ----------------------------------------------------
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export TERMINAL="kitty"
