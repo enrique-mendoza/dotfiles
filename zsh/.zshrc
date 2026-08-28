@@ -51,8 +51,6 @@ zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
 plugins=(
-  brew
-  git
   fzf-tab
   mise
   vi-mode
