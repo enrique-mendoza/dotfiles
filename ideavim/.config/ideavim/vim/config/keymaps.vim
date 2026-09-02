@@ -3,6 +3,10 @@ nnoremap Y y$
 inoremap <C-U> <C-G>u<C-U>
 inoremap <C-W> <C-G>u<C-W>
 
+" Keep cursor centered on half-page scroll.
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 " Q isn't exactly the same.
 nnoremap Q @@
 
@@ -10,14 +14,21 @@ nnoremap Q @@
 vnoremap < <gv
 vnoremap > >gv
 
-nnoremap <s-h> ^
-nnoremap <s-l> g_
-vnoremap <s-h> ^
-vnoremap <s-l> g_
+nnoremap <S-h> ^
+nnoremap <S-l> g_
+vnoremap <S-h> ^
+vnoremap <S-l> g_
 
 " Move a chunk of text and it will automatically indent.
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Join lines without moving cursor off its spot.
+nnoremap J mzJ`z
+
+" Keep cursor centered when jumping between search matches.
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " Search within visual selection - this is magic
 vmap / <esc>/\\%V
