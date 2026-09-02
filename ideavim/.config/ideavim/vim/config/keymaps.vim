@@ -43,3 +43,6 @@ nmap <C-Up> <Action>(IncrementWindowHeight)
 nmap <C-Down> <Action>(DecrementWindowHeight)
 nmap <C-Left> <Action>(DecrementWindowWidth)
 nmap <C-Right> <Action>(IncrementWindowWidth)
+
+" Escape and Clear hlsearch
+nmap <esc> :nohlsearch<CR>
