@@ -19,11 +19,11 @@ nmap <leader>sc :history<CR>
 let g:WhichKeyDesc_search_activate_problems_view_tool_window = "<leader>sd Diagnostics"
 nmap <leader>sd <Action>(ActivateProblemsViewToolWindow)
 
-let g:WhichKeyDesc_search_goto_url_action = "<leader>se Endpoints"
-nmap <leader>se <Action>(GotoUrlAction)
-
 let g:WhichKeyDesc_search_find_in_path = "<leader>sg Grep"
 nmap <leader>sg <Action>(FindInPath)
+
+let g:WhichKeyDesc_search_goto_url_action = "<leader>sh Http"
+nmap <leader>sh <Action>(GotoUrlAction)
 
 let g:WhichKeyDesc_search_recent_locations = "<leader>sj Jumps"
 nmap <leader>sj <Action>(RecentLocations)
