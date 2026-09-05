@@ -90,11 +90,6 @@ function dfd() { docker compose -f "$1" down -v }
 function dfu() { docker compose -f "$1" up }
 
 # ----------------------------------------------------
-# Fastfetch
-# ----------------------------------------------------
-alias ff="fastfetch"
-
-# ----------------------------------------------------
 # FZF Helpers
 # ----------------------------------------------------
 # fd - cd to selected directory including hidden directories.
