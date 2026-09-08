@@ -48,3 +48,6 @@ nmap <leader>ss <Action>(GotoSymbol)
 
 let g:WhichKeyDesc_search_goto_test = "<leader>st Tests"
 nmap <leader>st <Action>(GotoTest)
+
+let g:WhichKeyDesc_search_local_history_show_history = "<leader>su Undotree"
+nmap <leader>su <Action>(LocalHistory.ShowHistory)
