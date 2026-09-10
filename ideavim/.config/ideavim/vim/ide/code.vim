@@ -15,8 +15,8 @@ let g:WhichKeyDesc_code_activate_problems_view_tool_window = "<leader>cd Line Di
 nmap <leader>cd <Action>(ActivateProblemsViewToolWindow)
 
 let g:WhichKeyDesc_code_format = "<leader>cf Format"
-nmap <leader>cf <Action>(Format)
-vmap <leader>cf <Action>(Format)
+nmap <leader>cf <Action>(ReformatCode)
+vmap <leader>cf <Action>(ReformatCode)
 
 let g:WhichKeyDesc_code_optimize_imports = "<leader>co Optimize Imports"
 nmap <leader>co <Action>(OptimizeImports)
