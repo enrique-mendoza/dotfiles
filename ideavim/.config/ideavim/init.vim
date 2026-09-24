@@ -3,6 +3,7 @@ source ~/.config/ideavim/vim/config/extensions.vim
 
 " Core settings
 source ~/.config/ideavim/vim/config/options.vim
+source ~/.config/ideavim/vim/config/autocmds.vim
 
 " Plugin configurations
 " See: https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
