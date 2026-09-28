@@ -215,7 +215,7 @@ gaps.outer.right =      8
     run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
-    if.app-id = 'com.docker.docker'
+    if.app-id = 'com.electron.dockerdesktop'
     run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
