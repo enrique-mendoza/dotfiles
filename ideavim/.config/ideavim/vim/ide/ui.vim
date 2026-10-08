@@ -1,7 +1,7 @@
 " UI Keymaps (<leader>u)
 let g:WhichKeyDesc_ui = "<leader>u +ui"
 
-let g:WhichKeyDesc_ui_quick_change_scheme = "<leader>uC Colorscheme"
+let g:WhichKeyDesc_ui_quick_change_scheme = "<leader>uC Colorschemes"
 nmap <leader>uC <Action>(QuickChangeScheme)
 
 let g:WhichKeyDesc_ui_toggle_distraction_free_mode = "<leader>uf Toggle Distraction Free Mode"
