@@ -9,7 +9,7 @@ let g:WhichKeyDesc_split_horizontally = "<leader>- Split Horizontally"
 nmap <leader>- <c-w>s
 
 let g:WhichKeyDesc_welcome_screen_plugins = "<leader>p Plugins"
-nmap <leader>p <Action>(WelcomeScreen.Plugins)
+nmap <leader>p <Action>(ShowPlugins)
 
 let g:WhichKeyDesc_reload_idea_vim = "<leader>r Reload IdeaVim"
 nmap <Leader>r <Action>(IdeaVim.ReloadVimRc.reload)
