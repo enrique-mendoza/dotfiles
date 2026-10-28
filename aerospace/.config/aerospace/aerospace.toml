@@ -211,7 +211,7 @@ gaps.outer.right =      8
     run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-    if.app-id = 'com.postmanlabs.mac'
+    if.app-id = 'com.usebruno.app'
     run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
