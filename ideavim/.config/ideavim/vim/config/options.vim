@@ -11,6 +11,8 @@ set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set formatoptions=jcroqlnt
 set hlsearch
+set ideaeditor+=main
+set ideascrollcursor
 set ignorecase
 set inccommand=nosplit
 set incsearch
