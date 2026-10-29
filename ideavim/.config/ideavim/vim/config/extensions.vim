@@ -1,4 +1,5 @@
 " Extensions
+set NERDTree
 set argtextobj
 set commentary
 set dial
@@ -9,10 +10,9 @@ set ideamarks
 set ideaput
 set matchit
 set mini-ai
-set multiple-cursors
-set NERDTree
 set surround
 set textobj-entire
 set textobj-indent
 set vim-paragraph-motion
+set visual-multi
 set which-key
