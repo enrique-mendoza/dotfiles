@@ -160,6 +160,9 @@ source <(fzf --zsh)
 # Load Angular CLI autocompletion
 source <(ng completion script)
 
+# Load GitLab CLI autocompletion
+source <(glab completion -s zsh); compdef _glab glab
+
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
