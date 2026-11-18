@@ -3,6 +3,7 @@ set NERDTree
 set argtextobj
 set commentary
 set dial
+set fugitive
 set functiontextobj
 set highlightedyank
 set ideajoin
