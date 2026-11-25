@@ -4,7 +4,7 @@ set argtextobj
 set commentary
 set dial
 set fugitive
-set functiontextobj
+set functextobj
 set highlightedyank
 set ideajoin
 set ideamarks
