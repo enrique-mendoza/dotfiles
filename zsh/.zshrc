@@ -88,6 +88,7 @@ alias dls="docker container ls --format 'table {{.Names}}\t{{.Status}}\t{{.Ports
 
 function dfd() { docker compose -f "$1" down -v }
 function dfu() { docker compose -f "$1" up }
+function dcr() { docker compose -f "$1" run --rm "$2" "${@:3}" }
 
 # ----------------------------------------------------
 # FZF Helpers
