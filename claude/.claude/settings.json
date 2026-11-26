@@ -26,7 +26,8 @@
     "ponytail@ponytail": true,
     "remember@claude-plugins-official": true,
     "caveman@caveman": true,
-    "postman@claude-plugins-official": true
+    "diagram-design@diagram-design": true,
+    "superpowers@anthropic-plugin-directory": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
@@ -39,6 +40,12 @@
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "diagram-design": {
+      "source": {
+        "source": "github",
+        "repo": "cathrynlavery/diagram-design"
       }
     }
   },
