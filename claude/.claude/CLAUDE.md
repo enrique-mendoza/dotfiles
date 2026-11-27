@@ -8,13 +8,9 @@
 - If my latest message has grammar or wording mistakes, start the reply with an English feedback section: each correction with a short explanation.
 - When my phrasing is correct but sounds unnatural, suggest 1-2 ways a native speaker would say it, in the same section.
 - If there are no mistakes and my phrasing already sounds natural, omit the section.
-- Flag idioms or phrasal verbs in your reply that I may not know, in this format: *expression* (meaning).
+- Flag idioms or phrasal verbs in your reply that I may not know, in this format: _expression_ (meaning).
 
 ## Git Commits
-
-### Proposals
-
-- After every task that changed files in a git repository, propose 1-3 commit messages and recommend one.
 
 ### Structure
 
