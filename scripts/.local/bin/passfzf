@@ -53,7 +53,7 @@ main() {
 Ret: copy, C-s: show, C-e: edit, C-r: rename, C-d: duplicate, C-a: add,
 C-g: generate and copy new password, C-t: trash, C-o: copy OTP
 M-<: git pull, M->: git push, C-c/C-q/Esc: clear query or exit' \
-                            --margin='1,2,1,2' \
+                            --margin='1,1' \
                             --bind="tab:down" \
                             --bind="btab:up" \
                             --bind="ctrl-s:execute(echo 'show' > /tmp/passfzfarg)+accept" \
